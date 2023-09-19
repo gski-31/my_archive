@@ -1,0 +1,10 @@
+{% unless ${first_name} %}
+  {% assign displayName = 'friend' %}
+{% else %}
+  {% if ${first_name} == 'Anonymous' %}
+    {% assign displayName = 'friend' %}
+  {% else %}
+    {% assign displayName = ${first_name} %}
+  {% endif %}
+{% endunless %}
+{{displayName}}

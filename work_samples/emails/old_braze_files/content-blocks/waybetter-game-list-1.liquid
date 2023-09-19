@@ -1,0 +1,14 @@
+{{content_blocks.${waybetter-new-customer-featured-game-ids}}}
+
+{% assign featured_game_ids = waybetter_new_customer_featured_game_ids | split: "," %}
+
+{% if game_id and waybetter_new_customer_fallback_featured_game_ids %}
+  {% assign game_id_str = game_id | append: '' %}
+  {% if featured_game_ids contains game_id_str %}
+    {% assign featured_game_ids = waybetter_new_customer_fallback_featured_game_ids | split: "," %}
+  {% endif %}
+{% endif %}
+
+{% for game_id in featured_game_ids %}
+  {{content_blocks.${waybetter-game-list-item-1}}}
+{% endfor %}

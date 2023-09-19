@@ -1,0 +1,45 @@
+{{content_blocks.${config-vars-1}}}
+
+{% unless wb_config_waybetter_app_branch_url %}
+  {% abort_message("waybetter-marketing-email-1_email-4_grid-game-row: wb_config_waybetter_app_branch_url missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{% unless wb_utm_campaign_name %}
+  {% abort_message("waybetter-marketing-email-4_grid-game-row: wb_utm_campaign_name missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{% unless wb_config_connected_content_user_url or user_service_url %}
+  {% abort_message("waybetter-marketing-email-4_grid-game-row: wb_config_connected_content_user_url is missing and user_service_url is not set") %}
+{% endunless %}
+
+<!-- 3 Cols -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <!-- Row -->
+  <tr>
+    <td class="pb-30 mpb-35" style="padding-bottom: 30px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th class="column-top" width="162" bgcolor="#f6f7f7" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+            {% assign game_id = row_game_ids[0] %}
+            {{content_blocks.${get-falkor-game-by-id}}}
+						{{content_blocks.${waybetter-marketing-email-4_grid-game-cell}}}
+         </th>
+          <th class="column mpb-35" width="19" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+          <th class="column-top" width="162" bgcolor="#f6f7f7" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+            {% assign game_id = row_game_ids[1] %}
+            {{content_blocks.${get-falkor-game-by-id}}}
+						{{content_blocks.${waybetter-marketing-email-4_grid-game-cell}}}
+          </th>
+          <th class="column mpb-35" width="19" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;"></th>
+          <th class="column-top" width="162" bgcolor="#f6f7f7" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+            {% assign game_id = row_game_ids[2] %}
+            {{content_blocks.${get-falkor-game-by-id}}}
+						{{content_blocks.${waybetter-marketing-email-4_grid-game-cell}}}
+          </th>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- END Row -->
+</table>
+<!-- END 3 Cols -->

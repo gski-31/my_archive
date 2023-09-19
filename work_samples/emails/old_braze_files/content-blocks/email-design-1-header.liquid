@@ -1,0 +1,69 @@
+<!-- email-design-1-header - start -->
+<tr>
+    <td align="center" id="templateHeader" valign="top">
+        <!--[if (gte mso 9)|(IE)]>
+                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                    <tr>
+                    <td align="center" valign="top" width="600" style="width:600px;">
+                    <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="templateContainer" width="100%">
+            <tbody>
+                <tr>
+                    <td class="headerContainer" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" class="mcnImageBlock" style="float: left;  min-width: 100%;" width="100%">
+                            <tbody class="mcnImageBlockOuter">
+                                <tr>
+                                    <td class="mcnImageBlockInner" valign="top">
+                                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="mcnImageContent wbHeaderLogoImageContent" valign="top">
+                                                        <img align="center" alt="" class="wbHeaderLogoImage" src="{{logo_url}}"/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        {% if header_hero_image_url %}
+                            <table border=" 0" cellpadding="0" cellspacing="0" class="mcnImageBlock" style="min-width:100%;" width="100%">
+                                <tbody class="mcnImageBlockOuter">
+                                    <tr>
+                                        <td class="mcnImageBlockInner" valign="top">
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;" width="100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="mcnImageContent" valign="top">
+                                                            {% if header_hero_image_link_url.size > 0 %}
+                                                                <a href="{{header_hero_image_link_url}}">
+                                                                {% endif %}
+                                                                <img align="center" alt="" class="mcnImage" src="{{header_hero_image_url}}" style="max-width:1024px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" width="600"/>
+                                                                {% if header_hero_image_link_url.size > 0 %}
+                                                                </a>
+                                                            {% endif %}
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        {% endif %}
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+    </td>
+</tr>
+<!-- email-design-1-header - end -->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Layout Project</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+  <div class="div container">
+    <div class="zone green">
+      <nav class="menu">
+        <a>menu 1</a>
+        <a>menu 2</a>
+        <a>menu 3</a>
+        <a></a>
+        <a>menu 99</a>
+      </nav>
+    </div>
+    <div class="zone red">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.Lorem ipsum dolor.</p>
+    </div>
+    <div class="zone blue">
+      <div class="blue_art"><img src="img/data_storage_2_2.png" /></div>
+      <div class="blue_art"><img src="img/data_storage_2_2.png" /></div>
+      <div class="blue_art"><img src="img/data_storage_2_2.png" /></div>
+      <div class="blue_art"><img src="img/data_storage_2_2.png" /></div>
+    </div>
+    <div class="zone yellow">Footer</div>
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: grid;
+      grid-template-rows: 60px auto 200px 60px;
+
+    }
+
+    .zone {
+      display: grid;
+      padding: 25px;
+    }
+
+    .green {
+      display: grid;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 80px 80px 80px auto 80px;
+    }
+
+    .blue {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .blue_art>img {
+      object-fit: contain;
+      width: 100%;
+      max-height: 100%;
+    }
+
+    .yellow {
+      text-align: center;
+    }
+
+  </style>
+
+</body>
+
+</html>

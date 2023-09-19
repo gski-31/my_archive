@@ -1,0 +1,54 @@
+{% assign header_image_arr = header_images | split: '|' %}
+{% assign header_image_url_arr = header_image_urls | split: '|' %}
+
+<!-- email-design-2-header - start -->
+<tr>
+    <td align="center" id="templateHeader" style="padding-top: 0px" valign="top">
+        <!--[if (gte mso 9)|(IE)]>
+                                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                                    <tr>
+                                    <td align="center" valign="top" width="600" style="width:600px;">
+                                    <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="templateContainer" width="100%">
+            <tbody>
+                <tr>
+                    <td class="headerContainer" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" class="mcnImageBlock" id="wbMultipleImageHeaderBlockOuter" width="100%">
+                            <tbody class="mcnImageBlockOuter">
+                                <tr>
+                                    <td class="mcnImageBlockInner" valign="top">
+                                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" id="wbMultipleImageHeaderBlockInner" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="mcnImageContent" valign="top">
+                                                        {% for imageUrl in header_image_arr %}
+                                                            {% if header_image_url_arr[forloop.index0] %}
+                                                                <a class="wbLinkableHeaderImage" href="{{header_image_url_arr[forloop.index0]}}" data-index-0="{{forloop.index0}}">
+                                                                  <!-- absbottom is a hack to remove space under images in gmail mobile, possibly other clients -->
+                                                                  <img align="absbottom" data-bind="attr: {'title': $data.name, 'src': $data.fullUrl}" src="{{imageUrl}}" title="section{{forloop.index}}" style="display: block"/>
+                                                                </a>
+                                                            {% else %}
+                                                                <!-- absbottom is a hack to remove space under images in gmail mobile, possibly other clients -->
+                                                                <img align="absbottom" data-bind="attr: {'title': $data.name, 'src': $data.fullUrl}" src="{{imageUrl}}" title="section{{forloop.index}}" style="display: block"/>
+                                                             {% endif %}
+                                                        {% endfor %}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+    </td>
+</tr>
+<!-- email-design-2-header - end -->

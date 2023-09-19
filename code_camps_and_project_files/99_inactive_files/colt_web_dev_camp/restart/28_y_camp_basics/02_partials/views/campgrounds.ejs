@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+<p> CG page</p>
+
+<% campgrounds.forEach(function(campground){ %>
+    <div>
+        <h4> <%= campground.name %></h4>
+        <img src="<%= campground.image %>" width="220px"/>
+    </div>
+<% }); %>
+
+<br /><br />
+<a href="/">Go to LP</a>
+
+<% include partials/footer %>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html_from_strings</title>
+</head>
+
+<body>
+    <div class="myDiv">
+
+    </div>
+    <script>
+        const name = 'Jason';
+        const arr = ['item 01', 'item 02', 'item 03'];
+        const myDiv = document.querySelector('.myDiv');
+        myDiv.innerHTML = ` <h3>H3 Header</h3>
+                            <p>Hello ${name}</p>
+                            <ul>${arr.map(x => `<li>${x}</li>`).join('')}</ul>`;
+        // join removes comma
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+
+{% comment %} set to true for prod, false for dev {% endcomment %}
+{% if true %}
+  {% assign wb_env = "production" %}
+  {% assign wb_config_connected_content_url = "https://braze.waybetter.com" %}
+  {% assign wb_config_connected_content_user_url = "https://accounts.waybetterdev.com/users" %}
+  {% assign wb_config_cloudinary_cloud_name = "waybetter" %}
+  {% assign wb_config_hub_url = "https://waybetter.com" %}
+  {% assign wb_config_waybetter_app_branch_url = "https://app.waybetter.com" %}
+  {% assign wb_config_waybetter_app_url_scheme = "waybetterapp" %}
+{% else %}
+  {% assign wb_env = "staging" %}
+  {% assign wb_config_connected_content_url = "https://braze.waybetterdev.com" %}
+  {% assign wb_config_connected_content_user_url = "https://accounts-staging.waybetterdev.com/users" %}
+  {% assign wb_config_cloudinary_cloud_name = "waybetter-staging" %}
+  {% assign wb_config_hub_url = "https://hub-staging.waybetter.com" %}
+  {% assign wb_config_waybetter_app_branch_url = "https://v38dp.test-app.link" %}
+  {% assign wb_config_waybetter_app_url_scheme = "waybetterstageapp" %}
+{% endif %}
+
+
+{% comment %} these are the same for dev and prod {% endcomment %}
+{% assign wb_product_name = 'WayBetter' %}
+{% assign wb_product_name_internal = 'waybetterapp' %}
+{% assign wb_facebook_page_url = 'https://www.facebook.com/TheWayBetterWay/' %}
+{% assign wb_instagram_page_url = 'https://www.instagram.com/waybetterapp/' %}
+{% assign wb_unsubscribe_url = 'https://email-subscriptions.waybetter.com/unsubscribe/marketing/waybetter/' %}
+{% assign wb_support_email = 'support@waybetter.com' %}
+
+
+{% comment %}
+standard naming convention for the utm_campaign value based on Braze campaign or canvas name
+{% endcomment %}
+
+{% if canvas.${name} %}
+  {% capture wb_utm_campaign_name %}{{ canvas.${name} | append: '_' | append: campaign.${name} | url_param_escape }}{% endcapture %}
+{% else %}
+  {% assign wb_utm_campaign_name = campaign.${name} | url_param_escape %}
+{% endif %}

@@ -1,0 +1,62 @@
+{% comment %}
+Adapted from the "Waybetter Marketing Email v2 - Live Text" source template.
+
+Available variables:
+
+1. top-image-row
+- wb_logo_image_url - defaults to https://appboy-images.com/appboy/communication/assets/image_assets/images/5f3bd8a628a1b1361fe0893c/original.png?1597757606
+- wb_logo_image_link_url - defaults to content_blocks.config-vars-1:wb_config_hub_url
+2. top-row-start
+- top_bg_image_url
+3. game_row
+- game_row_title
+- game_row_game_ids (comma delimited list)
+
+{% endcomment %}
+
+{% comment %}See WBA-879{% endcomment %}
+{% assign waybetter_marketing_email_use_link_template = true %}
+
+{{content_blocks.${waybetter-marketing-email-2_lt-all-pre-content}}}
+
+  {% assign top_bg_image_url = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fdb9432141af41fff976c3e/original.jpg?1608225842" %}
+	{{content_blocks.${waybetter-marketing-email-2_lt-top-start}}}
+
+
+		{{content_blocks.${waybetter-marketing-email-2_lt-top-logo-image-row}}}
+
+		{{content_blocks.${waybetter-marketing-email-2_lt-top-title-row-start}}}
+			<strong>Lorem ipsum dolor sit.</strong>
+		{{content_blocks.${waybetter-marketing-email-2_lt-top-title-row-end}}}
+
+
+		{{content_blocks.${waybetter-marketing-email-2_lt-top-body-row-start}}}
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		{{content_blocks.${waybetter-marketing-email-2_lt-top-body-row-end}}}
+
+
+		{% assign top_cta_url = "https://waybetter.com/games" %}
+		{% assign top_cta_text = "CTA" %}
+		{{content_blocks.${waybetter-marketing-email-2_lt-top-cta-row}}}
+
+
+	{{content_blocks.${waybetter-marketing-email-2_lt-top-end}}}
+
+
+	{% assign game_row_title = "Workout games" %}
+	{% assign game_row_game_ids = "281,284,294" %}
+	{{content_blocks.${waybetter-marketing-email-2_lt-game-row}}}
+
+
+	{% assign game_row_title = "Self-care games" %}
+	{% assign game_row_game_ids = "286,288,262" %}
+	{{content_blocks.${waybetter-marketing-email-2_lt-game-row}}}
+
+
+	{% assign game_row_title = "Cooking games" %}
+	{% assign game_row_game_ids = "252,250,233" %}
+	{{content_blocks.${waybetter-marketing-email-2_lt-game-row}}}
+
+
+{{content_blocks.${waybetter-marketing-email-2_lt-all-post-content}}}
+

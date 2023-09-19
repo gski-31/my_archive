@@ -1,0 +1,28 @@
+<!-- START waybetter-marketing-email-2_lt-top-start -->
+
+<!-- Header -->
+<tr>
+	<td class="pb-50 mpb-40" style="padding-bottom: 50px;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			  {% if top_bg_image_url %}
+				  <td background="{{top_bg_image_url}}" style="background: url({{top_bg_image_url}}) center top / cover; -webkit-background-size: cover; background-size: cover; background-position: center top;" bgcolor="#956da9" height="822" valign="top">
+				{% else %}
+				  <td bgcolor="#956da9" height="822" valign="top">
+				{% endif %}
+					<!--[if gte mso 9]>
+					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:822px;">
+					<v:fill type="frame" src="{{top_bg_image_url}}" color="#956da9" />
+					<v:textbox inset="0,0,0,0">
+					<![endif]-->
+					<div>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+
+								{% comment %} This provides some padding to the left {% endcomment %}
+								{{content_blocks.${waybetter-marketing-email-2_lt-top-spacer-column-left}}}
+
+								{{content_blocks.${waybetter-marketing-email-2_lt-top-center-column-start}}}
+
+
+<!-- END waybetter-marketing-email-2_lt-top-start -->

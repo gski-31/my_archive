@@ -1,0 +1,147 @@
+{{content_blocks.${config-vars-1}}}
+
+{% unless wb_config_waybetter_app_branch_url %}
+  {% abort_message("waybetter-marketing-email-1_email-3_stack-game-row: wb_config_waybetter_app_branch_url missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{% unless wb_utm_campaign_name %}
+  {% abort_message("waybetter-marketing-email-3_stack-game-row: wb_utm_campaign_name missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{% unless wb_config_connected_content_user_url or user_service_url %}
+  {% abort_message("waybetter-marketing-email-3_stack-game-row: wb_config_connected_content_user_url is missing and user_service_url is not set") %}
+{% endunless %}
+
+{{content_blocks.${get-falkor-game-by-id}}}
+
+{% comment %}
+  Find the host that is the official coach.
+{% endcomment %}
+{% for host_id in game.host_ids %}
+  {% if host_id %}
+    {% assign fetch_host_url = user_service_url | default: wb_config_connected_content_user_url | append: '/' | append: host_id %}
+    {% connected_content {{fetch_host_url}} :save response_user :cache 3600 %}
+    {% if response_user.isOfficialCoach && !coach_name %}
+      {% assign coach_name = response_user.displayName %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  This image is in Braze PROD media library: waybetter-marketing-email-3_stack_4_grid-join-now-button.png
+{% endcomment %}
+{% assign game_join_cta_image_url = "https://appboy-images.com/appboy/communication/assets/image_assets/images/60420fd38356684f8bca8046/original.png?1614942163" %}
+
+{% comment %}
+  Calculate the x week(s) value and label.
+{% endcomment %}
+{% assign game_start_s = game.start_date | date: "%s" %}
+{% assign game_end_s = game.end_date | date: "%s" %}
+{% assign game_duration_secs = game_end_s | minus: game_start_s %}
+{% comment %}
+Game date ranges sometimes use a start date time of midnight and and end date time
+of 11:59:59, so that the end date is not the day later, which results in a game 
+length that is a multiple of a week minus one second. This detects such cases and
+adds the missing second, so it can properly calculate the length in weeks.
+{% endcomment %}
+{% if game_duration_secs > 0 %}
+  {% if game_duration_secs | modulo: 7 != 0 %}
+    {% if game_duration_secs | plus: 1 | modulo: 7 == 0 %}
+      {% assign game_duration_secs = game_duration_secs | plus: 1 %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% assign game_duration_weeks = game_duration_secs | divided_by: 3600 | divided_by: 24 | divided_by: 7 | round: 0 %}
+{% if game_duration_weeks == 1 %}
+  {% assign game_duration_weeks_label = "week" %}
+{% else %}
+  {% assign game_duration_weeks_label = "weeks" %}
+{% endif %}
+
+
+{% assign game_start_date = game.start_date | date: "%b %e" %}
+{% assign game_end_date = game.end_date | date: "%b %e" %}
+
+{% assign game_join_cta_url = wb_config_waybetter_app_branch_url | append: '/game_profile' %}
+
+{% unless waybetter_marketing_email_use_link_template %}
+  {% capture game_join_cta_url %}{{game_join_cta_url}}?utm_medium=email&amp;gameId={{game.id}}&amp;utm_campaign={{wb_utm_campaign_name}}{% endcapture %}
+{% endunless %}
+
+{% if game_row_image_url %}
+  {% assign hero_image_url = game_row_image_url %}
+{% else %}
+  {% comment %}
+    https://cloudinary.com/documentation/image_transformations#control_gravity
+  {% endcomment %}
+  {% if game_row_image_crop_params %}
+    {% assign game_row_image_xform_params = game_row_image_crop_params %}
+  {% else %}
+    {% assign game_row_image_xform_params = 'c_crop,c_fill,g_auto' %}
+  {% endif %}
+
+  {% assign hero_image_url_parts = game.image.secure_url | split: '/' %}
+  {% assign hero_image_display_width = 278 %}
+  {% assign hero_image_display_height = 234 %}
+  {% assign hero_image_pixel_width = hero_image_display_width | times: 1 %}
+  {% assign hero_image_pixel_height = hero_image_display_height | times: 1 %}
+  {% assign hero_image_cloudinary_params = 'dpr_2,f_auto,q_auto,w_IMAGE_WIDTH,h_IMAGE_HEIGHT,XFORM_PARAMS' | replace: 'IMAGE_WIDTH', hero_image_pixel_width | replace: 'IMAGE_HEIGHT', hero_image_display_height | replace: 'XFORM_PARAMS', game_row_image_xform_params %}
+  {% assign hero_image_url = game.image.secure_url | replace: hero_image_url_parts[6], hero_image_cloudinary_params %}
+{% endif %}
+
+<!-- 2 Cols - L Image, R Copy -->
+<tr>
+  <td class="px-20 pb-33 mpx-50" style="padding-left: 20px; padding-right: 20px; padding-bottom: 33px;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f6f7f7">
+      <tr>
+        <th class="column-top fluid-img" width="276" style="padding:0; margin:0; font-weight:normal; vertical-align:top; font-size:0pt; line-height:0pt; text-align:left;">
+          <a href="{{game_join_cta_url}}" target="_blank">
+            <img src="{{hero_image_url}}" width="276" height="231" border="0" alt="" />
+          </a>
+        </th>
+        <th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="pt-26 px-22 mpb-18 pb-18" style="padding-top: 26px; padding-left: 22px; padding-right: 22px; padding-bottom: 18px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="text fz-12 lh-16 pb-7" style="color:#000001; font-family:Roboto, Arial, sans-serif; text-align:left; font-size: 12px; line-height: 16px; padding-bottom: 7px;">
+                      {{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="title fz-18 lh-22 mfz-16 mlh-20" style="color:#000001; font-family:Roboto, Arial, sans-serif; text-align:left; font-size: 18px; line-height: 22px;">
+                      <strong>{{game.title}}</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text fz-12 lh-16 pb-10" style="color:#000001; font-family:Roboto, Arial, sans-serif; text-align:left; font-size: 12px; line-height: 16px; padding-bottom: 10px;">
+                      {% if coach_name %}
+                        <strong>With Coach {{coach_name}}</strong>
+                      {% else %}
+                        &nbsp;
+                      {% endif %}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text fz-11 lh-16 fw-300 pb-19" style="color:#000001; font-family:Roboto, Arial, sans-serif; text-align:left; font-size: 11px; line-height: 16px; font-weight: 300; padding-bottom: 19px;">
+                      {{game.description}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="img" style="font-size:0pt; line-height:0pt; text-align:left;">
+                      <a href="{{game_join_cta_url}}" target="_blank">
+                        <img src="{{game_join_cta_image_url}}" width="84" height="10" border="0" alt="" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </th>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- END 2 Cols - L Image, R Copy -->

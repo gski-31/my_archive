@@ -1,0 +1,11 @@
+<h1>Welcome to the SW page</h1>
+<p>SW LIST GOES HERE</p>
+
+<% sw.forEach(function(sw_char){ %>
+    <li><%= sw_char %></li>
+<% }) %>
+
+<form action="/addsw" method="POST">
+<input type="text" name="newsw" placeholder="name">
+<button>add sw person</button>
+</form>

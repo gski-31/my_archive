@@ -1,0 +1,121 @@
+<mjml>
+
+<mj-head>
+<mj-title>Ask me anything</mj-title>
+<mj-preview>Questions about WayBetter? Fire away!</mj-preview>
+
+<mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+<mj-attributes>
+<mj-all padding="0px" font-family="Roboto, Arial, sans-serif;" />
+<mj-class name="footer_text" font-size="12px" align="center" letter-spacing="0.3px;" line-height="18px" color="gray" font-family="Roboto, Arial, sans-serif" />
+
+</mj-attributes>
+
+<mj-style>
+/* *** IMPORT AVERTA FONT FOR TITLES *** */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Regular.woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Semibold.woff');
+font-weight: 600;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Bold.woff');
+font-weight:
+bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-ExtraBold.woff');
+font-weight: 900;
+font-style: normal;
+}
+
+
+/* *** STANDARD DESKTOP FONT SIZES *** */
+*{
+font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+.body_text {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 14px;
+color: #000000;
+letter-spacing: 0;
+line-height: 18px;
+}
+
+.header_text {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 60px;
+color: #000000;
+letter-spacing: 0;
+line-height: 70px;
+font-weight: bold;
+text-align: center;
+}
+
+.link_text {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 14px;
+color: blue;
+letter-spacing: 0;
+line-height: 18px;
+font-weight: bold;
+}
+
+</mj-style>
+  
+  <mj-style inline="inline">
+*{
+font-family: 'Roboto', Arial, sans-serif !important;
+}
+</mj-style>
+
+</mj-head>
+
+<mj-body background-color="#eee">
+
+
+<mj-wrapper background-color="white" padding="30px">
+<mj-section>
+<mj-column>
+<mj-text>
+<p class="body_text">Hey, {{custom_attribute.${first_name}}},</p>
+<p class="body_text">Just dropping a line to say hi and see if I can answer any questions for you about the WayBetter app or your weight loss goals. If I can help with anything, please don&rsquo;t hesitate to&nbsp;ask!</p>
+<p class="body_text">Cheers,<br/>
+Kayla<br/>
+Assistant Manager<br/>
+WayBetter Customer Service</p>
+
+<a class="link_text" href="https://waybetter.com/">Become a member</a>
+
+</mj-text>
+</mj-column>
+</mj-section>
+</mj-wrapper>
+
+<!-- ------- BEGIN_FOOTER ------- -->
+<mj-include path="../includes/footer.mjml" />
+<!-- ------- END_FOOTER ------- -->
+
+</mj-body>
+</mjml>

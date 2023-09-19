@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today</title>
+</head>
+
+<body>
+    <h3>Today is <%= currentDate %></h3>
+    <ul>
+        <!-- <li>Buy</li>
+        <li>Open</li>
+        <li>Use</li> -->
+        <!-- CHALLENGE 2: add multiple li -->
+        <% newListItems.forEach((e)=>{ %>
+        <li><%= e %></li> <!-- EJS Syntax goes inside HTML -->
+        <% }) %>
+    </ul>
+
+    <!-- CHALLENGE: Create a form and POST request -->
+    <form action="/" method="POST">
+        <label for="newItem">Add Item:</label><br>
+        <input type="text" id="newItem" name="newItem" placeholder="item to be added"><br>
+        <input type="submit" value="Add">
+    </form>
+
+</body>
+
+</html>

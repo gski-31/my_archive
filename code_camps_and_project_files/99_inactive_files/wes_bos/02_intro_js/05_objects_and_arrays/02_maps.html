@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>new Map()</title>
+</head>
+
+<body>
+
+    <script>
+        // The MAP object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
+
+        const myMap = new Map();
+        // .set() has 2 args
+        myMap.set('name', 'jason');
+
+        // set and get
+        const score = 300;
+        const prizes = new Map();
+        prizes.set(100, 'Whistle');
+        prizes.set(200, 'Doll');
+        prizes.set(300, 'Stuffy');
+        console.log(prizes);
+        console.log(`you win a ${prizes.get(score)}`);
+        // map order is guaranteed as opposed to objects
+
+        // .has()
+        // .delete()
+    </script>
+</body>
+
+</html>

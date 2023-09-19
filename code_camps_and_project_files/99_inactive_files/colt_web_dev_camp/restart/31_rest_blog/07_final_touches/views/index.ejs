@@ -1,0 +1,20 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+    <% blogs.forEach((blogs)=>{ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="card">
+                <img class="card-img-top" src="<%= blogs.image %>" alt="<%= blogs.name %>">
+                <div class="card-body">
+                    <p class="card-text"><small><%= blogs.date.toDateString() %></small></p>
+                    <h5 class="card-title"><%= blogs.title %></h5>
+                    <p class="card-text"><%= blogs.body.substring(0,100) %>…</p>
+                    <a href="blogs/<%= blogs._id %>" class="btn btn-danger">See More</a>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+    </div>
+</div>
+
+<% include partials/footer %>

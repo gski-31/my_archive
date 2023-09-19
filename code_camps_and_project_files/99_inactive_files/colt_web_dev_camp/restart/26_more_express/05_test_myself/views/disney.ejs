@@ -1,0 +1,10 @@
+<h3>Char Page</h3>
+
+<% dataSet.forEach(function(char){ %>
+    <li><%= char %></li>
+<% }); %>
+
+<form action='/add_d_char' method='POST'>
+    <input type=text' name='d_char' placeholder="add name" />
+    <button>submit</button>
+</form>

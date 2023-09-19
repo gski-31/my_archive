@@ -1,0 +1,21 @@
+<% include partials/header %>
+<h3>Character Page</h3>
+
+<div class="row">
+<% characters.forEach((character)=>{ %>
+    <div class="col-md-3 col-sm-6">
+        <div class="card">
+            <img class="card-img-top" src="<%= character.image %>" alt="<%= character.name %>">
+            <div class="card-body">
+                <h5 class="card-title"><%= character.name %></h5>
+                <p class="card-text"><%= character.description.substring(0,100) %>...</p>
+                <a href="characters/<%= character._id %>" class="btn btn-danger">Read More</a>
+                <small class="text-align-right"><%= character.date.toDateString() %></small>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+</div>
+
+<% include partials/footer %>

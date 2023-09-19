@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new keyword</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        /* The new operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function. The new keyword does the following things:
+
+        • Creates a blank, plain JavaScript object;
+        • Links (sets the constructor of) this object to another object;
+        • Passes the newly created object from Step 1 as the this context;
+        • Returns this if the function doesn't return its own object.         */
+
+        const myDate = new Date('February 28, 2000');
+        console.dir(myDate);
+        console.log(myDate.getFullYear());
+
+        // everything is technically "new" when declared but some such as array and objects are literal from brackets and parentheses
+
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        const car1 = new Car('Eagle', 'Talon TSi', 1993);
+
+        console.log(car1.make);
+        console.log(car1.constructor); // constructor aka "what made me?"
+        console.log(car1 instanceof Car); // true
+
+        // using the "new" keyword creates an instance of the called function
+    </script>
+</body>
+
+</html>

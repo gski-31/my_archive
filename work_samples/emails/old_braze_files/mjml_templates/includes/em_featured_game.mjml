@@ -1,0 +1,21 @@
+<mj-section background-color="#eee">
+<mj-column>
+<mj-image fluid-on-mobile="true" 
+href="#" src="{{featured_game_id GAME IMAGE}}" />
+</mj-column>
+
+<mj-column padding="20px">
+<mj-text font-size="12px">{{featured_game_id_WEEKS}}</mj-text>
+<mj-text font-size="18px" font-weight="bold">{{featured_game_id_GAME TITLE}}</mj-text>
+<mj-spacer height="6px" />
+<mj-table>
+<tr>
+<td width="48px"><img width="40px" style="border-radius: 30px; border: 1px solid white;" src="{{featured_game_id COACH IMAGE}}" /></td>
+<td><span style="font-size: 12px; line-height: 16px;"><strong>With Coach</strong><br/>{{featured_game_id_COACH_NAME}}</span></td>
+</tr>
+</mj-table>
+<mj-spacer height="8px" />
+<mj-text font-size="11px">{{featured_game_id_GAME_DESC}}</mj-text>
+</mj-text>
+<mj-button href="{{featured_game_id_GAME_URL}}">JOIN NOW&nbsp;&nbsp;></mj-button>
+</mj-section>

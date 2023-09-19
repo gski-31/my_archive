@@ -1,0 +1,48 @@
+https://blog.londonappbrewery.com/how-to-download-install-mongodb-on-mac-2895ccd2b5c1
+
+https://www.udemy.com/the-complete-web-development-bootcamp/learn/lecture/12385648#overview
+
+Install Mongo:
+• Download CS version of MongoDB
+• Extract
+• sudo mv folder to /usr/local/mongodb
+• touch .bash_profile
+• add export PATH=$PATH:/usr/local/mongodb/bin to bash_profile
+• sudo mkdir -p /data/db
+• sudo chown <your-username> /data/db
+• restart terminal
+• test with mongo --version
+
+Start Mongo:
+• spin-up server: in one terminal window type mongod // from root // has to always be on
+• start shell: in 2nd terminal window type mongo
+
+==============
+CRUD
+==============
+CREATE a DB:
+• tips
+    - show dbs // shows all db
+    - db// shows current db
+• use <db_name>
+
+Add and READ DB:
+• db.<db_name>.insert(<data to insert>)
+• show collections // show collections in current database
+• db.<db_name>.find();  // list all data in db
+• db.<db_name>.find({object property});  // specific search
+
+UPDATE a DB:
+• db.<db_name>.update({select by}, {actual update});  // update sta and wipe out other fields
+• db.<db_name>.update({select by}, {$set: {actual update}});  // overwrites specific data
+    - example: db.family.update({relation : "daughter"}, {$set: {aka: 'little buddy'}});
+
+DESTROY data in DB
+• db.<db_name>.remove({key: value});
+
+DELETE entire DB:
+• db.dropDatabase()
+
+
+
+

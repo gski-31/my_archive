@@ -1,0 +1,19 @@
+<!-- START waybetter-marketing-email-1_i-top -->
+
+{% unless top_image_url %}
+  {% abort_message("waybetter-marketing-email-1_i-top: top_image_url missing") %}
+{% endunless %}
+
+{% unless top_image_link_url %}
+  {% abort_message("waybetter-marketing-email-1_i-top: top_image_link_url missing") %}
+{% endunless %}
+
+<!-- Header + Intro -->
+<tr>
+  <td class="fluid-img pb-55 mpb-30" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom: 55px;">
+    <a href="{{top_image_link_url}}" target="_blank"><img src="{{top_image_url}}" width="600" border="0" alt="" /></a>
+  </td>
+</tr>
+<!-- END Header + Intro -->
+
+<!-- END waybetter-marketing-email-1_i-top -->

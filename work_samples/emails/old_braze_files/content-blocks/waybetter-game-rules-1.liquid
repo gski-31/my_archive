@@ -1,0 +1,32 @@
+{% assign rules_image_url = nil %}
+{% if game.rules_description_image %}
+  {% if game.rules_description_image.secure_url %}
+    {% assign rules_image_url = game.rules_description_image.secure_url %}
+  {% endif %}
+{% endif %}
+
+{% capture custom_ul %}
+  <ul style="padding-inline-start: 20px">
+{% endcapture %}
+
+{% capture custom_li %}
+  <li style="font-size: 12pt; margin: 15px 0;">
+{% endcapture %}
+
+<p class="wbNormalTextCentered">
+  {% if game.rules and game.rules.size > 0 %}
+    <div id="rulesSection">
+      {% for rule in game.rules %}
+        <h2 class="rule">{{rule.heading}}</h2>
+        {{rule.body | replace: "<li>", custom_li | replace: "<ul>", custom_ul}}
+      {% endfor %}
+    </div>
+  {% elsif rules_image_url %}
+    <a class="mcnButton wbButton" href="{{game_cta}}" target="_self" title="">
+      <img src="{{rules_image_url}}" width="100%" style="max-width: 100%" />
+    </a>
+  {% else %}
+    {{ game.rules_description_text }}
+  {% endif %}
+</p>
+

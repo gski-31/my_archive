@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>insert_html</title>
+</head>
+
+<body>
+    <script>
+        // Add LI items using a variet of insert commands
+        const list = document.createElement('ul');
+        const item = document.createElement('li');
+
+        item.textContent = 'second item';
+        list.appendChild(item);
+
+        document.body.insertAdjacentElement('afterbegin', list);
+
+        item.insertAdjacentHTML('beforebegin', '<li>first item</li>');
+        list.insertAdjacentHTML('beforeend', '<li>third item</li>');
+    </script>
+</body>
+
+</html>

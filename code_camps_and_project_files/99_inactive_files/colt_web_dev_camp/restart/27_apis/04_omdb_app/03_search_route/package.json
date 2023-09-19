@@ -1,0 +1,17 @@
+{
+  "name": "03_search_route",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "request": "^2.88.0"
+  },
+  "description": ""
+}

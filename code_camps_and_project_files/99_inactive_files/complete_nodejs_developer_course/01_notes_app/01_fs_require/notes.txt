@@ -1,0 +1,3 @@
+file created by Node.js and fs.write
+here is another line
+and another

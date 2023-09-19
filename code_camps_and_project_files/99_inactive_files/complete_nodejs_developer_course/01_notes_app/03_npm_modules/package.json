@@ -1,0 +1,14 @@
+{
+  "name": "03_npm_modules",
+  "version": "1.0.0",
+  "description": "Importing Npm Modules",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^11.1.0"
+  }
+}

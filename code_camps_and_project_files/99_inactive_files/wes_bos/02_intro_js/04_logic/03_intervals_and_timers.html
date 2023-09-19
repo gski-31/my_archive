@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- timeout => AFTER x time
+ interval => EVERY x time -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>intervals and timers</title>
+</head>
+
+<body>
+
+    <script>
+        setTimeout(function () {
+            console.log('waiting 2 seconds…');
+        }, 2000); // window.setTimeout(function, milliseconds);
+
+        function buzzer() {
+            console.log('BBBBZZZZZZZZZZZZZZZZZZ');
+        }
+
+        setTimeout(buzzer, 5000);
+
+        // setInterval(buzzer, 5000);
+
+        // clearTimeout(function) // clears timeout  // has to be saved as a var somewhere prior
+        // clearInterval(function)
+        // const stopMe = setInterval(buzzer, 5000);
+        // clearInterval(stopMe);
+        // mix and match to run numerous intervals and then timeout at end
+    </script>
+</body>
+
+</html>

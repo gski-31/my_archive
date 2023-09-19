@@ -1,0 +1,66 @@
+{% assign theme = 'waybetterapp' %}
+
+{{content_blocks.${config-vars-1}}}
+
+{% comment %}
+When debugging, the game_id must also be set after the featured game list.
+{% endcomment %}
+{% assign game_id = 266 %}
+
+{{content_blocks.${get-falkor-game-by-id}}}
+
+{% assign game_cta = {{wb_config_waybetter_app_branch_url | append: '/game_view' }} %}
+
+{% assign hero_image_url_parts = game.image.secure_url | split: '/'%}
+{% assign hero_image_display_width = 200 %}
+{% assign hero_image_pixel_width = hero_image_display_width | times: 2 %}
+{% assign hero_image_cloudinary_params = 'c_scale,f_auto,q_auto,w_IMAGE_DIMENSION,h_IMAGE_DIMENSION' | replace: 'IMAGE_DIMENSION', hero_image_pixel_width %}
+{% assign header_hero_image_url = game.image.secure_url | replace: hero_image_url_parts[6], hero_image_cloudinary_params  %}
+{% assign header_hero_image_link_url = game_cta %}
+
+{% if ${first_name} %}
+  {% assign congrats_suffix = ${first_name} | prepend: ', ' | append: '.' %}
+{% else %}
+  {% assign congrats_suffix = "." %}
+{% endif %}
+
+{{content_blocks.${email-design-3-all-pre-content}}}
+
+<h1 class="wbHeading1">Welcome to {{game.title}}!</h1>
+
+<p class="wbNormalTextCentered wbSubHeading1">
+  Congrats{{congrats_suffix}} You’re one step closer to living WayBetter. We’ve included the details for your upcoming game below so you can have them handy. Good luck!
+  <br/><br/>
+  Why not make the most out of your membership and join another? Here’s one we think you’ll enjoy:
+</p>
+
+<div class="wbGameListRow">
+  {{content_blocks.${waybetter-game-list-1}}}
+</div>
+
+{% comment %}
+ When debugging, be sure to also re-set the game_id here, prior to the game rules,
+ as the game list content block overrides it.
+{% endcomment %}
+{% assign game_id = 266 %}
+
+<h2 class="wbSubHeading1">{{game.title}}</h2>
+
+{{content_blocks.${waybetter-game-rules-1}}}
+
+<p class="wbNormalTextCentered wbSubHeading2">
+  Make sure you have the WayBetter app installed, then drop a line in the comments and say hi to your fellow players.
+</p>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer wbButtonContainer">
+  <tbody>
+    <tr>
+      <td class="mcnButtonContent wbButtonContent buttonWidthLarge" valign="middle">
+        <a class="mcnButton wbButton" href="{{game_cta}}" target="_self" title="">Go to the game dashboard</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% assign hide_unsubscribe = true %}
+{{content_blocks.${email-design-1-all-post-content}}}

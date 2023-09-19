@@ -1,0 +1,31 @@
+<% include partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>CG Page</h1>
+            <p> CG tagline</p>
+            <p><a href="/campgrounds/new" class="btn btn-danger">Add CG</a></p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row" style="display: flex; flex-wrap: wrap;">
+            <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top" src="<%= campground.image %>">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= campground.name %></h5>
+                        <p class="card-text">Descriptive</p>
+                        <a href="#" class="btn btn-danger">Button Stuff</a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <a href="/">Go to LP</a>
+
+</div>
+<% include partials/footer %>

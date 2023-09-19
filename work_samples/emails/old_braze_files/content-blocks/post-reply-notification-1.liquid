@@ -1,0 +1,26 @@
+{{content_blocks.${config-vars-1}}}
+
+{% unless wb_config_connected_content_user_url or user_service_url %}
+  {% abort_message("post-reply-notification-1: wb_config_connected_content_user_url is missing and user_service_url is not set") %}
+{% endunless %}
+
+{% case event_properties.response_kind %}
+  {% when "like" %}
+    {% assign reaction_label = "likes your post" %}
+  {% when "inspired" %}
+    {% assign reaction_label = "is inspired by your post" %}
+  {% when "onfire" %}
+    {% assign reaction_label = "says you're on fire" %}
+  {% when "lovethis" %}
+    {% assign reaction_label = "loves your post" %}
+  {% when "same" %}
+    {% assign reaction_label = "feels the same" %}
+  {% else %}
+    {% assign reaction_label = "replied to your post" %}
+{% endcase %}
+
+{% connected_content {{user_service_url | default: wb_config_connected_content_user_url}}/{{event_properties.${response_user_id}}} :save response_user :cache 3600 %}
+{% comment %}
+Keep a very close note on spacing below!
+{% endcomment %}
+{{response_user.displayName | default: "Someone" }} {{reaction_label | default: "responded to your post"}}

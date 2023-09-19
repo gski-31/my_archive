@@ -1,0 +1,81 @@
+{% unless game_id %}
+  {% abort_message("waybetter-game-list-item: missing game_id") %}
+{% endunless %}
+
+{% assign waybetter_list_item_product = "falkor" %}
+
+{{content_blocks.${get-falkor-game-by-id}}}
+
+{{content_blocks.${config-vars-1}}}
+
+{% comment %}
+{% assign game_url = "HUB_URL/games/" | replace: "HUB_URL", wb_config_hub_url | append: game_id %}
+{% endcomment %}
+
+
+{% unless game_url %}
+  {% assign game_url = "BRANCH_URL/game_profile?gameId=" | replace: "BRANCH_URL", wb_config_waybetter_app_branch_url | append: game_id %}
+{% endunless %}
+
+
+
+
+{% assign image_display_edge_length = 50 %}
+{% assign image_edge_length = image_display_edge_length | times: 2 %}
+{% assign game_image_url = "https://res.cloudinary.com/CLOUDINARY_CLOUD_NAME/image/upload/c_scale,f_auto,h_EDGELENGTH,q_auto,w_EDGELENGTH/PUBLIC_ID" | replace: "EDGELENGTH", image_edge_length | replace: 'CLOUDINARY_CLOUD_NAME', wb_config_cloudinary_cloud_name | replace: 'PRODUCT', waybetter_list_item_product | replace: 'PUBLIC_ID', game.image.public_id %}
+
+<table border="0" class="wbGameListOuterContainer" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td align="center" class="wbGameListOuterContainerCell" valign="top">
+
+        <table class="wbGameListContainer" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td align="left" class="wbGameListItemImageContainer" valign="top">
+                <a href="{{game_url}}">
+                  <img alt="" class="wbImageRoundedCorners wbGameListItemImage" src="{{game_image_url}}" />
+                </a>
+              </td>
+              <td align="center" class="wbGameListHeader" valign="top">
+                <p class="wbGameListItemText">
+                  <span class="wbGameListItemTitle">
+                    <a href="{{game_url}}">{{game.title}}</a>
+                  </span>
+                </p>
+
+                <p class="wbGameListItemText">
+                    <span class="wbGameListItemDates">{{game.start_date | date: "%b %e"}}
+                      -
+                    {{game.end_date | date: "%b %e"}}
+                    </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" valign="top">
+                <p class="wbGameListItemText">
+                  <span class="wbGameListItemDescription">{{game.description}}</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer wbButtonContainer wbGameListItemButtonContainer">
+                  <tbody>
+                    <tr>
+                      <td class="mcnButtonContent wbButtonContent wbGameListItemButtonContent buttonWidthLarge" valign="middle">
+                        <a class="mcnButton wbButton" href="{{game_url}}" target="_self" title="">Join Now</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>

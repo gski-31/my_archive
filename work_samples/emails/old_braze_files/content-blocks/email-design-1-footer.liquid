@@ -1,0 +1,83 @@
+<!-- email-design-1-footer - start -->
+<tr>
+    <td align="center" id="templateFooter" valign="top">
+        <table align="left" border="0" cellpadding="0" cellspacing="0" class="mcnTextContentContainer" style="max-width:100%; min-width:100%;" width="100%">
+            <tbody>
+                <tr>
+                    <td class="mcnTextContent wbFooter" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" class="mcnDividerBlock" style="min-width:100%;" width="100%">
+                            <tbody class="mcnDividerBlockOuter">
+                                <tr>
+                                    <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="mcnDividerContent" style="min-width: 100%;border-top: 1px solid #DDDDE2;" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p align="center">
+                            <p class="wbSocialMediaIcons">
+                                {% if facebook_page_url %}
+                                    <a href="{{facebook_page_url}}" target="_blank"><img data-file-id="9513" height="35" src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/b26dd39d-934e-456d-adb5-87c61199fef8.png" style="border: 0px; width: 35px; height: 35px; margin: 0px;" width="35" /></a>
+                                {% endif %}
+                                {% if instagram_page_url %}
+                                    <a href="{{instagram_page_url}}" target="_blank"><img data-file-id="9517" height="35" src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/374bb897-c6c6-4a86-a342-1e07071cb4bf.png" style="border: 0px; width: 35px; height: 35px; margin: 0px;" width="35" /></a>
+                                {% endif %}
+                            </p>
+                            {% if faq_url %}
+                                Questions? Read the
+                                <a href="{{faq_url}}" target="_blank"><strong>{{product_name}} FAQ</strong></a><br />
+                            {% endif %}
+                            Got an idea for a game? Tell us! <a href="mailto:suggestions@waybetter.com" target="_blank"><strong>suggestions@waybetter.com</strong></a><br />
+                            {% if facebook_group_url %}
+                                Visit the<strong>
+                                    <a href="{{facebook_group_url}}" target="_blank">Official {{product_name}} Players Facebook group</a>
+                                </strong>
+                            {% endif %}
+                        </p>
+
+                        <div style="text-align: center;"><br />
+                            This email was sent to
+                            <span class="wbFooterEmail">{{${email_address}}}</span>
+                            from WayBetter, Inc.<br />
+                            WayBetter, Inc. 4023 Kennett Pike Suite 500 Wilmington, DE 19807<br />
+                            {% if unsubscribe_url %}
+                                {% unless hide_unsubscribe %}
+                                    <br />
+                                    Want to change how you receive these emails?<br />
+                                    You can
+                                    <a email-subscriptions.waybetter.com="" href="{{unsubscribe_url}}{{${user_id}}}">unsubscribe</a>
+                                    <span style="font-size:Default Size">
+                                        <span style="color:A1ACB3">from this list</span>.</span><br />
+                                {% endunless %}
+                            {% endif %}
+                            {% if email_received_reason_phrase %}
+                                <br />
+                                {{email_received_reason_phrase}}
+                                <br />
+                            {% endif %}
+                            <br />
+                            {% if product_name_internal != 'waybetter' %}
+                              {% if product_name_internal != 'waybetterapp' %}
+                                {{product_name}} is made by<br />
+                              {% endif %}
+                            {% endif %}
+                            <img data-file-id="9521" height="25" src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/98933a7c-31b6-4917-aec6-294c3ee587b7.png" style="border: 0px  ; width: 137px; height: 25px; margin: 10px 5px 5px;" width="137" />
+                            <br />
+                            ©
+                            {{current year}}
+                            WayBetter, All rights reserved.
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<!-- email-design-1-footer - end -->

@@ -1,0 +1,67 @@
+{% comment %}
+
+Sample event:
+  {
+    "messageId": "ap-test-message-z5wbv9",
+    "timestamp": "2020-07-10T14:10:28.513Z",
+    "event": "Falkor Non-Qualifying Activity Received",
+    "type": "track",
+    "properties": {
+      "game_id": 411,
+      "metric_average_heart_rate": 147,
+      "metric_distance": 859.961,
+      "metric_distance_unit": "meters",
+      "metric_duration": 617,
+      "metric_occurred_at_start": "2020-07-10 09:08:37",
+      "metric_steps": 1069,
+      "metric_type": "workout",
+      "product": "waybetter",
+      "rejection_reason_codes": "round_activities_completed|duration_too_low",
+      "rejection_reason_messages": "All activities for round have been completed. Activity not long enough.", 
+      "title": "Sedentary Bet v.6",
+      "token": "<not used>"
+    },
+    "userId": "1000009253"
+  }
+
+Sample input (use in body where this would be included, to test):
+
+  {% assign activity_date = "2020-07-10 09:08:37" %}
+  {% assign game_name = "Sedentary Bet v.6" %}
+  {% assign activity_type = "workout" %}
+
+{% endcomment %}
+
+
+{% comment %} 
+get variables from event_properties if not otherwise set already
+{% endcomment %}
+
+{% unless activity_date %}
+  {% assign activity_date = event_properties.${metric_occurred_at_start} %}
+{% endunless %}
+{% unless game_name %}
+  {% assign game_name = event_properties.${title} %}
+{% endunless %}
+{% unless activity_type %}
+  {% assign activity_type = event_properties.${metric_type} %}
+{% endunless %}
+
+
+{% comment %}
+sanity check
+{% endcomment %}
+
+{% unless activity_type == 'workout' %}
+  {% abort_message('metric is not a cardio/workout type metric') %}
+{% endunless %}
+
+
+{% comment %} 
+reformat variables
+{% endcomment %}
+
+{% assign activity_date = activity_date | date: "%b %d" %}
+
+
+{{activity_date}} Activity - {{game_name}}

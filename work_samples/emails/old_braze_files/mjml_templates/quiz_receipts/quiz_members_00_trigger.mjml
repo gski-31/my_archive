@@ -1,0 +1,169 @@
+<mjml>
+
+<mj-head>
+<mj-title>Your WayBetter trial has started</mj-title>
+
+<mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+<mj-attributes>
+<mj-all padding="0px" font-family="Roboto, Arial, sans-serif;" />
+<mj-image href="https://waybetter.com/" />
+<mj-button 
+background-color="#ff6a5b" 
+inner-padding="12px 24px" 
+border-radius="24px" 
+href="https://app.waybetter.com/3CvhEaIHZib"/>
+
+<mj-class name="footer_text" font-size="12px" align="center" letter-spacing="0.3px;" line-height="18px" color="gray" font-family="Roboto, Arial, sans-serif" />
+
+</mj-attributes>
+
+<mj-style>
+/* *** IMPORT AVERTA FONT FOR TITLES *** */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Regular.woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Semibold.woff');
+font-weight: 600;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Bold.woff');
+font-weight:
+bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-ExtraBold.woff');
+font-weight: 900;
+font-style: normal;
+}
+
+
+/* *** STANDARD DESKTOP FONT SIZES *** */
+
+*{
+font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+.body_text {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 14px;
+color: #000000;
+letter-spacing: 0;
+line-height: 20px;
+}
+
+.header_text {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 36px;
+color: #000000;
+letter-spacing: 0;
+line-height: 42px;
+font-weight: bold;
+text-align: center;
+}
+
+.button_text{
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 14px;
+line-height: 20px;
+color: #ffffff;
+letter-spacing: 0;
+text-align: center;
+}
+
+/* *** MEDIA QUERIES FOR MOBILE FONT SIZES *** */
+
+@media (max-width:480px) {
+.body_text {
+font-size: 16px;
+line-height: 21px;
+}
+
+.header_text {
+font-size: 30px;
+line-height: 36px;
+}
+
+.button_text{
+font-size: 16px;
+line-height: 21px;
+}
+
+}
+</mj-style>
+
+<mj-style inline="inline">
+*{
+font-family: 'Roboto', Arial, sans-serif !important;
+}
+</mj-style>
+
+</mj-head>
+
+<mj-body background-color="#eee">
+
+<mj-wrapper background-color="white">
+
+
+<mj-section>
+<mj-column>
+<mj-spacer height="40px" />
+<mj-image src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60a84d92bec83924ae241e63/original.png?1621642642" width="200px" />
+</mj-column>
+</mj-section>
+</mj-wrapper>
+
+<mj-wrapper background-color="white" padding="40px">
+<mj-section>
+<mj-column>
+<mj-text>
+<p class="body_text">Congrats, {{custom_attribute.${first_name}}}. You&rsquo;re now part of an awesome community getting fit the fun&nbsp;way. </p>
+<p class="body_text">As a new member, you&rsquo;ll receive $30 in chips to play with in your personalized weight loss experience. Intrigued? Download the app to learn more! Chips will be distributed to new members within the first 7&nbsp;days. </p>
+</mj-text>
+
+<mj-spacer height="20px" />
+
+<mj-button>
+<span class="button_text">Download the app</span>
+</mj-button>
+
+<mj-spacer height="20px" />
+
+<mj-text>
+<p class="body_text"><strong>Trial details:</strong></p>
+
+<p class="body_text">Your 7 day trial will end on {{ "now" | date: "%s" | plus: 604800 | date: "%b %d, %Y" }} and your card on file will be charged $129.99. </p>
+
+<p class="body_text">Trial members can cancel at any time by sending a cancel request to <a href="mailto:support@waybetter.com">support@waybetter.com</a>. Please email us before your trial ends to avoid getting&nbsp;charged.</p>
+
+<p class="body_text"><strong>Please Note:</strong> If you started your trial through the Apple App Store, you’ll need to cancel your trial through Apple. You can find this in your <strong><em>Account Settings</em></strong> under <strong><em>Subscriptions</em></strong>. </p>
+</p>
+</mj-text>
+</mj-column>
+</mj-section>
+</mj-wrapper>
+
+<!-- ------- BEGIN_FOOTER ------- -->
+<mj-include path="../includes/footer.mjml" />
+<!-- ------- END_FOOTER ------- -->
+
+</mj-body>
+</mjml>

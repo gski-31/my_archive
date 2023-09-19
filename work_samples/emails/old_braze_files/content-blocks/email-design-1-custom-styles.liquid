@@ -1,0 +1,234 @@
+<!-- email-design-1-custom-styles - start -->
+<style type="text/css">
+    .wbContent {
+        padding: 2.5rem;
+    }
+    @media only screen and (max-width: 480px) {
+        .wbContent {
+            padding: 1rem;
+        }
+    }
+
+    .wbHeaderLogoImage {
+        max-height: 40px;
+    }
+
+    .wbHeaderLogoImageContent {
+        text-align: center;
+        padding: 9px 0 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    /* hacks to remove spacing under images  in Gmail mobile */
+    a.wbLinkableHeaderImage {
+        display: block;
+        font-size:2px;
+    }
+
+    .wbImageRoundedCorners  {
+        display: block;
+        object-fit: cover;
+        overflow: hidden;
+        border-width: 2px;
+        border-radius: 8px;
+
+        padding-bottom: 0;
+        display: inline !important;
+        vertical-align: bottom;
+        margin-top: 2em;
+        max-width:1024px;
+    }
+
+    .wbHeaderImage {
+        width: 175px;
+        height: 175px;
+    }
+
+    .wbBodyFrame {
+        width: 100%;
+    }
+
+    #wbBodyFrameCell {
+        background-color: {{email_body_frame_background_color}};
+    }
+
+    .wbBodyTable {
+        /* override #bodyTable, which has precedence */
+        max-width: 600px !important;
+    }
+
+    #bodyCell {
+        background-color: white !important;
+    }
+
+    @media only screen and (min-width:768px) {
+        .wbBodyTable {
+            width: 600px !important;
+        }
+    }
+
+    .wbButtonContainer {
+        margin-bottom: 3rem;
+        border-collapse: separate !important;
+        border-radius: 50px;
+        width: 275px;
+        background-color: {{theme_primary_color}};
+    }
+
+    .wbButtonContainer a,
+    .wbButtonContainer a:link,
+    .wbButtonContainer a:hover,
+    .wbButtonContainer a:visited {
+        color: white;
+    }
+
+    .wbButtonContainerWbGreen {
+        background-color: #3ABE8D;
+    }
+
+    .wbButtonContainerWbCoral {
+        background-color: #E34F4B;
+    }
+
+    .wbButtonContainerMembership {
+        background-color: #FE9968;
+    }
+
+    .wbButtonContainerInverted {
+        background-color: white;
+        border: 2px solid {{theme_primary_color}};
+        color: {{theme_primary_color}} !important;
+    }
+
+     .wbButtonContainerWbGreenInverted {
+        color: #3ABE8D;
+        background-color: white;
+        border: 2px solid #3ABE8D !important;
+    }
+
+     .wbButtonContainerWbCoralInverted {
+        color: #E34F4B;
+        background-color: white;
+        border: 2px solid #E34F4B!important;
+    }
+
+    .wbButton {
+        font-size: 15px;
+    }
+
+    .wbButtonContent {
+        font-family: Helvetica;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .wbButton {
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 100%;
+        text-align: center;
+        text-decoration: none !important;
+        color: white !important;
+    }
+
+    .wbButtonInverted {
+        color: {{theme_primary_color}}!important;
+    }
+
+    p.wbNormalText,
+    p.wbNormalTextCentered {
+        font-size: 16px;
+        line-height: 1.3;
+        letter-spacing: 0.3px;
+    }
+
+    p.wbNormalTextCentered {
+        text-align: center !important;
+    }
+
+    p#wbTeamSupportLink {
+        margin-top: 5rem;
+        text-align: center !important;
+        font-size: 16px;
+        line-height: 1.3;
+        letter-spacing: 0.3px;
+    }
+    p#wbTeamSupportLink a {
+        color: {{theme_primary_color}}!important;
+    }
+
+    .wbSocialMediaIcons,
+    .wbFooter {
+        color: #696969;
+        padding-bottom: 18px;
+    }
+    .wbSocialMediaIcons {
+        margin-bottom: 9px;
+    }
+
+    table#wbMultipleImageHeaderBlockOuter,
+    table#wbMultipleImageHeaderBlockInner {
+        min-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    table#wbMultipleImageHeaderBlockInner td {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+    }
+
+    table#wbMultipleImageHeaderBlockInner img {
+        width: 600px;
+        border: 0;
+    }
+
+    .wbThemeColor {
+        color: {{theme_primary_color}}!important;
+    }
+
+    .wbMembershipColor {
+        color: #FE9968 !important;
+    }
+
+    .wbGreen {
+        color: #3ABE8D !important;
+    }
+
+    .wbCoral {
+        color: #E34F4B !important;
+    }
+
+    table#wbFeaturedGamesContainer {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    table#wbFeaturedGamesContainer h1 {
+        text-align: center;
+        padding: 9px;
+        font-size: 21px;
+        margin-bottom: 0.6em;
+    }
+
+    /*
+       complement to mcnCaptionRightTextContentContainer -> mcnTextContent
+    */
+    @media only screen and (max-width: 480px) {
+        .wbCaptionRightTextContent {
+            padding-left: 0 !important;
+        }
+    }
+
+</style>
+
+<!-- email-design-1-custom-styles - end -->

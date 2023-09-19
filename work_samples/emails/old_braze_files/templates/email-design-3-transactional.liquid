@@ -1,0 +1,64 @@
+{% assign theme = 'stepbet' %}
+{% assign header_hero_image_url = 'https://appboy-images.com/appboy/communication/assets/image_assets/images/5bd0ead418bc0a3f46295790/original.jpg?1540418260' %}
+{% assign header_hero_image_link_url = '' %}
+
+{% comment %}
+Whether a unsubscribe link is shown in the footer is dependent on two things:  1) 
+the "theme" value used: "waybetter" does not have an unsubscribe link, so no
+"unsubscribe" is shown in the footer. However, the other games do have unsubscribe
+links. If you wish to omit the unsubscribe link despite a theme having a unsubscribe_url,
+then you can set hide_unsubscribe to true.
+{% endcomment %}
+{% assign hide_unsubscribe = false %}
+
+{{content_blocks.${email-design-1-all-pre-content}}}
+
+
+<h1 style="text-align: center;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+</h1>
+
+<p class="wbNormalTextCentered">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+<br/>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer wbButtonContainer">
+    <tbody>
+        <tr>
+            <td class="mcnButtonContent wbButtonContent" valign="middle">
+                <a class="mcnButton wbButton" href="https://waybetter.com/runbet/games" target="_self" title="">Play</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Game name or subhead</h2>
+
+<p class="wbNormalTextCentered">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+<br/>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer wbButtonContainer wbButtonContainerInverted">
+    <tbody>
+        <tr>
+            <td class="mcnButtonContent wbButtonContent" valign="middle">
+                <a class="mcnButton wbButton wbButtonInverted" href="https://waybetter.com/runbet/games" target="_self" title="">Inverted Theme Button</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{{content_blocks.${email-design-1-featured-games-header}}}
+
+{% assign game_id = 133341 %}
+{{content_blocks.${dietbet-game-list-item}}}
+{% assign game_id = 133343 %}
+{{content_blocks.${dietbet-game-list-item}}}
+{% assign game_id = 133880 %}
+{{content_blocks.${dietbet-game-list-item}}}
+
+{{content_blocks.${email-design-1-team-link}}}
+
+{{content_blocks.${email-design-1-all-post-content}}}

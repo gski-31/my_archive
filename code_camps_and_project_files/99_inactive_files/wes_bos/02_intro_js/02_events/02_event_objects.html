@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>event objects</title>
+</head>
+
+<body>
+    <button class="mybutton">Click Me 1</button>
+    <button class="mybutton">Click Me 2</button>
+    <button class="mybutton">Click Me 3</button>
+    <button class="mybutton">Click Me 4</button>
+    <button class="mybutton">Click Me 5</button>
+    <button class="mybutton">Click Me 6</button>
+    <button class="mybutton">Click Me 7</button>
+    <button class="mybutton">Click Me 8</button>
+    <button class="mybutton">Click Me 9</button>
+    <button class="mybutton">Click Me 10</button>
+
+    <script>
+        // • GET ALL THE BUTTONS
+        // • LOOP OVER THEM WITH EVENT LISTENER AND GIVE A FUNCTION
+        // • CREATE FUNCTION FOR THEM WITH CURRENT TARGET
+        const myButtons = document.querySelectorAll('.mybutton');
+
+        // function shoutBingo() {
+        //     alert('BINGO!');
+        // }
+
+        function shoutBingo(e) {
+            const theInfo = e.currentTarget;
+            console.log(theInfo);
+        }
+
+        myButtons.forEach(e => {
+            e.addEventListener('click', shoutBingo);
+        });
+    </script>
+</body>
+
+</html>

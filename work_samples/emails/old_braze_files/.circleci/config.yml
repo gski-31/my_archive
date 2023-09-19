@@ -1,0 +1,87 @@
+---
+version: 2
+
+references:
+  container_config: &container_config
+    docker:
+      - image: circleci/node:erbium
+    working_directory: ~/repo
+
+  dependencies_cache_key: &dependencies_cache_key
+    v1-npm-cache-{{ checksum "package-lock.json" }}
+
+  restore_dependencies: &restore_dependencies
+    restore_cache:
+      key: *dependencies_cache_key
+  save_dependencies: &save_dependencies
+    save_cache:
+      key: *dependencies_cache_key
+      paths:
+        - node_modules
+
+  restore_repo: &restore_repo
+    restore_cache:
+      key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+  save_repo: &save_repo
+    save_cache:
+      key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      paths:
+        - ~/repo
+
+  setup_npm: &setup_npm
+    run:
+      name: Setting private WayBetter npm registry...
+      command: |
+        npm config set @waybetter:registry=https://npm.fury.io/waybetter/
+        npm config set //npm.fury.io/waybetter/:_authToken=$GEMFURY_SECRET
+
+  teardown_npm: &teardown_npm
+    run:
+          name: Removing Gemfury configuration secrets...
+          command: npm logout --scope @waybetter --registry=https://npm.fury.io/waybetter/
+
+jobs:
+    checkout:
+      <<: *container_config
+      steps:
+        - *restore_repo
+        - checkout
+        - *save_repo
+
+    install_dependencies:
+      <<: *container_config
+      steps:
+        - *restore_repo
+        - *restore_dependencies
+        - *setup_npm
+        - run:
+            name: Installing dependencies...
+            command: npm install --no-save
+        - *teardown_npm
+        - *save_dependencies
+
+    test:
+      <<: *container_config
+      steps:
+        - *restore_repo
+        - *restore_dependencies
+
+        - run:
+            name: Running linter...
+            command: npm run lint
+        - run:
+            name: Running tests...
+            command: npm test -- --runInBand
+
+workflows:
+    version: 2
+    test:
+      jobs:
+        - checkout
+        - install_dependencies:
+            context: convox-deploy
+            requires:
+              - checkout
+        - test:
+            requires:
+              - install_dependencies

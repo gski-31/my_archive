@@ -1,0 +1,23 @@
+.container > .navbar-collapse {
+    margin-left: 0 !important;
+}
+.nav {
+    padding-left: 0 !important;
+}
+#li-home > a {
+	padding-left: 0px;
+}
+@media (min-width: 768px) {
+    .navbar-collapse.collapse {
+        display: inline-block !important;
+    }
+    .nav{
+    	margin-left: unset !important;
+    }    
+}
+
+@media (max-width: 768px) {
+    #li-home > a {
+    	padding-left: 15px;
+    }
+}

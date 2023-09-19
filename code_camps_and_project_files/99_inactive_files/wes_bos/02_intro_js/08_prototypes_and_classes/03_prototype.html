@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protoypes</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function Pizza(toppings = [], customer) {
+            console.log('Making a pizza');
+            this.toppings = toppings;
+            this.customer = customer;
+            this.id = Math.floor(Math.random() * 16777215).toString(16);
+            this.slices = 10;
+            // embedded function included on EVERY created instance
+            // this.eat = function () {
+            //     if (this.slices > 0) {
+            //         this.slices -= 1;
+            //     } else {
+            //         console.log('outta luck');
+            //     }
+            // };
+        }
+
+        // make embedded function a PROTOTYPE
+        // same as the meat of embedded function above
+        Pizza.prototype.eat = function () {
+            if (this.slices > 0) {
+                this.slices -= 1;
+            } else {
+                console.log('outta luck');
+            }
+        };
+
+        // can add to all instances after as well // works on non existent properties only
+        Pizza.prototype.size = 'Large';
+
+        // prototype searches instance first then searches "mama"
+
+        // try adding describe function
+        Pizza.prototype.describe = function () {
+            return `this pizza has ${this.toppings.join(', ')}, and is for ${this.customer} with ${this.slices} slices `;
+        };
+
+        const myPizza = new Pizza(['pep', 'shrooms'], 'Ty');
+        const yourPizza = new Pizza(['ban pep', 'shrooms'], 'Cobb');
+        console.log(myPizza, yourPizza);
+
+        // example of adding a prototype // built-in don't do // example
+        String.prototype.toUpperCase = function () {
+            return 'NOPE!!!!';
+        };
+        const me = 'meeeeeeeeeeeee';
+        console.log(me.toUpperCase()); // NOPE!!!!
+    </script>
+</body>
+
+</html>

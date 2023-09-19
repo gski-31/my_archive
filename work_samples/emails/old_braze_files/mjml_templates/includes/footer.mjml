@@ -1,0 +1,42 @@
+<mj-wrapper>
+<mj-section padding="35px">
+<mj-column>
+
+<mj-social icon-size="36px" mode="horizontal" inner-padding="4px" padding-bottom="12px">
+
+<mj-social-element name="facebook" href="{{wb_facebook_page_url}}" target="_blank"
+src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/b26dd39d-934e-456d-adb5-87c61199fef8.png"
+background-color="transparent">
+
+</mj-social-element>
+<mj-social-element name="instagram" href="{{wb_instagram_page_url}}" target="_blank"
+src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/374bb897-c6c6-4a86-a342-1e07071cb4bf.png"
+background-color="transparent">
+</mj-social-element>
+
+</mj-social>
+
+<mj-text mj-class="footer_text">
+Questions? We&rsquo;re here to help!&nbsp;<a
+href="mailto:support@waybetter.com?subject=Support">support@waybetter.com</a><br />
+Got&nbsp;an&nbsp;idea&nbsp;for&nbsp;a&nbsp;game? Tell&nbsp;us!&nbsp;<a
+href="mailto:suggestions@waybetter.com?subject=Suggestion">suggestions@waybetter.com</a>
+<br>&nbsp;<br>
+This email was sent from WayBetter,&nbsp;Inc.<br />
+4023 Kennett Pike Suite 500 Wilmington,&nbsp;DE&nbsp;19807
+<br>&nbsp;<br>
+Want to change how you receive these&nbsp;emails?<br />
+You can <a href="{{wb_unsubscribe_url}}{{${user_id}}}">unsubscribe</a> from this&nbsp;list.
+</mj-text>
+
+<mj-image
+src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/98933a7c-31b6-4917-aec6-294c3ee587b7.png"
+padding="20px" width="140px" />
+
+<mj-text mj-class="footer_text">
+&copy; {{ "now" | date: "%Y" }}  WayBetter, All rights reserved.
+</mj-text>
+</mj-column>
+</mj-section>
+
+</mj-wrapper>

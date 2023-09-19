@@ -1,0 +1,165 @@
+<mjml>
+
+<mj-head>
+<mj-title>Let’s create your game plan </mj-title>
+<mj-preview>Get a customized weight loss plan made just for you </mj-preview>
+
+<mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+<mj-attributes>
+<mj-all padding="0px" font-family="Roboto, Arial, sans-serif;" />
+<mj-image 
+href="https://waybetter.com/" />
+<mj-button 
+background-color="#ff6a5b" 
+inner-padding="12px 24px" 
+href="https://waybetter.com/" 
+border-radius="24px" />
+
+<mj-class name="footer_text" font-size="12px" align="center" letter-spacing="0.3px;" line-height="18px" color="gray" font-family="Roboto, Arial, sans-serif" />
+
+</mj-attributes>
+
+<mj-style>
+/* *** IMPORT AVERTA FONT FOR TITLES *** */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Regular.woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Semibold.woff');
+font-weight: 600;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Bold.woff');
+font-weight:
+bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Averta';
+src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-ExtraBold.woff');
+font-weight: 900;
+font-style: normal;
+}
+
+
+/* *** STANDARD DESKTOP FONT SIZES *** */
+
+*{
+font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+.body_text {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 14px;
+color: #000000;
+letter-spacing: 0;
+line-height: 20px;
+}
+
+.header_text {
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 36px;
+color: #000000;
+letter-spacing: 0;
+line-height: 42px;
+font-weight: bold;
+text-align: center;
+}
+
+.button_text{
+font-family: 'Roboto', Arial, sans-serif;
+font-size: 14px;
+line-height: 21px;
+color: #ffffff;
+letter-spacing: 0;
+text-align: center;
+}
+
+/* *** MEDIA QUERIES FOR MOBILE FONT SIZES *** */
+
+@media (max-width:480px) {
+.body_text {
+font-size: 16px;
+line-height: 21px;
+}
+
+.header_text {
+font-size: 30px;
+line-height: 36px;
+}
+
+.button_text{
+font-size: 16px;
+line-height: 21px;
+}
+
+}
+</mj-style>
+
+<mj-style inline="inline">
+*{
+font-family: 'Roboto', Arial, sans-serif !important;
+}
+</mj-style>
+
+</mj-head>
+
+<mj-body background-color="#eee">
+
+<mj-wrapper background-color="white">
+
+
+<mj-section>
+<mj-column>
+<mj-spacer height="25px" />
+<mj-image src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60a84d92bec83924ae241e63/original.png?1621642642" width="200px" />
+<mj-spacer height="25px" />
+<mj-image src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6130fd122886a41fa711642b/original.jpg?1630600466"  alt="WayBetter makes games that motivate you to change your life." />
+</mj-column>
+</mj-section>
+</mj-wrapper>
+
+<mj-wrapper background-color="white" padding="40px">
+<mj-section>
+<mj-column>
+<mj-text>
+<p class="body_text">Flip the script with the fun way to lose weight. And kickstart your journey with a game plan designed just for&nbsp;you.</p>
+</mj-text>
+
+<mj-spacer height="20px" />
+
+<mj-button>
+<span class="button_text">Start your free trial</span>
+</mj-button>
+
+<mj-spacer height="20px" />
+
+<mj-text>
+<p class="body_text">Thanks for sharing your goals with us, {{custom_attribute.${first_name}}}. Based on what you&rsquo;ve told us so far, we think your goal of {{custom_attribute.${quiz_goal_weight}}} is totally within reach. Let&rsquo;s do&nbsp;this!</p>
+</mj-text>
+</mj-column>
+</mj-section>
+</mj-wrapper>
+
+<!-- ------- BEGIN_FOOTER ------- -->
+<mj-include path="../includes/footer.mjml" />
+<!-- ------- END_FOOTER ------- -->
+
+</mj-body>
+</mjml>

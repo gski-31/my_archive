@@ -1,0 +1,373 @@
+body * {
+	font-family: 'Open Sans', sans-serif;
+	color: #646464;
+
+}
+body {
+	background-color: #f1f1f1;
+}
+
+a, a:hover {
+	text-decoration: underline;
+}
+
+div.spacer {
+	height: 1.5em;
+}
+.margin-0 {
+	margin: 0;
+}
+
+.congratuliations {
+    background: url("../images/congratuliations.png");
+    height: 276px;
+    max-width: 800px;
+	background-repeat: no-repeat;
+	background-position:center; 
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	padding-top: 11em;
+}
+
+.yourin {
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.7em;
+    color: #000000;
+}
+
+.san-diego{
+background: url("http://mindmovies-images.s3.amazonaws.com/flightclub/FC_161212_step2_SANDIEGO_date.jpg");
+height: 362px;
+max-width: 800px;
+background-repeat: no-repeat;
+background-position:center; 
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+padding-top: 3.85em;
+}
+
+.bg-image {
+background: url("../images/bg.png");
+background-repeat: no-repeat;
+background-attachment:fixed;
+background-position:center; 
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+}
+
+.top {
+background-color: #94a2b5;
+}
+
+
+.container{
+max-width: 800px;
+text-align:center;
+vertical-align: middle;
+}
+
+.container-content{
+max-width: 800px;
+text-align:center;
+vertical-align: middle;
+border-left: 2px solid #e2e2e2;
+border-right: 2px solid #e2e2e2;
+/*border-bottom: 2px solid #e2e2e2;*/
+background-color: #fff;
+/*margin-bottom: 60px;*/
+}
+
+.pg1.container-fluid {
+	background-color: #fff;
+}
+
+.pg1 .container-content{
+max-width: 800px;
+text-align:center;
+vertical-align: middle;
+border-left: 0px solid #e2e2e2;
+border-right: 0px solid #e2e2e2;
+/*border-bottom: 2px solid #e2e2e2;*/
+background-color: #fff;
+/*margin-bottom: 60px;*/
+}
+
+.pg2 .container-content{
+border-bottom: 2px solid #e2e2e2;
+margin-bottom: 60px;
+}
+
+p {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box {
+	margin: 2em auto;
+}
+
+h1{
+font-weight: 800;
+text-transform: uppercase;
+font-size: 2em;
+}
+
+h2{
+font-weight: 800;
+text-transform: uppercase;
+font-size: 1.75em;
+}
+
+.text-white {
+	color: #fff;
+}
+.text-blue{
+color: #6790bc;
+}
+
+.code{
+margin-top: 30px;
+max-width: 350px;
+max-height: 80px;
+width: 100%;
+background-color: #fff;
+color: #94a2b5;
+font-weight: bold;
+text-align:left;
+font-size: 3em;
+letter-spacing:0.6em;
+padding-left: 0.7em;
+padding-right: 0px;
+font-family: 'Open Sans', sans-serif;
+border: 4px solid #ffffff;
+display: block;
+margin: 5px auto;
+}
+
+
+.pg2 input[type=text], .pg2 input[type=email] {
+margin-top: 5px;
+max-width: 250px;
+max-height: 35px;
+background-color: #fff;
+color: #6790bc;
+font-weight: none;
+text-align:left;
+vertical-align: baseline;
+font-size: 1em;
+letter-spacing:2px;
+padding-left: 2px;
+padding-right: 2px;
+}
+
+.submit_button{
+margin-top: 30px;
+width: 141px;
+height: 50px;
+display: block;
+margin: 5px auto;
+}
+.help{
+margin-left: 290px;
+margin-top: 30px;
+}
+
+.button {
+   border-top: 1px solid #50cdae;
+   background: #3f9680;
+   background: -webkit-gradient(linear, left top, left bottom, from(#50cdae), to(#3f9680));
+   background: -webkit-linear-gradient(top, #50cdae, #3f9680);
+   background: -moz-linear-gradient(top, #50cdae, #3f9680);
+   background: -ms-linear-gradient(top, #50cdae, #3f9680);
+   background: -o-linear-gradient(top, #50cdae, #3f9680);
+   padding: 1em 2em;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 1.3em;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   }
+.button:hover {
+   border-top-color: #3f9680;
+   background: #3f9680;
+   color: #ffffff;
+   }
+.button:active {
+   border-top-color: #3f9680;
+   background: #3f9680;
+   }
+
+input:focus:required:invalid {
+  box-shadow: inset 0 0 0 2px #9F96AA;
+}
+/*    inset 0 0 0 8px #94a2b5,*/
+input:required:valid {
+  box-shadow: inset 0 0 0 1px #94a2b5;
+}
+#cover{
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 150;
+background-color: #000000;
+opacity: 0.7;
+-moz-opacity: 0.70;
+filter: alpha(opacity=70);
+background-repeat: repeat;
+}
+
+.errors {
+	margin-top: 10px;
+	max-width: 800px;
+	color: #FF3333;
+	font-weight: none;
+	text-align:center;
+	vertical-align: baseline;
+	font-size: 1em;
+}
+
+#err{
+margin:auto;
+max-width: 450px;
+height: 300px;
+background-color: #ffffff;
+font-family: 'Open Sans', sans-serif;
+color: #94a2b5;
+font-weight: bold;
+border: 2px solid #e2e2e2;
+text-align:center;
+vertical-align: middle;
+z-index: 999;
+}
+#errc{
+display: none;
+position: fixed;
+padding-top: 15%;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 250;
+text-align:center;
+vertical-align: middle;
+z-index: 500;
+}
+
+.admin{
+color: #000000;
+text-decoration: underline;
+}
+
+
+
+/********* others {odd} ************************/
+
+.name{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14pt;
+	text-align: center;
+}
+.where{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 8pt;
+	font-style:italic;
+	text-align: center;
+}
+.comments p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10pt;
+	text-align: left;
+	margin:0;
+	padding:0;
+	line-height:26px;
+}
+
+div.comments {
+	padding: 20px;
+	text-align: left;
+	line-height:120%;
+	border-radius: 5px;
+	/*overflow: hidden;*/
+	position: relative;
+	background: #eeeeee;
+}
+
+
+div.comments:after{
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(238, 238, 238, 0);
+	border-right-color: #eeeeee;
+	border-width: 13px;
+	margin-top: -13px;
+
+}
+
+div[class*="pull"] div.comments:after{
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(238, 238, 238, 0);
+	border-left-color: #eeeeee;
+	border-width: 13px;
+	margin-top: -13px;
+
+}
+
+.freebirdFormviewerViewFormBanner {
+    height: 100px !important;
+}
+
+.freebirdHeaderMast {
+    background-color: #fff !important;
+}
+
+
+@media (max-width: 768px) {
+	div.comments:after {
+		display: none;
+	}
+	.san-diego{
+	background: none;
+	height: auto;
+	background-color: #6790bc;
+	padding-top: 0.85em;
+	}
+	.congratuliations {
+	    background: none;
+	    background-color: #ffbb28;
+	    height: auto;
+	    padding: 1em;
+	}
+}
+

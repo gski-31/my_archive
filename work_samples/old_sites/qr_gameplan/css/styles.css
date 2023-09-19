@@ -1,0 +1,511 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html {margin:0; padding:0; border:0;}
+
+/****************************************************************************/
+/* Styles For All Sites
+/****************************************************************************/
+
+/* Anchor Links In The Body Of All Pages */
+.bdyAs:link
+{
+	color:#009;
+}
+
+.bdyAs:visited
+{
+	color:#009;
+}
+
+.bdyAs:hover
+{
+	color: #AF282F;
+}
+
+
+
+/****************************************************************************/
+/* PC System Styles
+/****************************************************************************/
+
+/* Body Content Text */
+/* ----------------- */
+.bdyTxt
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:small;
+/*	font-weight:bold; */
+	color:#666;
+}
+
+/* Main Menu Navigation Links */
+/* -------------------------- */
+.nav
+{
+	font-family:verdana; 
+	font-size:16px;
+	font-weight:bold;
+	color:#FFF;
+	text-decoration:none;
+}
+
+.navSelected
+{
+	font-family:verdana; 
+	font-size:16px;
+	font-weight:bold;
+	color:#F00;
+	text-decoration:none;
+}
+
+.navNA
+{
+	font-family:verdana; 
+	font-size:16px;
+	font-weight:bold;
+	color:#000;
+	text-decoration:none;
+}
+
+.nav:visited
+{
+	color:#FFF;
+	text-decoration:none;
+}
+
+.nav:hover
+{
+	color:#F00;
+	text-decoration:none;
+}
+
+/* News, Press Release, & Stats Links On The Scoreboard Page */
+/* --------------------------------------------------------- */
+.news
+{
+	font-family:verdana; 
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.news:link
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.news:visited
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.news:hover
+{
+	color: #AF282F;
+	text-decoration:none;
+}
+
+/* Forgot Password Link */
+/* -------------------- */
+.fp
+{
+	font-family:verdana; 
+	font-size:17px;
+	font-weight:bolder;
+	color:#009;
+	text-decoration:none;
+}
+
+.fp:link
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.fp:visited
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.fp:hover
+{
+	color: #AF282F;
+	text-decoration:none;
+}
+
+/* Admin Add Links */
+/* -------------------- */
+.add
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:25px;
+	font-weight:bold;
+	color:#009;
+	text-decoration:none;
+}
+
+.add:link
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.add:visited
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.add:hover
+{
+	color: #AF282F;
+	text-decoration:none;
+}
+
+/* Admin Back Links */
+/* -------------------- */
+.admBack
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	color:#009;
+}
+
+.admBack:link
+{
+	color:#009;
+}
+
+.admBack:visited
+{
+	color:#009;
+}
+
+.admBack:hover
+{
+	color: #AF282F;
+}
+
+/* Admin Qsite URLs */
+/* -------------------- */
+.qURL
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#888;
+	text-decoration:none;
+}
+
+.qURL:link
+{
+	color:#888;
+	text-decoration:none;
+}
+
+.qURL:visited
+{
+	color:#888;
+	text-decoration:none;
+}
+
+.qURL:hover
+{
+	color: #AF282F;
+	text-decoration:none;
+}
+
+/* Admin Labels for User Input Controls */
+/* -------------------- */
+.lbl
+{
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:13px;
+	font-weight:bold;
+	color:#999;
+	text-decoration:none;
+	vertical-align:top;
+}
+
+/* Admin Back Links on Public Pages and Change Template Link */
+/* --------------------------------------------------------- */
+.pubAdmLink
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#009;
+	text-decoration:none;
+}
+
+.pubAdmLink:link
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.pubAdmLink:visited
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.pubAdmLink:hover
+{
+	color: #AF282F;
+	text-decoration:none;
+}
+
+/* Admin Venue Price Level Links */
+/* ----------------------------- */
+.vnuLink
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#009;
+	text-decoration:none;
+}
+
+.vnuLink:link
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.vnuLink:visited
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.vnuLink:hover
+{
+	color: #AF282F;
+	text-decoration:none;
+}
+
+/* Admin Profiles Name/Company text boxes */
+/* -------------------------------------- */
+.txtBox
+{
+	background-color:#FFD7DE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this is keeping div tags from having gaps between them (Mobile systems) */
+.divs
+{
+/*	margin-top:-10px;  */
+	margin-bottom:-10px;
+}
+
+
+
+
+/* hdrImg is for header image and full body width image sizing (Mobile systems) */
+.hdrImg
+{
+	width:100%;
+	height:auto !important;
+}
+
+/* tstImg is for testimonial image sizing (Mobile systems) */
+.tstImg
+{
+	width:70%;
+	height:auto !important;
+}
+
+/* m_selNavigation is for positioning and sizing the drop-down main navigation links (Mobile systems) */
+#m_selNavigation
+{
+	float:right;
+	font-size:12px
+}
+
+/* t_selNavigation is for positioning and sizing the drop-down main navigation links (Tablet systems) */
+#t_selNavigation
+{
+	float:right;
+	font-size:15px
+}
+
+/* ftrNav & ftrText is for font and links in footer (Mobile systems) */
+.ftrNav
+{
+	font-family:verdana; 
+	font-size:9px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.ftrNav:link
+{
+	color:#FFF;
+	text-decoration:none;
+}
+
+.ftrNav:visited
+{
+	color:#FFF;
+	text-decoration:none;
+}
+
+.ftrNav:hover
+{
+	color: #000;
+	text-decoration:none;
+}
+
+.ftrText
+{
+	font-family:verdana; 
+	font-size:9px;
+	font-weight:bold;
+	color:#FFF;
+	text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lbl
+{
+	font-family:verdana; 
+	font-size:13px;
+	font-weight:bold;
+	color:#999;
+	text-decoration:none;
+	vertical-align:top;
+}
+
+/* contsEmail is for the Email Links on Contacts View page */
+.contsEmail
+{
+	font-family:verdana; 
+	font-size:13px;
+	font-weight:bold;
+	color:#00C;
+	text-decoration:none;
+}
+
+.contsEmail:link
+{
+	color:#00C;
+	text-decoration:none;
+}
+
+.contsEmail:visited
+{
+	color:#00C;
+	text-decoration:none;
+}
+
+.contsEmail:hover
+{
+	color: #B12830;
+	text-decoration:none;
+}
+
+/* cont is for the Contact Us link on players page */
+.cont
+{
+	font-family:verdana; 
+	font-size:14px;
+	font-weight:normal;
+	color:#B12830;
+	text-decoration:none;
+}
+
+.cont:link
+{
+	color:#B12830;
+	text-decoration:none;
+}
+
+.cont:visited
+{
+	color:#B12830;
+	text-decoration:none;
+}
+
+.cont:hover
+{
+	color: #009;
+	text-decoration:none;
+}
+
+/* url is for promotion url links */
+.url
+{
+	font-family:verdana; 
+	font-size:13px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.url:link
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.url:visited
+{
+	color:#009;
+	text-decoration:none;
+}
+
+.url:hover
+{
+	color: #B12830;
+	text-decoration:none;
+}

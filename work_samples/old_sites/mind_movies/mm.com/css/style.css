@@ -1,0 +1,1669 @@
+/*---------------------------- FONTS ---------------------------------------*/
+
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Light/Gotham-Light.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Light/Gotham-Light.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Light/Gotham-Light.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Light/Gotham-Light.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Light/Gotham-Light.svg#Gotham-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Ultra';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.svg#Gotham-Ultra') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BigCaslon-Medium';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/BigCaslon-Medium/BigCaslon-Medium.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/BigCaslon-Medium/BigCaslon-Medium.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/BigCaslon-Medium/BigCaslon-Medium.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/BigCaslon-Medium/BigCaslon-Medium.svg#BigCaslon-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/Raleway-Medium/Raleway-Medium.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/Raleway-Medium/Raleway-Medium.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/Raleway-Medium/Raleway-Medium.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/Raleway-Medium/Raleway-Medium.svg#Raleway-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AkzidenzGroteskBQ-BdCnd';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AkzidenzGroteskBQ-BdCnd/AkzidenzGroteskBQ-BdCnd.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AkzidenzGroteskBQ-BdCnd/AkzidenzGroteskBQ-BdCnd.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AkzidenzGroteskBQ-BdCnd/AkzidenzGroteskBQ-BdCnd.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AkzidenzGroteskBQ-BdCnd/AkzidenzGroteskBQ-BdCnd.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AkzidenzGroteskBQ-BdCnd/AkzidenzGroteskBQ-BdCnd.svg#AkzidenzGroteskBQ-BdCnd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodoniBE-RegularSC';
+    src: url('http://www.mindmovies.com/mm.com/assets/fonts/BodoniBE-RegularSC/BodoniBE-RegularSC.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/BodoniBE-RegularSC/BodoniBE-RegularSC.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/BodoniBE-RegularSC/BodoniBE-RegularSC.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/BodoniBE-RegularSC/BodoniBE-RegularSC.svg#BodoniBE-RegularSC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/GothamMedium/GothamMedium.eot?#iefix') format('embedded-opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/GothamMedium/GothamMedium.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/GothamMedium/GothamMedium.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/GothamMedium/GothamMedium.svg#GothamMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Ultra';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/Gotham-Ultra/Gotham-Ultra.svg#Gotham-Ultra') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SignPainter-HouseScript';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/SignPainter-HouseScript/SignPainter-HouseScript.eot?#iefix') format('embedded-opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/SignPainter-HouseScript/SignPainter-HouseScript.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/SignPainter-HouseScript/SignPainter-HouseScript.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/SignPainter-HouseScript/SignPainter-HouseScript.svg#SignPainter-HouseScript') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-Black';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Black/AvenirLTPro-Black.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Black/AvenirLTPro-Black.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Black/AvenirLTPro-Black.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Black/AvenirLTPro-Black.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Black/AvenirLTPro-Black.svg#AvenirLTPro-Black') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-BlackOblique';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BlackOblique/AvenirLTPro-BlackOblique.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BlackOblique/AvenirLTPro-BlackOblique.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BlackOblique/AvenirLTPro-BlackOblique.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BlackOblique/AvenirLTPro-BlackOblique.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BlackOblique/AvenirLTPro-BlackOblique.svg#AvenirLTPro-BlackOblique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-Book';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Book/AvenirLTPro-Book.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Book/AvenirLTPro-Book.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Book/AvenirLTPro-Book.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Book/AvenirLTPro-Book.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Book/AvenirLTPro-Book.svg#AvenirLTPro-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-BookOblique';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BookOblique/AvenirLTPro-BookOblique.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BookOblique/AvenirLTPro-BookOblique.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BookOblique/AvenirLTPro-BookOblique.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BookOblique/AvenirLTPro-BookOblique.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-BookOblique/AvenirLTPro-BookOblique.svg#AvenirLTPro-BookOblique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-Heavy';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Heavy/AvenirLTPro-Heavy.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Heavy/AvenirLTPro-Heavy.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Heavy/AvenirLTPro-Heavy.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Heavy/AvenirLTPro-Heavy.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Heavy/AvenirLTPro-Heavy.svg#AvenirLTPro-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-HeavyOblique';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-HeavyOblique/AvenirLTPro-HeavyOblique.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-HeavyOblique/AvenirLTPro-HeavyOblique.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-HeavyOblique/AvenirLTPro-HeavyOblique.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-HeavyOblique/AvenirLTPro-HeavyOblique.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-HeavyOblique/AvenirLTPro-HeavyOblique.svg#AvenirLTPro-HeavyOblique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-Medium';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Medium/AvenirLTPro-Medium.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Medium/AvenirLTPro-Medium.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Medium/AvenirLTPro-Medium.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Medium/AvenirLTPro-Medium.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Medium/AvenirLTPro-Medium.svg#AvenirLTPro-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-Roman';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Roman/AvenirLTPro-Roman.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Roman/AvenirLTPro-Roman.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Roman/AvenirLTPro-Roman.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Roman/AvenirLTPro-Roman.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-Roman/AvenirLTPro-Roman.svg#AvenirLTPro-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirLTPro-MediumOblique';
+  src: url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-MediumOblique/AvenirLTPro-MediumOblique.eot?#iefix') format('embedded-opentype'),  url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-MediumOblique/AvenirLTPro-MediumOblique.otf')  format('opentype'),
+         url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-MediumOblique/AvenirLTPro-MediumOblique.woff') format('woff'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-MediumOblique/AvenirLTPro-MediumOblique.ttf')  format('truetype'), url('http://www.mindmovies.com/mm.com/assets/fonts/AvenirLTPro-MediumOblique/AvenirLTPro-MediumOblique.svg#AvenirLTPro-MediumOblique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.big-caslon-medium-50px {
+    font-family: 'BigCaslon-Medium';
+    font-size: 50px;
+}
+
+.raleway-medium-14 {
+    font-family: 'Raleway-Medium';
+    font-size: 14px;
+}
+
+.raleway-medium-20 {
+    font-family: 'Raleway-Medium';
+    font-size: 20px;
+}
+
+.gotham-medium-13px {
+    font-family: 'GothamMedium';
+    font-size: 13px;
+}
+
+.gotham-medium-15px {
+    font-family: 'GothamMedium';
+    font-size: 15px;
+}
+
+.gotham-medium-16px {
+    font-family: 'GothamMedium';
+    font-size: 16px;
+}
+
+.gotham-medium-20px {
+    font-family: 'GothamMedium';
+    font-size: 20px;
+}
+
+.gotham-medium-22px {
+    font-family: 'GothamMedium';
+    font-size: 22px;
+}
+
+.gotham-ultra-26px {
+    font-family: 'Gotham-Ultra';
+    font-size: 26px;
+}
+
+
+.sing-painter_hosue-script-78px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 78px;
+}
+
+.sing-painter_hosue-script-80px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 80px;
+}
+
+.sing-painter_hosue-script-66px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 66px;
+}
+
+.sing-painter_hosue-script-32px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 32px;
+}
+
+.sing-painter_hosue-script-45px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 45px;
+}
+
+.sing-painter_hosue-script-48px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 48px;
+}
+
+.sing-painter_hosue-script-54px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 54px;
+}
+
+.sing-painter_hosue-script-55px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 55px;
+}
+
+.sing-painter_hosue-script-50px {
+    font-family: 'SignPainter-HouseScript';
+    font-size: 50px;
+}
+
+.avenir-book-11px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 11px;
+}
+
+.avenir-roman-17px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 17px;
+}
+
+.avenir-roman-18px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 18px;
+}
+
+.avenir-roman-19px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 19px;
+}
+
+.avenir-roman-22px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 22px;
+}
+
+.avenir-roman-20px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 20px;
+}
+
+.avenir-book-24px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 24px;
+}
+
+.avenir-book-29px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 29px;
+}
+
+.avenir-book-20px {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 20px;
+}
+
+.avenir-heavy-26px {
+    font-family: 'AvenirLTPro-Heavy';
+    font-size: 26px;
+}
+
+
+.avenir-heavy-oblq-19px {
+    font-family: 'AvenirLTPro-HeavyOblique';
+    font-size: 19px;
+}
+
+.avenir-heavy-oblq-23px {
+    font-family: 'AvenirLTPro-HeavyOblique';
+    font-size: 23px;
+}
+
+.avenir-heavy-oblq-24px {
+    font-family: 'AvenirLTPro-HeavyOblique';
+    font-size: 24px;
+}
+
+.avenir-heavy-oblq-21px {
+    font-family: 'AvenirLTPro-HeavyOblique';
+    font-size: 21px;
+}
+
+
+.avenir-heavy-oblq-35px {
+    font-family: 'AvenirLTPro-HeavyOblique';
+    font-size: 35px;
+}
+
+.avenir-medium-35px {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 35px;
+}
+
+.avenir-medium-16px {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 16px;
+}
+
+.avenir-medium-18px {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 18px;
+}
+
+.avenir-medium-20px {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 20px;
+}
+
+
+.avenir-medium-23px {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 23px;
+}
+
+.avenir-medium-22px {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 22px;
+}
+
+.avenir-medium-oblq-22px {
+    font-family: 'AvenirLTPro-MediumOblique';
+    font-size: 22px;
+}
+
+.avenir-medium-24px {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 24px;
+}
+
+.avenir-black-lt-pro-24px {
+    font-family: 'AvenirLTPro-Black';
+    font-size: 24px;
+}
+
+.avenir-black-17px {
+    font-family: 'AvenirLTPro-Black';
+    font-size: 17px;
+}
+
+.avenir-black-20px {
+    font-family: 'AvenirLTPro-Black';
+    font-size: 19px;
+}
+
+.avenir-black-40px {
+    font-family: 'AvenirLTPro-Black';
+    font-size: 40px;
+}
+
+.avenir-black-33px {
+    font-family: 'AvenirLTPro-Black';
+    font-size: 33px;
+}
+
+.avenir-black-lt-pro-42px {
+    font-family: 'AvenirLTPro-Heavy';
+    font-size: 42px;
+}
+
+.avenir-heavy-24px {
+    font-family: 'AvenirLTPro-Heavy';
+    font-size: 24px;
+}
+
+.avenir-black-oblq-20px {
+    font-family: 'AvenirLTPro-BlackOblique';
+    font-size: 20px;
+}
+
+.avenir-black-oblq-24px {
+    font-family: 'AvenirLTPro-BlackOblique';
+    font-size: 24px;
+}
+
+/*---------------------------- GLOBAL ---------------------------------------*/
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+
+  background-color: white;
+}
+.bg-img{
+	position: absolute;
+}
+
+.color-syn {
+	color: #20bfd2;
+}
+
+.color-orange {
+	color: #e94309;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+
+.cta_global_white {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 5px 10px 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.hcenter {
+    margin: 0 auto;
+    text-align:center;
+}
+
+.no-radius{
+	border-radius: 0;
+}
+
+.font-color-black {
+    color:#000000;
+}
+
+.font-color-white {
+	color:white;
+}
+
+.font-color-red {
+	color:red;
+}
+
+.font-color-bluish-gray {
+    color:#37536a;
+}
+
+.font-color-light-red {
+	color:#f16748;
+}
+
+.font-color-dark-red-new {
+    color:#ba0913;
+}
+
+.font-color-new-orange-mm {
+    color:#fd8525;
+}
+
+.font-color-new-cyan-dark {
+    color:#28b7c0;
+}
+
+.bg-color-ultra-light-orange {
+    background-color: #f0e9df;
+}
+
+.bg-color-orange {
+    background-color: #FFBA31;
+}
+
+.bg-color-cyan {
+    background-color: #40b9cc;
+}
+
+.bg-color-dark-cyan-new {
+    background-color: #16a4ae;
+}
+
+.bg-color-story-yellow {
+    background-color: #ffd259;
+}
+
+.bg-color-story-timeline {
+    background-color: #41a0a6;
+}
+
+.bg-img{
+    position: absolute;
+}
+
+.hcenter {
+    margin: 0 auto;
+    text-align:center;
+}
+
+.bg-color-white {
+	background-color: white;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.margin-0px {
+    margin:0px;
+}
+
+.margin-left-social-small {
+    margin-left: 2px;
+}
+
+.margin-top20px {
+    margin-top: 20px;
+}
+
+.margin-top30px {
+    margin-top: 30px;
+}
+
+.border-color-gray {
+    border:solid 1px #cccccc;
+}
+
+/*----------------------------------NAV BAR AND OVERRIDE-----------------------------*/
+
+.nav {
+	font-family: 'GothamMedium';
+	font-size: 17px;
+	background-color: white;
+	width: 100%;
+    text-align: center;
+}
+
+.navbar-default {
+    border: 0px;
+    background-color: white;
+}
+
+ .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: black;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #28A2AE;
+}
+.nav-hover-color {
+	color: #28A2AE !important;
+}
+
+#li-login a {
+    font-family:'AkzidenzGroteskBQ-BdCnd';
+    color:white;
+    display:block;
+    margin-top:18px;
+    padding:1px 30px 0px 30px;
+    background-color:#f77123;
+}
+
+#li-login a:hover {
+    color:black;
+}
+
+.li-login-submit {
+    font-family:'AkzidenzGroteskBQ-BdCnd';
+    color:white;
+    display:block;
+    margin-top:18px;
+    padding:1px 30px 0px 30px;
+    background-color:#f77123;
+    border-radius: 0;
+    border: 0;
+}
+
+.li-login-submit:hover {
+    font-family:'AkzidenzGroteskBQ-BdCnd';
+    color:white;
+    display:block;
+    margin-top:18px;
+    padding:1px 30px 0px 30px;
+    background-color:#f77123;
+    border-radius: 0;
+    border: 0;
+    color:black;
+}
+
+.breadcrumb {
+    background-color: #FFFFFF;
+}
+
+.breadcrumb li a {
+    color: #fd8525;
+    font-family: 'GothamMedium';
+    font-size: 16px;
+}
+
+.blog_active_post_li {
+    text-decoration: underline;
+}
+
+/*----------------------------------Main Content -----------------------------*/
+.body_wrapper {
+
+}
+
+.form-top-margin {
+	margin-top: 0px;
+}
+
+.blog-top-margin {
+    margin-top: 0px;
+}
+
+
+/*----------------------------------PRODUCTS-----------------------------*/
+
+
+
+/*----------------------------------FOOTER-----------------------------*/
+
+.footer_ul {
+    list-style-type: none;
+    padding:0px; margin:0px;
+}
+
+.footer_ul li {
+    list-style-type: none;
+    line-height: 25px;
+
+}
+
+.footer_ul li a {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 15px;
+    color: white;
+}
+
+.footer_ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer_ul_title {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 17px;
+    text-transform: uppercase;
+    color:#fecb51;
+}
+
+.footer_ul_title_other {
+    font-family: 'AvenirLTPro-Roman';
+    font-size: 17px;
+    text-transform: uppercase;
+    color:#fecb51;
+    margin-top: 25px;
+}
+
+.copyright {
+	padding-top: 10px;
+}
+
+@media (max-width: 980px) {
+	.copyright {
+		text-align: center;
+	}
+}
+
+.top_banner_margin {
+    min-width:100%;
+    margin-top:30px;
+}
+
+.form-control-optin {
+	background-image: none;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	display: block;
+	font-size: 14px;
+	height: 46px;
+	line-height: 1.42857;
+	padding: 6px 12px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	width: 240px;
+	color: #999999;
+    font-family:'AvenirLTPro-Roman';
+}
+
+.form-control-optin::-webkit-input-placeholder { /* WebKit browsers */
+	color: #999999;
+}
+
+.form-control-optin:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #999999;
+	opacity:  1;
+}
+
+.form-control-optin::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: #999999;
+	opacity:  1;
+}
+
+.form-control-optin:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color: #999999;
+}
+
+/*---------------------------------Footer------------------------------------*/
+.footer_wrap {
+    text-align: left;
+}
+
+/*---------------------------------Social------------------------------------*/
+.facebook {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_facebook.png');
+    width: 77px;
+    height: 77px;
+    background-repeat: no-repeat;
+}
+
+.twitter {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_twitter.png');
+    width: 77px;
+    height: 77px;
+    background-repeat: no-repeat;
+}
+
+.youtube {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_youtube.png');
+    width: 77px;
+    height: 77px;
+    background-repeat: no-repeat;
+}
+
+.pinterest {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_pinterest.png');
+    width: 77px;
+    height: 77px;
+    background-repeat: no-repeat;
+}
+
+.instagram {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_instagram.png');
+    width: 77px;
+    height: 77px;
+    background-repeat: no-repeat;
+}
+
+.social_wrap_button {
+    text-align: left;
+}
+
+.social_plugin_fb {
+    max-width: 300px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.social_wrap {
+    padding: 30px 20px 30px 20px;
+    min-height:410px;
+}
+
+
+.facebook_small {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_facebook_small.png');
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+}
+
+.twitter_small {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_twitter_small.png');
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+}
+
+.youtube_small {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_youtube_small.png');
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+}
+
+.pinterest_small {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_pinterest_small.png');
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+}
+
+.instagram_small {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_01_instagram_small.png');
+    width: 56px;
+    height: 56px;
+    background-repeat: no-repeat;
+}
+
+/* Making FB Like plugin responsive */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}
+
+/*---------------------------------INDEX.PHP------------------------------------*/
+
+.mm_cta_wrap {
+    padding: 80px 20px 30px 20px;
+    max-height:630px;
+}
+
+.mm_about_wrap {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_about_video_bg.jpg') no-repeat;
+    display: block;
+    background-color: #16a5af;
+    background-position: center center;
+    min-height: 605px;
+    padding: 80px 20px 30px 20px;
+}
+
+.mm_cta_visualization {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015-05-04_cta_vis_bg.png') no-repeat;
+    display: block;
+    background-color: #efeadf;
+    background-position: 85% center;
+    min-height: 480px;
+    padding-left:55px;
+    padding-top:45px;
+    padding-bottom: 65px;
+}
+
+.mm_cta_visualization_about {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_about_vis_bg.jpg') no-repeat;
+    display: block;
+    background-color: #efeadf;
+    background-position: 85% center;
+    min-height: 770px;
+    padding-left:55px;
+    padding-top:70px;
+    padding-bottom: 65px;
+}
+
+.mm_what_is {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015-05-05_what_is_bg.jpg') no-repeat;
+    display: block;
+    background-color: #efeadf;
+    background-size: auto 100%;
+    background-position: 40%;
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.mm_what_is p {
+     padding-left: 25px;
+}
+
+.mm_what_is_padding {
+    padding: 0px 0 0px 0;
+}
+
+.mm_123 {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_05_123.jpg') no-repeat;
+    display: block;
+    background-color: #16a5af;
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 700px;
+    color: white;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+.mm_tis {
+    background: url('http://mindmovies-images.s3.amazonaws.com/natalieledwell/NL_150415_inspiration_show.jpg') no-repeat;
+    display: block;
+    background-color: #FFBA31;
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 368px;
+    color: white;
+    text-align: center;
+    padding: 70px 0 10px 0;
+}
+
+.mm_blog {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_06_blog_banner.jpg') no-repeat;
+    display: block;
+    background-color: #fd892e;
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 368px;
+    color: white;
+    text-align: center;
+    padding: 150px 0 0 0;
+}
+
+.mm_products {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_06_products_banner.jpg') no-repeat;
+    display: block;
+    background-color: #16a4ae;
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 368px;
+    color: white;
+    text-align: center;
+    padding: 150px 0 0 0;
+}
+
+.mm_free {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_free_banner.jpg') no-repeat;
+    display: block;
+    background-color: #16a4ae;
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 368px;
+    color: white;
+    text-align: center;
+    padding: 150px 0 0 0;
+}
+
+.mm_careers {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_career_banner.jpg') no-repeat;
+    display: block;
+    background-color: #16a4ae;
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 368px;
+    color: white;
+    text-align: center;
+    padding: 150px 0 0 0;
+}
+
+
+.mm_about {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_about_top_banner.jpg') no-repeat;
+    display: block;
+    background-color: #000000;
+    background-size: 100% 100%;
+    background-position: center center;
+    min-height: 360px;
+    color: white;
+    text-align: center;
+    padding: 100px 0 0 0;
+}
+
+.mm_story {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_story_banner.jpg') no-repeat;
+    display: block;
+    background-color: #ffd259;
+    background-position: center center;
+    min-height: 367px;
+    color: white;
+    text-align: center;
+    padding: 180px 0 0 0;
+}
+
+.mm_timeline {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_story_partner_banner.jpg') no-repeat;
+    display: block;
+    background-color: #41a0a6;
+    background-position: center center;
+    min-height: 518px;
+    color: white;
+    text-align: center;
+    padding: 0 0 0 0;
+}
+
+.mm_brain_science {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_about_brain_science.jpg') no-repeat;
+    display: block;
+    background-color: #41AEBB;
+    background-position: center center;
+    background-size: 100% 100%;
+    min-height: 328px;
+    color: white;
+    text-align: center;
+    padding: 85px 0 0 0;
+}
+
+.mm_matrix {
+    background: url('http://mindmovies-images.s3.amazonaws.com/matrix/banners/151028_mm_bubble_header.png') no-repeat;
+    display: block;
+    background-color: #160704;
+    background-position: center center;
+    min-height: 220px;
+    color: white;
+    text-align: center;
+    padding: 15px 0 0 0;
+}
+
+.mm_about_vis_made_easy {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_about_vis_bg_big.jpg') no-repeat;
+    display: block;
+    background-color: #e47a2c;
+    background-position: center center;
+    background-size: 100% 100%;
+    min-height: 1055px;
+    color: white;
+    text-align: center;
+}
+
+.mm_about_meet_creators {
+    background: url('http://mindmovies-images.s3.amazonaws.com/mindmovies_com/MM_2015_05_07_about_creator_bg.jpg') no-repeat;
+    display: block;
+    background-color: #18a1ac;
+    background-position: center center;
+    min-height: 607px;
+    color: white;
+    text-align: center;
+    padding: 5px 0 0 0;
+    background-size: 100% 100%;
+}
+
+.product_row {
+    padding: 0 20px 2px 20px;
+}
+
+.free_row {
+    /* min-height:400px; */
+    padding: 0 20px 2px 20px;
+}
+
+.products_padding {
+    padding: 70px 0 70px 0;
+}
+
+.about_padding {
+    padding:30px 30px 30px 50px;
+}
+
+.story_padding {
+    padding:30px 30px 30px 30px;
+}
+
+.height60px {
+    height: 60px;
+}
+
+.height30px {
+    height: 30px;
+}
+
+.product_sub_titile_line_height {
+    line-height:5px;
+}
+
+.padding-about-tall-pic {
+    padding-top: 180px;
+}
+
+@media (max-width: 1023px) {
+    .chevron-left{left:5%;}
+    .chevron-right{right:5%;}
+
+    .about_padding {
+        padding:30px 30px 30px 30px;
+    }
+
+     .mm_about_vis_made_easy {
+        background: none;
+        display: block;
+        background-color: #e47a2c;
+        background-position: center center;
+        min-height: 1055px;
+        color: white;
+        text-align: center;
+    }
+
+    .btn-vis-learn-more {
+        padding: 5px 80px 0px 0px;
+    }
+
+    .mm_brain_science {
+        background: none;
+        display: block;
+        background-color: #160704;
+        min-height: 328px;
+        color: white;
+        text-align: center;
+        padding: 85px 0 0 0;
+    }
+
+    .mm_blog {
+        background: none;
+        display: block;
+        background-color: #fd892e;
+        background-size: 100% 100%;
+        background-position: center center;
+        color: white;
+        text-align: center;
+        padding: 150px 0 0 0;
+    }
+
+    .mm_products {
+        background: none;
+        display: block;
+        background-color: #16a4ae;
+        background-size: 100% 100%;
+        background-position: center center;
+        min-height: 368px;
+        color: white;
+        text-align: center;
+        padding: 150px 0 0 0;
+    }
+
+    .mm_cta_visualization_about {
+        background: none;
+        display: block;
+        background-color: #efeadf;
+        min-height: 600px;
+        padding-left:30px;
+        padding-top:50px;
+        padding-bottom: 40px;
+    }
+
+     .mm_cta_visualization {
+        background: none;
+        display: block;
+        background-color: #efeadf;
+        padding-top:20px;
+        padding-left:5px;
+        padding-bottom: 10px;
+        min-height: 300px;
+    }
+
+    .padding-about-tall-pic {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mm_what_is_padding {
+        padding: 10px 0 10px 0;
+    }
+
+    .mm_what_is {
+        background: none;
+        display: block;
+        background-color: #efeadf;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .li-login-submit{
+        font-family:'AkzidenzGroteskBQ-BdCnd';
+        color:white;
+        display:block;
+        margin-top:23px;
+        padding:1px 30px 0px 30px;
+        background-color:#f77123;
+        border-radius: 0;
+        border: 0;
+    }
+}
+
+.btn-vis-learn-more {
+    padding: 5px 40px 0px 40px;
+}
+
+.inactionvideo {
+      max-width:600px;
+      margin: 0 auto;
+}
+
+
+
+/*---------------------------------Colors------------------------------------*/
+
+.bgcolor-brain-science {
+    background-color: #160704;
+}
+
+.bgcolor-vis-made-easy {
+    background-color: #e47a2c;
+}
+
+.bgcolor-creators {
+    background-color: #18a1ac;
+}
+
+.bgcolor-light-yeallo-new {
+    background-color: #efeadf;
+}
+
+.bg-color-light-cyan-new {
+    background-color: #16a5af;
+}
+
+
+.font-color-dark-cyan {
+    color: #208f97;
+}
+
+.font-color-cta2 {
+    color:white;
+}
+
+.font-color-light-cyan-new {
+    color: #16a5af;
+}
+
+.font-color-tis-orange {
+    color: #f87a15;
+}
+
+.font-color-new-orange {
+    color: #f87104;
+}
+
+.bgcolor-yellow {
+    background-color: #ffba00;
+}
+
+.bg-color-new-orange {
+    background-color: #f87104;
+}
+
+.blog_post_margin {
+    margin-top: 20px;
+}
+
+/*---------------------------------OPT IN------------------------------------*/
+
+.opt-in-wrapper {
+    padding:30px 37px 30px 37px;
+}
+
+.opt-in-input-box {
+    background-color: #208f97;
+    min-height: 80px;
+    padding: 10px 2px 0 2px;
+}
+
+.pstyle11 {
+    color:#cccccc;
+    font-family:'Myriad Pro';
+    font-size:10px;
+    padding-top:2px;
+}
+
+.pstyle5 {
+    color:#cccccc;
+    font-family:'Myriad Pro';
+    font-size:12px;
+    padding-top:2px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-top-20 {
+    padding-top: 0;
+}
+
+.padding-top-20new {
+    padding-top: 20px;
+}
+
+.padding-top-15px {
+    padding-top: 15px;
+}
+
+.padding-top-18px {
+    padding-top: 18px;
+}
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+.padding-right5px {
+    padding-right: 5px;
+}
+
+.padding-left10px {
+    padding-left: 10px;
+}
+
+.padding-left30px {
+    padding-left: 30px;
+}
+
+.padding-left40px {
+    padding-left: 40px;
+}
+
+.padding-0px {
+    padding: 0;
+}
+
+.padding-bottom0px {
+    padding-bottom:0px;
+}
+
+.line-height-premades {
+    line-height: 8px;
+}
+
+.blog-post-padding {
+    padding: 0;
+}
+
+.p_uppercase {
+    text-transform: uppercase;
+}
+
+.tis-thumb-image {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.tis-thumb-wrapper {
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+.tis-thumb-title {
+    font-family: 'AvenirLTPro-Medium';
+    font-size: 14px;
+    text-align: center;
+    line-height:2px;
+    padding-top: 0px;
+    margin-top: -10px;
+}
+
+.tis_fb_plugin_div {
+    background-color: #cccccc;
+    padding-top: 20px;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+.carousel-inner .active.left  { left: -33%;}
+.carousel-inner .active.right { left: 33%;              }
+.carousel-inner .next         { left: 33%               }
+.carousel-inner .prev         { left: -33%              }
+.carousel-control.left        { background-image: none; }
+.carousel-control.right       { background-image: none; }
+.carousel-inner .item         { background: white;      }
+
+/* Remove gradient background of right and left arrow */
+.carousel-control.left, .carousel-control.right{
+  background: none !important;
+  filter: none !important;
+  progid:none !important;
+}
+
+.chevron{
+    width:30%;
+    position:absolute;
+    top:40%;
+}
+
+.chevron-left{left:-50px;}
+.chevron-right{right:-50px;}
+
+.about_us_line_height {
+    line-height:20px;padding-top:40px;
+}
+
+.product_img_margin_top {
+
+}
+
+.blog_right_padding_adjust {
+    padding-right: 0px;
+}
+
+.tis_thumb_adjustment {
+
+}
+
+/*---------------------------------Device Specific------------------------------------*/
+
+@media (max-width: 768px) {
+    .mm_cta_visualization {
+        background: none;
+        display: block;
+        background-color: #efeadf;
+        padding-top:20px;
+        padding-left:5px;
+        padding-bottom: 10px;
+        min-height: 300px;
+    }
+
+    .tis-thumb-wrapper {
+        margin-top: 10px;
+    }
+
+    .blog-post-padding {
+        padding: 0 5px 0 15px;
+    }
+
+    .line-height-premades {
+        line-height: 20px;
+    }
+
+    .padding-top-20 {
+        padding-top: 20px;
+    }
+
+    .social_wrap {
+        padding: 30px 2px 30px 2px;
+    }
+
+    .social_plugin_fb {
+        padding-left: 100px;
+    }
+
+    .social_wrap_button {
+        text-align: center;
+    }
+
+    .footer_wrap {
+        text-align: center;
+    }
+
+    .form-control-optin {
+        width: 100%;
+    }
+
+    .tis-thumb-title {
+        text-align: left;
+        line-height:2px;
+        padding-top: 0px;
+        margin-top: -10px;
+    }
+
+    .height30px {
+        height: 2px;
+    }
+
+    .mm_about {
+        background: none;
+        display: block;
+        background-color: #000000;
+        min-height: 50px;
+        color: white;
+        text-align: center;
+        padding: 50px 0 40px 0;
+    }
+
+    .mm_free {
+        background: none;
+        display: block;
+        background-color: #16a4ae;
+        background-size: 100% 100%;
+        background-position: center center;
+        min-height: 200px;
+        color: white;
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+
+    .mm_products {
+        background: none;
+        display: block;
+        background-color: #16a4ae;
+        background-size: 100% 100%;
+        background-position: center center;
+        min-height: 200px;
+        color: white;
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+
+    .mm_blog {
+        background: none;
+        display: block;
+        background-color: #fd892e;
+        background-size: 100% 100%;
+        background-position: center center;
+        min-height: 200px;
+        color: white;
+        text-align: center;
+        padding: 50px 0 0 0;
+     }
+
+     .mm_story {
+        background: none;
+        display: block;
+        background-color: #ffd259;
+        background-position: center center;
+        min-height: 150px;
+        color: white;
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+
+    .mm_careers {
+        background: none;
+        display: block;
+        background-color: #16a4ae;
+        background-position: center center;
+        min-height: 150px;
+        color: white;
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+
+    .mm_brain_science {
+        background: none;
+        display: block;
+        background-color: #160704;
+        min-height: 50px;
+        color: white;
+        text-align: center;
+        padding: 50px 0 40px 0;
+    }
+
+    .about_us_line_height {
+        line-height:20px;padding-top:10px;
+    }
+
+    .padding-top-30 {
+        padding-top: 2px;
+    }
+
+    .margin-top30px {
+        margin-top: 2px;
+    }
+
+    .padding-about-tall-pic {
+        margin-top: -100px;
+        z-index: -1000;
+    }
+
+    .product_img_margin_top {
+        margin-top: -75px;
+        z-index: -1000;
+    }
+
+    .products_padding {
+        padding: 20px 0 20px 0;
+    }
+
+    .product_img_margin_top {
+        margin-top: -10px;
+        z-index: -1000;
+    }
+
+    .avenir-heavy-oblq-24px {
+        font-family: 'AvenirLTPro-HeavyOblique';
+        font-size: 18px;
+    }
+
+    .avenir-medium-23px {
+        font-family: 'AvenirLTPro-Medium';
+        font-size: 17px;
+    }
+
+    .tis_fb_plugin_div {
+        background-color: red;
+        /*padding-top: 20px;*/
+    }
+}
+
+
+    .nav {
+        padding-left: 70px;
+    }
+    .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+        max-height: 800px !important;
+    }
+    .hcenter div.navbar-header {
+      text-align: left;
+    }
+    .mm-log {
+        max-height: 25px;
+        max-width: 140px;
+        width: 100%;
+        display: inline;
+        margin-top: 12px;
+        margin-left: 12px;
+    }
+
+    @media (min-width:769px) {
+         .mm-log {
+            display: none !important;
+        }
+    }
+    @media (max-width:769px) {
+      .nav {
+          padding-left: 30px;
+      }
+    }
+
+.optin-box {
+  border: 1px solid #208f97;
+  padding-top: 15px;
+  background-color: #fff;
+  max-width: 293px;
+}
+
+.optin-float {
+  position: fixed;
+  top: 50px;
+  z-index: 99999
+}
+.optin-float:before {
+height: 14px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+    content: " ";
+    display: block;
+    width: 100%;
+    margin-top: -30px;
+}
+
+.optin-float-pd {
+  padding-top: 500px;
+}
+
+@media (max-width:769px) {
+  .optin-float {
+    position: inherit;
+    top: 0;
+    z-index: 1;
+  }
+  .optin-box {
+    max-width: 100%;
+  }
+  .optin-float-pd {
+    padding-top: 0;
+  }
+}
+.to-top {
+    font-size: 15px;
+    line-height: 40px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    text-align: center;
+    opacity: .8;
+    color: #fff;
+    -webkit-border-radius: 99px;
+    border-radius: 99px;
+    background-color: #444;
+    z-index: 9999999;
+}
+
+.to-top:hover {
+    opacity: 1;
+    color: #fff;
+    background-color: #f5873f;
+}

@@ -1,0 +1,47 @@
+{% assign theme = 'dietbet' %}
+
+{% comment %}
+Set header_images to a a list delimited by "|", e.g.:
+header_images = "https://.../a.jpg|https://.../b.jpg|https://.../c.jpg"
+{% endcomment %}
+
+
+{% assign test_image_1_600x473 =  "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe327aa141af430ec6a6971/original.jpg?1608722346" %}
+{% assign test_image_1_600x472 =  "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe268cbeb0163441079c81f/original.gif?1608673483" %}
+{% assign test_image_1_1200x944 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe32672a23ded1f24835100/original.jpg?1608722034" %}
+{% assign test_image_1_1200x945 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fd99b16eb01633441ad447c/original.jpg?1608096534" %}
+{% assign test_image2 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe26a674282565fb2a5c6fd/original.gif?1608673895" %}
+{% assign test_image3 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe24dd69592745dbd04f6a0/original.jpg?1608666582" %}
+
+{% assign image_urls_str = test_image_1_1200x944 | append: "|" | append: test_image2 | append: "|" | append: test_image3 %}
+
+{% assign header_images = image_urls_str %}
+
+{% assign header_image_urls = "https://diet.bet/e/igXd7Hfvkcb|https://diet.bet/e/igXd7Hfvkcb|https://diet.bet/e/igXd7Hfvkcb" %}
+
+{% comment %}
+You can override the default body frame color by setting this variable.
+You must set it before the "all-pre-content" content block.
+
+{% assign email_body_frame_background_color = "#DFDFDF" %}
+{% endcomment %}
+
+
+{{content_blocks.${email-design-2-all-pre-content}}}
+
+
+{% if theme != 'dietbet' %}
+  {% assign game_name = "Game Name" %}
+  {% assign game_dates = "Aug 19 - Feb 18" %}
+  {% assign cta_label = "CTA Label" %}
+  {% assign cta_url = "http://....." %}
+
+  {{content_blocks.${email-design-2-game-icon-with-labels-start}}}
+  Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis commodo et nulla vitae aliquam. Quisque maximus tempor
+  augue ac dignissim. Vivamus volutpat rhoncus nunc eget ultrices.
+  {{content_blocks.${email-design-2-game-icon-with-labels-end}}}
+{% endif %}
+
+{{content_blocks.${email-design-1-team-link}}}
+
+{{content_blocks.${email-design-2-all-post-content}}}

@@ -1,0 +1,49 @@
+<!-- email-design-1-variables - start -->
+
+{% case theme %}
+    {% when 'dietbet' %}
+        {% assign product_name = 'DietBet' %}
+        {% assign product_name_internal = 'dietbet' %}
+        {% assign logo_url = 'https://appboy-images.com/appboy/communication/assets/image_assets/images/5dfaa4f65b99ac220668f6d2/original.png?1576707318' %}
+        {% assign theme_primary_color = '#00A19F' %}
+        {% assign facebook_group_url = 'https://www.facebook.com/groups/officialdietbet/' %}
+        {% assign facebook_page_url = 'https://www.facebook.com/Dietbet/' %}
+        {% assign instagram_page_url = 'https://www.instagram.com/dietbet/?hl=en' %}
+        {% assign faq_url = 'https://www.dietbet.com/faq' %}
+        {% assign unsubscribe_url = 'https://email-subscriptions.waybetter.com/unsubscribe/marketing/dietbet/' %}
+    {% when 'runbet' %}
+        {% assign product_name = 'RunBet' %}
+        {% assign product_name_internal = 'runbet' %}
+        {% assign logo_url = 'https://appboy-images.com/appboy/communication/assets/image_assets/images/5dfaa4f57b648d3503ad29ac/original.png?1576707317' %}
+        {% assign theme_primary_color = '#3759D7' %}
+        {% assign unsubscribe_url = 'https://email-subscriptions.waybetter.com/unsubscribe/marketing/runbet/' %}
+    {% when 'stepbet' %}
+        {% assign product_name = 'StepBet' %}
+        {% assign product_name_internal = 'stepbet' %}
+        {% assign logo_url = 'https://appboy-images.com/appboy/communication/assets/image_assets/images/5dfaa4f52eef8c110df71c79/original.png?1576707317' %}
+        {% assign theme_primary_color = '#14A65B' %}
+        {% assign facebook_group_url = 'https://www.facebook.com/groups/756871701142164/' %}
+        {% assign facebook_page_url = 'https://www.facebook.com/StepBet/' %}
+        {% assign instagram_page_url = 'https://www.instagram.com/stepbet/?hl=en' %}
+        {% assign faq_url = 'https://waybetter.com/stepbet/faq' %}
+        {% assign unsubscribe_url = 'https://email-subscriptions.waybetter.com/unsubscribe/marketing/stepbet/' %}
+    {% when 'waybetterapp' %}
+        {% assign product_name = 'WayBetter' %}
+        {% assign product_name_internal = 'waybetterapp' %}
+        {% assign logo_url = 'https://appboy-images.com/appboy/communication/assets/image_assets/images/5e7cfe58417fe42324db59d9/original.png?1585249880' %}
+        {% assign theme_primary_color = '#6A1099' %}
+        {% assign facebook_page_url = 'https://www.facebook.com/TheWayBetterWay/' %}
+        {% assign instagram_page_url = 'https://www.instagram.com/waybetterapp/' %}
+        {% assign unsubscribe_url = 'https://email-subscriptions.waybetter.com/unsubscribe/marketing/waybetter/' %}
+    {% else %}
+        {% assign product_name = 'WayBetter' %}
+        {% assign product_name_internal = 'waybetter' %}
+        {% assign logo_url = 'https://appboy-images.com/appboy/communication/assets/image_assets/images/5de818047b648d127cca82e6/original.png?1575491588' %}
+        {% assign theme_primary_color = '#6a1099' %}
+{% endcase %}
+
+{% unless email_body_frame_background_color %}
+  {% assign email_body_frame_background_color = "#F3F3F3" %}
+{% endunless %}
+
+<!-- email-design-1-variables - end -->

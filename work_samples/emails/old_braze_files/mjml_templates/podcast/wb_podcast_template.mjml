@@ -1,0 +1,101 @@
+<mjml>
+
+<!-- HEADER AREA -->
+<mj-include path="includes/header.mjml" />
+
+<!-- BODY AREA -->
+<mj-body background-color="#eee">
+
+<!-- MAIN PC IMAGE -->
+<mj-wrapper background-color="white" padding="0px">
+<mj-section>
+<mj-column>
+<mj-image src="{{main_episode_img}}" href="{{main_episode_link}}" />
+</mj-column>
+</mj-section>
+</mj-wrapper>
+
+<mj-wrapper background-color="white" padding="0px 40px 40px 40px" css-class="podcast_mobile_body">
+
+<!-- INTRO AREA -->
+<mj-section>
+<mj-column>
+
+<mj-text mj-class="paragraph_black_centered">
+<p>{{intro_pargraph}}</p>
+</mj-text>
+<mj-spacer height="10px" />
+
+<mj-button 
+inner-padding="14px 34px"
+border-radius="50px"
+color="white"
+font-size="15px"
+align="center" 
+font-family="Roboto, Arial, sans-serif" 
+href="{{cta_button_link}}"  font-size="15px" border-radius="18px"background-color="{{cta_button_color}}">{{cta_button_text}}</mj-button>
+<mj-spacer height="28px" />
+
+<mj-text mj-class="subheader_black_centered" css-class="subheader_black_centered" font-family="'Averta', Roboto, Arial, sans-serif">
+<p>Catch up with past&nbsp;episodes</p>
+</mj-text>
+<mj-spacer height="10px" />
+
+</mj-column>
+</mj-section>
+
+<!-- SECOND EPISODE AREA -->
+<mj-section padding="2px 0px 6px 0px">
+<mj-column width="75%" padding="10px">
+
+<mj-text mj-class="podcast_date_purple_left" css-class="podcast_date_purple_left">
+{{second_episode_date}}
+</mj-text>
+<mj-text mj-class="paragraph_black_left" css-class="paragraph_black_left"  font-weight="600">
+<a href="{{second_episode_link}}"
+style="color: #010101; text-decoration: none;">{{second_episode_title}}</a>
+</mj-text>
+</mj-column>
+<mj-column width="25%" vertical-align="bottom">
+<mj-image
+src="https://appboy-images.com/appboy/communication/assets/image_assets/images/608c446a1d65d64fe35cebda/original.jpg?1619805290"
+width="70px" align="right" padding="10px 10px 20px 10px" css-class="pc_button" href="{{second_episode_link}}" />
+</mj-column>
+</mj-section>
+
+<!-- THIRD EPISODE AREA -->
+<mj-section padding="6px 0px">
+<mj-column width="75%" padding="10px">
+
+<mj-text mj-class="podcast_date_purple_left" css-class="podcast_date_purple_left">
+{{third_episode_date}}
+</mj-text>
+<mj-text mj-class="paragraph_black_left" css-class="paragraph_black_left" font-weight="600">
+<a href="{{third_episode_link}}"
+style="color: #010101; text-decoration: none;">{{third_episode_title}}</a>
+</mj-text>
+</mj-column>
+<mj-column width="25%" vertical-align="bottom">
+<mj-image
+src="https://appboy-images.com/appboy/communication/assets/image_assets/images/608c446a1d65d64fe35cebda/original.jpg?1619805290"
+width="70px" align="right" padding="10px 10px 20px 10px" css-class="pc_button" href="{{third_episode_link}}" />
+</mj-column>
+</mj-section>
+
+<!-- MORE INFOAREA -->
+<mj-section padding="24px 0px 8px 0px">
+<mj-column>
+<mj-spacer height="8px" />
+<mj-text mj-class="paragraph_black_centered">
+Available wherever you get your&nbsp;podcasts.
+</mj-text>
+</mj-column>
+</mj-section>
+
+</mj-wrapper>
+
+<!-- FOOTER AREA -->
+<mj-include path="includes/footer.mjml" />
+
+</mj-body>
+</mjml>

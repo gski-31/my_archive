@@ -1,0 +1,11 @@
+<% include partials/head %>
+
+<p>Loop Testing Page</p>
+
+<ol>
+<% dataSet.forEach(function(a){ %>
+<li style="padding-bottom: 10px;"><strong><%= a.firstName %></strong>&ndash;<em><%= a.lastName %></em> was listed</li>
+<% }); %>
+</ol>
+
+<% include partials/foot %>

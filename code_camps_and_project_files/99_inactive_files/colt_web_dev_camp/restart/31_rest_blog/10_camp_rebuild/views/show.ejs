@@ -1,0 +1,25 @@
+<% include partials/header %>
+<div class="container">
+    <div class="container">
+        <div class="row bg-dark p-2 text-white">
+            <h2><%= camp.name %></h2>
+        </div>
+        <div class="row bg-light">
+            <div class="col-md-3 p-3">
+                <img src="<%= camp.image %>" class="img-fluid mx-auto d-block" alt="<%= camp.name %>" />
+            </div>
+            <div class="col-md-9 p-3">
+                <p><%= camp.description %></p>
+                <p class="text-right text-info"><em><%= camp.location %></em></p>
+            </div>
+        </div>
+        <div class="row bg-dark p-2">
+            <a href="/camps" class="btn btn-success m-1">Go Back</a>
+            <a href="/camps/<%= camp._id %>/edit" class="btn btn-warning m-1">Edit</a>
+            <form action="/camps/<%= camp._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger m-1">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

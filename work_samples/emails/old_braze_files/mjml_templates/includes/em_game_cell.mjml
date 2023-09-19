@@ -1,0 +1,26 @@
+<mj-column background-color="#eee" border="10px solid white">
+<mj-image fluid-on-mobile="true" 
+href="{{game_join_cta_url}}" src="{{hero_image_url}}" />
+<mj-text padding="20px 10px 0px 15px"font-size="11px">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</mj-text>
+<mj-text padding="5px 10px 5px 15px" font-size="14px" font-weight="bold">{{game.title}}</mj-text>
+
+<mj-table padding-left="15px">
+<tr>
+<td width="40px"><img width="30px" style="border-radius: 30px; border: 1px solid white;" src="{{game_id_1_COACH_IMAGE}}" /></td>
+<td><span style="font-size: 11px; line-height: 15px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+
+<mj-button 
+background-color="transparent"
+color="#6a1798"
+align="left"
+inner-padding="10px 0px 0px 0px"
+font-size="13px"
+font-weight="bold"
+font-family="'Averta', Arial, sans-serif;"
+padding-left="15px" 
+padding-top="10px" 
+href="{{game_join_cta_url}}">JOIN NOW&nbsp;&nbsp;></mj-button>
+<mj-spacer height="16px" />
+</mj-column>

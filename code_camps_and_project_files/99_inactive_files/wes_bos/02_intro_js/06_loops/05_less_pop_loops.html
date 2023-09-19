@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>less popular loops</title>
+
+</head>
+
+<body>
+
+    <script>
+        // for loop
+        /* The for statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a block statement) to be executed in the loop. */
+        for (let i = 0; i < 15; i++) {
+            // do something 15 times
+        }
+        // refactor to map, reduce, filter
+
+        // for of loop
+        /* The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. */
+        const name = 'Jason';
+        for (const letter of name) {
+            console.log(letter);
+        }
+        console.log([...name]); // spread can be used as well
+        /* for of is used for promises // future lesson */
+
+        // for in loop // used for looping over keys of an object
+        /* The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties. */
+
+        for (const ind in name) {
+            console.log(ind);
+        }
+        /* use Object keys entries and values instead */
+
+// while loop
+        /* The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement. */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<% include partials/header %>
+<h5>Show Page</h5>
+<div class="row">
+    <h3><%= thing.name %></h3>
+    <div class="card">
+        <img class="card-img-top" src="<%= thing.image %>" alt="<%= thing.name %>" style="max-width:300px">
+        <div class="card-body">
+            <p class="card-text"><%= thing.description %>…</p>
+            <p><small><%= thing.date.toDateString() %></small></p>
+            <a href="/" class="btn btn-primary">Back</a>
+            <a href="/things/<%= thing._id %>/edit" class="btn btn-success">Edit Me</a>
+            <form action="/things/<%= thing._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete Me</button>
+            </form>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

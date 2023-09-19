@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom_traversal</title>
+</head>
+
+<body>
+    <p class="me">Here is some <em>text</em></p>
+    <p class="notMe">Here is some <em>more text</em></p>
+
+
+    <script>
+        console.log('bingo');
+        const me = document.querySelector('.me');
+        console.log(me.childNodes);
+        me.remove();
+        // still in memory
+        console.log(me.textContent);
+    </script>
+</body>
+
+</html>

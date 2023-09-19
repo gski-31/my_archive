@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="container">
+        <div class="row bg-dark p-2 text-white">
+            <h2><%= campground.name %></h2>
+        </div>
+        <div class="row bg-light">
+            <div class="col-md-3 p-3">
+                <img src="<%= campground.image %>" class="img-fluid mx-auto d-block" alt="<%= campground.name %>" />
+            </div>
+            <div class="col-md-6 p-3">
+                <p><%= campground.description %></p>
+                <p class="text-right text-info"><em><%= campground.location %></em></p>
+            </div>
+            <div class="col-md-3 p-3">
+                <p>Future Map</p>
+                <img src="<%= campground.image %>" class="img-fluid mx-auto d-block" alt="<%= campground.name %>" />
+            </div>
+        </div>
+        <div class="row bg-warning">
+            <div class="col-md-4 p-3">
+                <p>RATING X OUT OF X</p>
+            </div>
+            <div class="col-md-4 p-3">
+                <p>CURRENT PRICE</p>
+            </div>
+            <div class="col-md-4 p-3">
+                <a href="#" class="btn-lg btn-dark">BOOK IT</a>
+            </div>
+        </div>
+        <div class="row bg-dark p-2">
+            <div class="col d-inline-block">
+                <a href="/campgrounds" class="badge badge-dark m-1">&laquo; Go Back</a>
+                <a href="/campgrounds/<%= campground._id %>/comments/new" class="badge badge-warning m-1">Add Comment</a>
+            </div>
+            <div class="col-auto d-inline-block">
+                <a href="/campgrounds/<%= campground._id %>/edit" class="badge badge-dark m-1">Edit</a>
+                <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST" class="d-inline-block">
+                    <button class="badge badge-dark m-1">Delete</button>
+                </form>
+            </div>
+        </div>
+        <div class="row bg-light p-4">
+            <% campground.comments.forEach((comment)=>{ %>
+            <div class="container">
+                <p><%= comment.text %></p>
+                <p><small><em>– <%= comment.author %></em></small></p>
+                <hr>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>

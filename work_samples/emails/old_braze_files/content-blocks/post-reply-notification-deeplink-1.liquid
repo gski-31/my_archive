@@ -1,0 +1,11 @@
+{% if event_properties.${response_type} == "post" %}
+  {% assign post_id = event_properties.${response_id} %}
+{% else %}
+  {% assign post_id = event_properties.${post_id} %}
+{% endif %}
+{{content_blocks.${config-vars-1}}}
+{% if event_properties.${feed_type} == "game" %}
+  {{wb_config_waybetter_app_url_scheme}}://screen/gameActivity?gameType={{event_properties.${feed_product}}}&gameId={{event_properties.${feed_type_id}}}&postId={{post_id}}&utm_source=waybetter&utm_medium=push
+{% else %}
+  {{wb_config_waybetter_app_url_scheme}}://screen/appFeedActivity?postId={{post_id}}&utm_source=waybetter&utm_medium=push
+{% endif %}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+html { 
+  background: url(../img/bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  text-shadow: 3px 0 rgb(255, 146, 4);
+
+}
+
+footer {
+  color: #DBEDF3;
+}
+
+.w {
+  background: url('../img/crash.png'); 
+  background-size: cover;
+}
+
+.a {
+  background: url('../img/kick.png'); 
+  background-size: cover;
+}
+
+.s {
+  background: url('../img/snare.png'); 
+  background-size: cover;
+}
+
+.d {
+  background: url('../img/tom1.png'); 
+  background-size: cover;
+}
+
+.j {
+  background: url('../img/tom2.png'); 
+  background-size: cover;
+}
+
+.k {
+  background: url('../img/tom3.png'); 
+  background-size: cover;
+}
+
+.l {
+  background: url('../img/tom4.png'); 
+  background-size: cover;
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid rgb(73, 28, 69);
+  font-size: 5rem;
+  line-height: 2;
+  font-weight: 900;
+  color: rgb(255, 146, 4);
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}

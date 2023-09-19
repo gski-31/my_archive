@@ -1,0 +1,220 @@
+{{content_blocks.${config-vars-1}}}
+
+{% unless wb_config_waybetter_app_branch_url %}
+  {% abort_message("waybetter-marketing-email-6-email-3_stack-game-row: wb_config_waybetter_app_branch_url missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{% unless wb_utm_campaign_name %}
+  {% abort_message("waybetter-marketing-email-6-stack-game-row: wb_utm_campaign_name missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{% unless wb_config_connected_content_user_url or user_service_url %}
+  {% abort_message("waybetter-marketing-email-6-stack-game-row: wb_config_connected_content_user_url is missing and user_service_url is not set") %}
+{% endunless %}
+
+{{content_blocks.${get-falkor-game-by-id}}}
+
+{% comment %}
+  Find the host that is the official coach.
+{% endcomment %}
+{% for host_id in game.host_ids %}
+    {% assign fetch_host_url = user_service_url | default: wb_config_connected_content_user_url | append: '/' | append: host_id %}
+    {% connected_content {{fetch_host_url}} :save response_user :cache 3600 %}
+    {% assign coach_name = response_user.displayName %}
+    {% assign coach_image_url = response_user.avatar.secureUrl %}
+    {% assign avatar_image_url = response_user.avatar.url %}
+{% endfor %}
+
+{% comment %}
+  This image is in Braze PROD media library: waybetter-marketing-email-3_stack_4_grid-join-now-button.png
+{% endcomment %}
+{% assign game_join_cta_image_url = "https://appboy-images.com/appboy/communication/assets/image_assets/images/60420fd38356684f8bca8046/original.png?1614942163" %}
+
+{% comment %}
+  Calculate the x week(s) value and label.
+{% endcomment %}
+{% assign game_start_s = game.start_date | date: "%s" %}
+{% assign game_end_s = game.end_date | date: "%s" %}
+{% assign game_duration_secs = game_end_s | minus: game_start_s %}
+{% comment %}
+Game date ranges sometimes use a start date time of midnight and and end date time
+of 11:59:59, so that the end date is not the day later, which results in a game 
+length that is a multiple of a week minus one second. This detects such cases and
+adds the missing second, so it can properly calculate the length in weeks.
+{% endcomment %}
+{% if game_duration_secs > 0 %}
+  {% if game_duration_secs | modulo: 7 != 0 %}
+    {% if game_duration_secs | plus: 1 | modulo: 7 == 0 %}
+      {% assign game_duration_secs = game_duration_secs | plus: 1 %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% assign game_duration_weeks = game_duration_secs | divided_by: 3600 | divided_by: 24 | divided_by: 7 | round: 0 %}
+{% if game_duration_weeks == 1 %}
+  {% assign game_duration_weeks_label = "week" %}
+{% else %}
+  {% assign game_duration_weeks_label = "weeks" %}
+{% endif %}
+
+
+{% assign game_start_date = game.start_date | date: "%b %e" %}
+{% assign game_end_date = game.end_date | date: "%b %e" %}
+
+{% assign game_join_cta_url = wb_config_waybetter_app_branch_url | append: '/game_profile' %}
+
+{% unless waybetter_marketing_email_use_link_template %}
+  {% capture game_join_cta_url %}{{game_join_cta_url}}?utm_medium=email&amp;gameId={{game.id}}&amp;utm_campaign={{wb_utm_campaign_name}}{% endcapture %}
+{% endunless %}
+
+{% if game_row_image_url %}
+  {% assign hero_image_url = game_row_image_url %}
+{% else %}
+  {% comment %}
+    https://cloudinary.com/documentation/image_transformations#control_gravity
+  {% endcomment %}
+  {% if game_row_image_crop_params %}
+    {% assign game_row_image_xform_params = game_row_image_crop_params %}
+  {% else %}
+    {% assign game_row_image_xform_params = 'c_crop,c_fill,g_auto' %}
+  {% endif %}
+
+  {% assign hero_image_url_parts = game.image.secure_url | split: '/' %}
+  {% assign hero_image_display_width = 278 %}
+  {% assign hero_image_display_height = 234 %}
+  {% assign hero_image_pixel_width = hero_image_display_width | times: 1 %}
+  {% assign hero_image_pixel_height = hero_image_display_height | times: 1 %}
+  {% assign hero_image_cloudinary_params = 'dpr_2,f_auto,q_auto,w_IMAGE_WIDTH,h_IMAGE_HEIGHT,XFORM_PARAMS' | replace: 'IMAGE_WIDTH', hero_image_pixel_width | replace: 'IMAGE_HEIGHT', hero_image_display_height | replace: 'XFORM_PARAMS', game_row_image_xform_params %}
+  {% assign hero_image_url = game.image.secure_url | replace: hero_image_url_parts[6], hero_image_cloudinary_params %}
+{% endif %}
+
+<!-- FEATURED GAME  ------------------------- -->
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div style="background:white;background-color:white;margin:0px auto;max-width:600px;">
+  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="background:white;background-color:white;width:100%;">
+    <tbody>
+      <tr>
+        <td style="direction:ltr;font-size:0px;padding:30px 30px 20px 30px;text-align:center;">
+          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:540px;" width="540" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+          <div style="background:#eeeeee;background-color:#eeeeee;margin:0px auto;border-radius:10px;max-width:540px;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+              style="background:#eeeeee;background-color:#eeeeee;width:100%;border-radius:10px;">
+              <tbody>
+                <tr>
+                  <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:270px;" ><![endif]-->
+                    <div class="mj-column-per-50 mj-outlook-group-fix"
+                      style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tbody>
+                          <tr>
+                            <td style="vertical-align:top;padding:0px;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tbody>
+                                  <tr>
+                                    <td align="center" class="featured_corners"
+                                      style="font-size:0px;padding:0px;word-break:break-word;">
+                                      <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        style="border-collapse:collapse;border-spacing:0px;"
+                                        class="mj-full-width-mobile">
+                                        <tbody>
+                                          <tr>
+                                            <td style="width:270px;" class="mj-full-width-mobile">
+                                              <a href="{{game_join_cta_url}}" target="_blank"><img
+                                                  alt="join our featured game" height="auto" src="{{hero_image_url}}"
+                                                  style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                                  width="270"></a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!--[if mso | IE]></td><td class="" style="vertical-align:top;width:270px;" ><![endif]-->
+                    <div class="mj-column-per-50 mj-outlook-group-fix"
+                      style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tbody>
+                          <tr>
+                            <td style="vertical-align:top;padding:0px;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                <tbody>
+                                  <tr>
+                                    <td align="left"
+                                      style="background:#eeeeee;font-size:0px;padding:12px 12px 6px 12px;word-break:break-word;">
+                                      <div
+                                        style="font-family:Roboto, Arial, sans-serif;;font-size:13px;line-height:1.3em;text-align:left;color:#000000;">
+                                        <span style="font-size: 12px; line-height: 17px;">{{game_start_date}}
+                                          - {{game_end_date}} •
+                                          {{game_duration_weeks}}
+                                          {{game_duration_weeks_label}}</span><br><span
+                                          style="font-size: 16px; line-height: 21px;"><strong>{{game.title}}</strong></span><br>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  {% unless coach_name == blank  %}
+
+
+                                  <tr>
+                                    <td align="left"
+                                      style="background:#eeeeee;font-size:0px;padding:0px 12px;word-break:break-word;">
+                                      <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                        style="color:#000000;font-family:Roboto, Arial, sans-serif;;font-size:13px;line-height:1.em;table-layout:auto;width:100%;border:none;">
+                                        <tr>
+                                          <td width="40px"><img width="30px"
+                                              style="border-radius: 30px; border: 1px solid white;"
+                                              src="{{avatar_image_url}}">
+                                          </td>
+                                          <td><span style="font-size: 12px; line-height: 16px;"><strong>With
+                                                Coach</strong><br>{{coach_name}}</span>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+
+                                  {% endunless %}
+
+
+                                  <tr>
+                                    <td align="left" class="pic_corners"
+                                      style="background:#eeeeee;font-size:0px;padding:6px 12px 0px 12px;word-break:break-word;">
+                                      <div
+                                        style="font-family:Roboto, Arial, sans-serif;;font-size:13px;line-height:1.3em;text-align:left;color:#000000;">
+                                        <span
+                                          style="font-size: 11px; line-height: 1em;">{{game.description}}</span><br><a
+                                          href="{{game_join_cta_url}}"
+                                          style="font-size: 14px; line-height: 40px; color: #6a1798; text-decoration: none;"><strong>JOIN
+                                            NOW</strong></a>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!--[if mso | IE]></td></tr></table><![endif]-->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+<!-- ------------------------- END FEATURED GAME -->

@@ -1,0 +1,699 @@
+.main-body-content * {
+	/*font-family: "Myriad Pro", 'PT Sans', "Open Sans", sans-serif;*/
+	font-family: "Open Sans", sans-serif !important;
+	font-weight: 400;
+}
+
+.main-body-content .container-fluid {
+	padding: 0;
+}
+
+
+.main-body-content p {
+	font-size: 1.3em;
+	max-width: 850px;
+	margin: 1em auto;
+}
+
+.main-body-content .text-italic, .main-body-content em  {
+	font-style: italic;
+	font-weight: inherit;
+}
+
+.main-body-content .text-underline, .main-body-content u {
+	text-decoration: underline;
+	font-weight: inherit;
+}
+
+.main-body-content strong {
+	font-weight: 700 !important;
+}
+
+.main-body-content .text-light {
+	font-weight: 300 !important;
+}
+
+.main-body-content .text-normal {
+	font-weight: 400 !important;
+}
+
+.main-body-content .text-semi-bold {
+	font-weight: 600 !important;
+}
+
+.main-body-content .text-bold {
+	font-weight: 700 !important;
+}
+
+.main-body-content .text-extra-bold {
+	font-weight: 800 !important;
+}
+
+.main-body-content .text-smaller {
+	font-size: 0.9em;
+}
+
+.main-body-content .text-bigger {
+	font-size: 1.2em;
+}
+
+.main-body-content h2 {
+	font-size: 2em;
+}
+
+.main-body-content h3 {
+	font-size: 1.7em;
+}
+
+.main-body-content a {
+	color: #000;
+}
+
+.main-body-content a:hover {
+	text-decoration: none;
+}
+
+.main-body-content .text-dark-cyan {
+	color: #17393d;
+}
+
+.main-body-content .click {
+	cursor: pointer;
+}
+
+.main-body-content ul {
+	list-style-type: none;
+}
+
+.main-body-content ul li {
+	font-size: 1.3em;
+}
+
+.main-body-content div.spacer {
+	display: block;
+	height: 1em;
+	width: 100%;
+}
+
+.main-body-content hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 3px solid #576265;
+}
+
+.main-body-content hr.white {
+	border-top: 3px solid #fff;
+}
+
+.main-body-content hr.black {
+	border-top: 3px solid #000;
+}
+
+.main-body-content .no-t-margin {
+	margin-top: 0;
+}
+
+.main-body-content .no-b-margin {
+	margin-bottom: 0;
+}
+
+.strikethrough {
+  position: relative;
+}
+
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 2px solid;
+  border-color: #ff0000;
+
+  -webkit-transform:rotate(-15deg);
+  -moz-transform:rotate(-15deg);
+  -ms-transform:rotate(-15deg);
+  -o-transform:rotate(-15deg);
+  transform:rotate(-15deg);
+}
+
+.container {
+	max-width: 950px;
+}
+
+.container-850 {
+	max-width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mm-logo {
+	max-height: 25px;
+	max-width: 140px;
+	width: 100%;
+	display: inline;
+	margin-top: 12px;
+}
+
+.bg-brains {
+	background-color: #124e5e;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_brains.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	color: #fff;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.bg-brains h1 {
+	font-size: 2em;
+	font-weight: 600;
+	font-style: italic;
+	color: #f8f9c5;
+	/*text-shadow: 3px 3px 10px #000;*/
+}
+
+
+.bg-computer-lady {
+	background-color: #fff;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_computer_lady.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-grey {
+	background-color: #c0c2c1;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_grey.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-dark-cyan-nat {
+	background-color: #17393d;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_dark_cyan_nat.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.bg-dark-cyan-brain {
+	background-color: #17393d;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_dark_cyan_brain.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: bottom center;
+	color: #fff;
+}
+
+.bg-grey-head {
+	background-color: #17393d;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_grey_head.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: top center;
+}
+
+.main-body-content .bg-grey-head p {
+	margin: 0;
+	font-size: 1.4em;
+}
+
+.bg-grey-head .row {
+	margin: 20px -15px;
+}
+
+.text-sources {
+	font-weight: 700;
+	font-size: 0.9em !important;
+}
+
+
+.bg-dark-cyan-sad {
+	background-color: #17393d;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_dark_cyan_sadgirl.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: top center;
+	color: #fff;
+}
+
+.bg-grey-woman-thinking {
+	background-color: #d3d5d4;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_grey_dreaming.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: bottom center;
+}
+
+.bg-light-grey {
+	background-color: #d3d5d4;
+}
+
+.img-brainwave img {
+	max-width: 100%;
+	margin-right: 0px;
+	margin-left: auto;
+	display: block;
+}
+
+.img-brainwave p {
+	margin-top: 0;
+}
+
+
+.bg-dark-cyan-vr {
+	background-color: #17393d;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_vr.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.main-body-content .brain-list p {
+	margin: 0;
+	font-size: 1.4em;
+}
+
+.brain-list .row {
+	margin: 20px -15px;
+}
+
+.bg-equation {
+	background-color: #17393d;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_equation.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.bg-grey-brainwave {
+	background-color: #e1e1e1;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_grey_brainwave.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-cmykheads {
+	background-color: #ededed;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_cmykheads.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.text-green {
+    color: #13563c;
+}
+
+.bg-testimonials {
+	background-color: #183a3e;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_testimonials.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.bg-hands {
+	background-color: #fff;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_hands.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.text-orange {
+	color: #f64f00
+}
+
+.bg-dark-cyan-guarantee {
+	background-color: #183a3e;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_dark_cyan_guarantee.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.bg-dark-cyan-guarantee a {
+	color: #ddf8a2;
+	text-decoration: underline;
+}
+
+.bg-grey-testimonials {
+	background-color: #e8e8e8;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_grey_testimonials.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-couple {
+	background-color: #cad1d3;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_couple.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-neo {
+	background-color: #133539;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_neo.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.bg-beach {
+	background-color: #133539;
+	background-image: url("http://mindmovies-images.s3.amazonaws.com/matrix/MMMT_160323_prdcts_mtrx_bg_beach.jpg"); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+
+
+.panel-matrix, .faq .panel-info {
+	border-color: #133539;
+	border-width: 2px;
+}
+
+.panel-matrix .panel-heading, .faq .panel-heading {
+	background-color: #133539;
+	border-color: #133539;
+	color: #fff !important;
+	border-top-right-radius: initial !important;
+	border-top-left-radius: initial !important;
+}
+
+.panel-matrix .panel-heading i {
+	background-color: #fff;
+	color: #133539;
+	padding: 2px 10px;
+	border-radius: 25px;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 1.4em;
+}
+
+.panel-matrix .panel-body {
+	font-size: 1.3em;
+	text-align: center;
+	min-height: 290px;
+}
+
+.faq .panel-body {
+	font-size: 1.2em;
+}
+
+.faq .panel-group .panel-heading a span {
+    font-size: 1.2em;
+    font-weight: 400 !important;
+    margin-left: 0.5em;
+    color: #fff;
+}
+
+.faq .panel-group .panel-heading a * {
+    text-decoration: none !important;
+    font-weight: 400 !important;
+}
+
+
+.faq .panel-group .panel-heading a, .faq .panel-group .panel-heading a:hover {
+    text-decoration: none;
+}
+
+.faq .panel-group .panel-body a, .faq .panel-group .panel-body a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+    color: #133539;
+}
+
+.faq .panel-group .panel-body a:hover {
+    text-decoration: none;
+}
+
+.faq .panel-group p {
+    margin: 10px auto;
+    font-size: 1.1em;
+ }
+
+
+
+.faq .panel-group .panel-heading a:before {
+    content: "+  ";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.faq .panel-group .panel-heading a[aria-expanded="false"]:before {
+    content: "+  ";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.faq .panel-group .panel-heading a[aria-expanded="true"]:before {
+    content: "-  ";
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.max-w {
+	width: 100%;
+	max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:390px) {
+	.main-body-content p {
+		font-size: 1.1em;
+		margin: 0.8em auto;
+	}
+	.main-body-content h1 {
+		font-size: 1.8em !important;
+	}
+	.main-body-content h2 {
+		font-size: 1.5em;
+	}
+	.main-body-content h3 {
+		font-size: 1.3em !important;
+	}
+	.main-body-content h4 {
+		font-size: 1em !important;
+	}
+	.main-body-content ul li {
+		font-size: 1.1em;
+	}
+	.panel-matrix .panel-body {
+		font-size: 1.1em;
+		min-height: 30px;
+	}
+	.faq .panel-body {
+		font-size: 0.9em;
+	}
+	.bg-dark-cyan-nat {
+		background-image: none; 
+	}
+}
+
+@media (min-width:391px) and (max-width:480px) {
+	.main-body-content p {
+		font-size: 1.1em;
+		margin: 0.8em auto;
+	}
+	.main-body-content h1 {
+		font-size: 1.8em !important;
+	}
+	.main-body-content h2 {
+		font-size: 1.5em;
+	}
+	.main-body-content h3 {
+		font-size: 1.3em !important;
+	}
+	.main-body-content h4 {
+		font-size: 1em !important;
+	}
+	.main-body-content ul li {
+		font-size: 1.1em;
+	}
+	.img-brainwave img {
+		margin-right: auto;
+	}
+	.panel-matrix .panel-body {
+		font-size: 1.1em;
+		min-height: 30px;
+	}
+	.faq .panel-body {
+		font-size: 0.9em;
+	}
+	.bg-dark-cyan-nat {
+		background-image: none; 
+	}	
+}
+
+@media (min-width:481px) and (max-width:768px) {
+	.main-body-content p {
+		font-size: 1.1em;
+		margin: 0.8em auto;
+	}
+	.main-body-content h1 {
+		font-size: 1.8em !important;
+	}
+	.main-body-content h2 {
+		font-size: 1.5em;
+	}
+	.main-body-content h3 {
+		font-size: 1.3em !important;
+	}
+	.main-body-content h4 {
+		font-size: 1.1em !important;
+	}
+	.main-body-content ul li {
+		font-size: 1.1em;
+	}
+	.img-brainwave img {
+		margin-right: auto;
+	}
+	.panel-matrix .panel-body {
+		font-size: 1.1em;
+		min-height: 30px;
+	}
+	.faq .panel-body {
+		font-size: 0.9em;
+	}
+	.bg-dark-cyan-nat {
+		background-image: none; 
+	}
+}
+
+@media (min-width:769px) and (max-width:991px) {
+	.mm-logo {
+		margin-left: 10px;
+		margin-right: 10px;
+		max-height: 20px;
+		max-width: 112px;
+		margin-top: 15px;
+		width: 100%;
+		display: inline;
+	}
+	.mm-log {
+		display: none !important;
+	}
+	.li-login-submit {
+		padding: 1px 20px 0px 20px;
+	}
+	.img-brainwave img {
+		margin-right: auto;
+	}
+}
+
+
+@media (min-width:991px) and (max-width:5000px) {
+	.mm-logo {
+		margin-left: 50px;
+		margin-right: 40px;
+		max-height: 25px;
+		max-width: 140px;
+		width: 100%;
+		display: inline;
+	}
+	.mm-log {
+		display: none !important;
+	}
+
+}

@@ -1,0 +1,77 @@
+{% comment %}
+Adapted from the "Waybetter Marketing Email v1 - Images" source template.
+
+Available variables:
+
+1. top
+- top_image_url
+2. top-row-start
+- top_bg_image_url
+3. game_row
+- game_row_title
+- game_row_show_title - true or false
+- game_row_image_url - override the game's image altogether. Set to nil to use the game's own image.
+- game_row_image_crop_params - if using the game's own image, you can offset the cropping by providing
+  a string in the format x_<number>,y_<number>, e.g. "x_0,y_300".  This tells cloudinary to center the
+	image at that coordinate before cropping the image.
+- game_row_game_ids (comma delimited list)
+
+{% endcomment %}
+
+{% comment %}See WBA-879{% endcomment %}
+{% assign waybetter_marketing_email_use_link_template = true %}
+
+{{content_blocks.${waybetter-marketing-email-1_i-all-pre-content}}}
+
+  {% comment %}
+	  This is the URL of the image that will comprise the entire top section
+		of this email template. Any text and CTA is expected to be part of the
+		image.
+  {% endcomment %}
+
+	{% assign top_image_url = "http://mailpreview.net/f9/2adf8ee0/r632403-68130cd0/images/img_10.png" %}
+	{% assign top_image_link_url = "https://waybetter.com/games" %}
+	{{content_blocks.${waybetter-marketing-email-1_i-top}}}
+
+	{% comment %}
+	  Be sure to always set all four variables before including the game-row content block,
+	  otherwise subsequent inclusions will use the previous row's values!
+	{% endcomment %}
+
+	{% assign game_id = 284 %}
+	{% assign game_row_show_title = true %}
+	{% assign game_row_image_url = nil %}
+	{% assign game_row_image_crop_params = "x_10,y_350" %}
+	{{content_blocks.${waybetter-marketing-email-1_i-game-row}}}
+
+	{% assign game_id = 302 %}
+	{% assign game_row_show_title = true %}
+	{% assign game_row_image_url = "http://mailpreview.net/f9/2adf8ee0/r632403-68130cd0/images/bg_img_2.jpg" %}
+	{% assign game_row_image_crop_params = nil %}
+	{{content_blocks.${waybetter-marketing-email-1_i-game-row}}}
+
+	{% assign game_id = 290 %}
+	{% assign game_row_show_title = true %}
+	{% assign game_row_image_url = nil %}
+	{% assign game_row_image_crop_params = "x_0,y_300" %}
+	{{content_blocks.${waybetter-marketing-email-1_i-game-row}}}
+
+	{% assign game_id = 288 %}
+	{% assign game_row_show_title = true %}
+	{% assign game_row_image_url = nil %}
+	{% assign game_row_image_crop_params = nil %}
+	{{content_blocks.${waybetter-marketing-email-1_i-game-row}}}
+
+	{% assign game_id = 281 %}
+	{% assign game_row_show_title = false %}
+	{% assign game_row_image_url = nil %}
+	{% assign game_row_image_crop_params = nil %}
+	{{content_blocks.${waybetter-marketing-email-1_i-game-row}}}
+
+	{% assign game_id = 281 %}
+	{% assign game_row_show_title = false %}
+	{% assign game_row_image_url = nil %}
+	{% assign game_row_image_crop_params = "x_0,y_200" %}
+	{{content_blocks.${waybetter-marketing-email-1_i-game-row}}}
+
+{{content_blocks.${waybetter-marketing-email-1_i-all-post-content}}}

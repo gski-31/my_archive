@@ -1,0 +1,26 @@
+{{content_blocks.${config-vars-1}}}
+
+{% unless wb_config_connected_content_user_url or user_service_url %}
+  {% abort_message("waybetter-post-reply-notification-json: wb_config_connected_content_user_url is missing and user_service_url is not set") %}
+{% endunless %}
+
+{% unless wb_env %}
+  {% abort_message("waybetter-post-reply-notification-json: wb_env is missing") %}
+{% endunless %}
+
+{% case event_properties.response_kind %}
+  {% when "like" %}
+    {% assign reaction_label = "likes your post" %}
+  {% when "inspired" %}
+    {% assign reaction_label = "is inspired by your post" %}
+  {% when "onfire" %}
+    {% assign reaction_label = "says you're on fire" %}
+  {% when "lovethis" %}
+    {% assign reaction_label = "loves your post" %}
+  {% when "same" %}
+    {% assign reaction_label = "feels the same" %}
+  {% else %}
+    {% assign reaction_label = "replied to your post" %}
+{% endcase %}
+
+{% connected_content {{user_service_url | default: wb_config_connected_content_user_url }}/{{event_properties.${response_user_id}}} :save response_user :cache 3600 %}{"message":"{{response_user.displayName | default: "Someone" }} {{reaction_label | default: "responded to your post"}}.","app":"waybetter","deeplink":"{{content_blocks.${waybetter-post-reply-notification-deeplink}}}","user_id":{{${user_id}}},"image_public_id":"{{response_user.avatar.public_id | default: "WB_ENV/user/profile/placeholders/waybetter.png" | replace: "WB_ENV", wb_env }}"}

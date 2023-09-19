@@ -1,0 +1,49 @@
+<!-- START waybetter-marketing-email-footer -->
+
+<table width="600" border="0" cellspacing="0" cellpadding="0" class="m-shell footer-container">
+  <tbody>
+    <tr>
+      <td class="td" style="width:600px; min-width:600px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td class="pb-50 mbp-40 footer-bottom-content" style="padding-bottom: 50px">
+
+                {% if wb_facebook_page_url || wb_instagram_page_url %}
+                  <div class="social-media-icons-row">
+                    {% if wb_facebook_page_url %}
+                      <a href="{{wb_facebook_page_url}}" target="_blank"><img alt="Facebook Logo" class="sociale-media-icon" height="35" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6087ee357b0e3d4a3081744d/original.png?1619521077" width="35" /></a>
+                    {% endif %}
+                    {% if wb_instagram_page_url %}
+                      <a href="{{wb_instagram_page_url}}" target="_blank"><img alt="Instagram Logo" class="sociale-media-icon" height="35" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6087ee35ce82062ed089c367/original.png?1619521077" width="35" /></a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                <p>
+                  Got an idea for a game? Tell us! <a class="footer" href="mailto:suggestions@waybetter.com" target="_blank">suggestions@waybetter.com</a>
+                  <br /><br />
+                  This email was sent to {{${email_address}}} from WayBetter, Inc.<br/>
+                  4023 Kennett Pike Suite 500 Wilmington, DE 19807<br/>
+                  {% if wb_unsubscribe_url %}
+                    {% unless hide_unsubscribe %}
+                        <br/>
+                        Want to change how you receive these emails?<br />
+                        You can <a class="footer" href="{{wb_unsubscribe_url}}{{${user_id}}}">unsubscribe</a> from this list.<br/><br/>
+                    {% endunless %}
+                  {% endif %}
+                  {% if email_received_reason_phrase %}
+                    {{email_received_reason_phrase}} <br /><br />
+                  {% endif %}
+                  <img height="25" alt="WayBetter Logo" src="https://appboy-images.com/appboy/communication/assets/image_assets/images/6087edabbdc3d64b17c3547e/original.png?1619520939" style="border: 0px ; width: 137px; height: 25px; margin: 10px 5px 5px;" width="137" /><br/><br/>
+                  © {{ "now" | date: "%Y" }} WayBetter, All rights reserved.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- END waybetter-marketing-email-footer -->

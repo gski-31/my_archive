@@ -1,0 +1,34 @@
+{% comment %} 
+
+Sample input (use in body where this would be included, to test):
+
+  {% assign activity_duration_secs = 1932 %}
+
+{% endcomment %}
+
+
+{% comment %} 
+get variables from event_properties if not otherwise set already
+{% endcomment %}
+
+{% unless activity_duration_secs %}
+  {% assign activity_duration_secs = event_properties.${metric_duration} | plus: 0 %}
+{% endunless %}
+
+{% unless activity_duration_secs %}
+  {% abort_message('activity duration not specified (either in activity_duration_secs nor in event's metric_duration') %}
+{% endunless %}
+
+{% comment %} 
+reformat variables
+{% endcomment %}
+
+{% if activity_duration_secs > 3600 %}
+  {% assign activity_duration = activity_duration_secs | divided_by: 3600 | round: 2 | append: " hour" %}
+{% elsif activity_duration_secs > 60 %}
+  {% assign activity_duration = activity_duration_secs | divided_by: 60 | round: 2 | append: " min" %}
+{% else %}
+  {% assign activity_duration = activity_duration_secs | append: " sec" %}
+{% endif %}
+
+This {{activity_duration}} activity does not qualify as a submission. See details in your daily log.

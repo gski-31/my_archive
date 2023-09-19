@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<p>new CG page</p>
+<p>add a CG</p>
+
+<form action="/campgrounds" method="POST">
+    <input type="text" name="name" placeholder="name"><br /><br />
+    <input type="text" name="image" placeholder="image url"><br /><br />
+    <button>Submit</button>
+</form>
+
+<a href="/campgrounds">View all CGs</a>
+
+<% include partials/footer %>

@@ -1,0 +1,186 @@
+<mj-head>
+
+<!-- ROBOTO GOOGLE FONT FOR BODY -->
+<mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+<mj-attributes>
+
+<!-- UNIVERSAL WAYBETTER STANDARDS -->
+<mj-all padding="0px" font-family="Roboto, Arial sans-serif" />
+
+<!-- FALLBACK IMAGE LINK AND ALT TEXT -->
+<mj-image 
+alt="Ready for better? Right this way…" 
+href="https://waybetter.com/" />
+
+<!-- STANDARD BLACK TEXT -->
+<mj-class name="header_black_centered" font-size="36px" align="center" letter-spacing="0.3px;" line-height="42px"
+color="#010101" font-family="'Averta', Roboto, Arial, sans-serif"/>
+
+<mj-class name="header_black_left" font-size="36px" align="center" letter-spacing="0.3px;" line-height="42px"
+color="#010101" font-family="'Averta', Roboto, Arial, sans-serif"/>
+
+<mj-class name="subheader_black_centered" font-size="29px" align="center" letter-spacing="0.3px;" line-height="35px"
+color="#010101" font-family="'Averta', Roboto, Arial, sans-serif"/>
+
+<mj-class name="paragraph_black_centered" font-size="18px" align="center" letter-spacing="0.3px;" line-height="26px"
+color="#010101" font-family="Roboto, Arial, sans-serif"/>
+
+<mj-class name="paragraph_black_left" font-size="17px" align="left" letter-spacing="0.3px;" line-height="23px"
+font-weight='bold' color="#010101" font-family="Roboto, Arial, sans-serif"/>
+
+<!-- STANDARD WHITE TEXT -->
+<mj-class name="header_white_centered" font-size="36px" align="center" letter-spacing="0.3px;" line-height="42px"
+color="white" font-family="'Averta', Roboto, Arial, sans-serif"/>
+
+<mj-class name="subheader_white_centered" font-size="29px" align="center" letter-spacing="0.3px;" line-height="35px"
+color="white" font-family="'Averta', Roboto, Arial, sans-serif"/>
+
+<mj-class name="paragraph_white_centered" font-size="18px" align="center" letter-spacing="0.3px;" line-height="26px"
+color="white" font-family="Roboto, Arial, sans-serif"/>
+
+<mj-class name="paragraph_white_left" font-size="17px" align="left" letter-spacing="0.3px;" line-height="23px"
+font-weight='bold' color="white" font-family="Roboto, Arial, sans-serif"/>
+
+<!-- OTHER TEXT -->
+
+<mj-class name="header_coral_centered" font-size="36px" align="center" letter-spacing="0.3px;" line-height="42px"
+color="#e24f4b" font-family="'Averta', Roboto, Arial, sans-serif"/>
+
+<mj-class name="subheader_coral_centered" font-size="29px" align="center" letter-spacing="0.3px;" line-height="35px"
+color="#e24f4b" font-family="'Averta', Roboto, Arial, sans-serif"/>
+
+<mj-class name="podcast_date_purple_left" font-size="18px" align="left" letter-spacing="0.3px;" line-height="26px" color="#6A1099" font-family="Roboto, Arial, sans-serif"/>
+
+
+<mj-class name="footer_text" font-size="12px" align="center" letter-spacing="0.3px;" line-height="18px"
+color="gray" font-family="Roboto, Arial, sans-serif"/>
+
+<!-- BUTTONS -->
+
+<mj-class
+name="coral_button_left"
+inner-padding="14px 34px"
+border-radius="50px"
+background-color="#e24f4b"
+color="white"
+font-size="15px"
+align="left" 
+font-family="Roboto, Arial, sans-serif"/>
+
+<mj-class
+name="coral_button_center"
+inner-padding="14px 34px"
+border-radius="50px"
+background-color="#e24f4b"
+color="white"
+font-size="15px"
+align="center" 
+font-family="Roboto, Arial, sans-serif"/>
+
+<mj-class
+name="green_button_left"
+inner-padding="14px 34px"
+border-radius="50px"
+background-color="#3bb989"
+color="white"
+font-size="15px"
+align="left" font-family="Roboto, Arial, sans-serif"/>
+
+<mj-class
+name="green_button_center"
+inner-padding="14px 34px"
+border-radius="50px"
+background-color="#3bb989"
+color="white"
+font-size="15px"
+align="center" 
+font-family="Roboto, Arial, sans-serif"/>
+
+<mj-class
+name="purple_button_left"
+inner-padding="14px 34px"
+border-radius="50px"
+background-color="#6A1099"
+color="white"
+font-size="15px"
+align="left" 
+font-family="Roboto, Arial, sans-serif"/>
+
+<mj-class
+name="purple_button_center"
+inner-padding="14px 34px"
+border-radius="50px"
+background-color="#6A1099"
+color="white"
+font-size="15px"
+align="center" 
+font-family="Roboto, Arial, sans-serif"/>
+
+</mj-attributes>
+
+<mj-style>
+
+/* *** IMPORT AVERTA FONT FOR TITLES *** */
+@import
+url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Regular.woff');
+font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Semibold.woff');
+font-weight: 600; font-style: normal; }
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Bold.woff'); font-weight:
+bold; font-style: normal; }
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-ExtraBold.woff');
+font-weight: 900; font-style: normal; }
+
+
+/* *** BODY GRADIENT *** */
+  
+.body_grad {
+background: rgb(254,223,213);
+background: linear-gradient(56deg, rgba(254,223,213,1) 0%, rgba(252,216,205,1) 40%, rgba(254,253,252,1) 79%);
+}
+
+/* *** MEDIA QUERIES FOR FONT SIZES *** */
+
+@media (max-width:480px) {
+.subheader_black_centered div {
+font-size:22px !important;
+}
+.pc_date_purple_left div {
+font-size:13px !important;
+}
+.paragraph_black_left div {
+font-size:15px !important;
+line-height: 20px !important;
+}
+
+.pc_button {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+}
+
+.podcast_mobile_body table tbody tr td{
+padding-left: 5px !important;
+padding-right: 5px !important;
+}
+
+.step_01_mobile_body table tbody tr td {
+padding-left: 12px !important;
+padding-right: 12px !important;
+}
+}
+
+</mj-style>
+
+</mj-head>

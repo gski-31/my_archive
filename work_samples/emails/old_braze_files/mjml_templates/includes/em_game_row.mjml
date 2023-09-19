@@ -1,0 +1,105 @@
+<!-- ------- BEGIN_GAME_ROW_TITLE ------- --> 
+<mj-section padding="0px 15px">
+<mj-column>
+<mj-spacer height="30px" />
+<mj-text font-family="'Averta', Arial, sans-serif;" font-size="23px" font-weight="600" align="center">{{row_title}}</mj-text>
+<mj-spacer height="15px" />
+</mj-column>
+</mj-section>
+<!-- ------- END_GAME_ROW_TITLE ------- --> 
+
+
+<mj-section>
+
+<!-- ------- GAME CELL_0_BEGIN ------- --> 
+<mj-column background-color="#eee" border="8px solid white">
+<mj-image fluid-on-mobile="true" 
+href="{{game_join_cta_url}}" src="{{hero_image_url}}" />
+<mj-text padding="20px 10px 0px 15px"font-size="11px">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</mj-text>
+<mj-text padding="5px 10px 5px 15px" font-size="14px" font-weight="bold">{{game.title}}</mj-text>
+
+<mj-table padding-left="13px" padding-right="5px">
+<tr>
+<td width="34px"><img width="28px" style="border-radius: 28px; border: 1px solid white;" src="{{avatar_image_url}}" /></td>
+<td><span style="font-size: 11px; line-height: 15px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+
+<mj-button 
+background-color="transparent"
+color="#6a1798"
+align="left"
+inner-padding="10px 0px 0px 0px"
+font-size="13px"
+font-weight="bold"
+font-family="'Averta', Arial, sans-serif;"
+padding-left="15px" 
+padding-top="10px" 
+href="{{game_join_cta_url}}">JOIN NOW&nbsp;&nbsp;></mj-button>
+<mj-spacer height="16px" />
+</mj-column>
+<!-- ------- GAME CELL_0_END ------- --> 
+
+
+<!-- ------- GAME CELL_1_BEGIN ------- --> 
+<mj-column background-color="#eee" border="8px solid white">
+<mj-image fluid-on-mobile="true" 
+href="{{game_join_cta_url}}" src="{{hero_image_url}}" />
+<mj-text padding="20px 10px 0px 15px"font-size="11px">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</mj-text>
+<mj-text padding="5px 10px 5px 15px" font-size="14px" font-weight="bold">{{game.title}}</mj-text>
+
+<mj-table padding-left="13px" padding-right="5px">
+<tr>
+<td width="34px"><img width="28px" style="border-radius: 28px; border: 1px solid white;" src="{{avatar_image_url}}" /></td>
+<td><span style="font-size: 11px; line-height: 15px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+
+<mj-button 
+background-color="transparent"
+color="#6a1798"
+align="left"
+inner-padding="10px 0px 0px 0px"
+font-size="13px"
+font-weight="bold"
+font-family="'Averta', Arial, sans-serif;"
+padding-left="15px" 
+padding-top="10px" 
+href="{{game_join_cta_url}}">JOIN NOW&nbsp;&nbsp;></mj-button>
+<mj-spacer height="16px" />
+</mj-column>
+<!-- ------- GAME CELL_1_END ------- --> 
+
+
+<!-- ------- GAME CELL_2_BEGIN ------- --> 
+<mj-column background-color="#eee" border="8px solid white">
+<mj-image fluid-on-mobile="true" 
+href="{{game_join_cta_url}}" src="{{hero_image_url}}" />
+<mj-text padding="20px 10px 0px 15px"font-size="11px">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</mj-text>
+<mj-text padding="5px 10px 5px 15px" font-size="14px" font-weight="bold">{{game.title}}</mj-text>
+
+<mj-table padding-left="13px" padding-right="5px">
+<tr>
+<td width="34px"><img width="28px" style="border-radius: 28px; border: 1px solid white;" src="{{avatar_image_url}}" /></td>
+<td><span style="font-size: 11px; line-height: 15px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+
+<mj-button 
+background-color="transparent"
+color="#6a1798"
+align="left"
+inner-padding="10px 0px 0px 0px"
+font-size="13px"
+font-weight="bold"
+font-family="'Averta', Arial, sans-serif;"
+padding-left="15px" 
+padding-top="10px" 
+href="{{game_join_cta_url}}">JOIN NOW&nbsp;&nbsp;></mj-button>
+<mj-spacer height="16px" />
+</mj-column>
+<!-- ------- GAME CELL_2_END ------- --> 
+
+
+
+</mj-section>

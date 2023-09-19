@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>objects</title>
+</head>
+
+<body>
+    <script src="https://www.unpkg.com/lodash"></script>
+    <script>
+        // OBJECTS => The Object class represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities. Objects can be created using the Object() constructor or the object initializer / literal syntax.  // order is irrelevant
+
+        // LESSER USED ALT METHOD
+        /* const pet = new Object({
+            age: 15,
+            name: 'copper',
+        });
+        console.log(pet); */
+
+        const age = 31;
+
+        // OBJECT LITERAL
+        const person = {
+            property_name: 'its_value',
+            age, // age pulled from var above
+            name: 'jason',
+            31: true,
+            clothing: {
+                pants: 'gray',
+                shirt: 'black',
+            },
+        };
+        person.job = 'developer';
+
+        // DELETE a property
+        delete person.property_name;
+
+        // freeze the object
+        const jasonFroze = Object.freeze(person);
+        console.log(jasonFroze);
+
+        console.log(jasonFroze.name);
+        console.log(jasonFroze[31]);
+        console.log(jasonFroze.clothing.shirt);
+
+        // METHODS => A method is a function which is a property of an object. There are two kind of methods: Instance Methods which are built-in tasks performed by an object instance, or Static Methods which are tasks that are called directly on an object constructor.
+        // a function within an object
+        const me = {
+            age, // age pulled from var above
+            name: 'jason',
+            clothing: {
+                pants: 'gray',
+                shirt: 'black',
+            },
+            sayHello(greeting = 'hola') {
+                // short hand from lenting, can be sayHello: function(){}
+                return `${greeting} ${this.name}`; // 'this' equals left of dot
+            },
+        };
+        console.log(me.sayHello());
+        console.log(me.sayHello('hey hey hey'));
+
+        // REFERENCE VS VALUE
+        const person1 = {
+            first: 'jason',
+            last: 'gralinski',
+        };
+
+        const person2 = {
+            first: 'jason',
+            last: 'gralinski',
+        };
+
+        console.log(person1 === person2); // false as they are different objects
+
+        const person3 = person1;
+        person3.first = 'Regan';
+
+        console.log(person3.first);
+        console.log(person1.first); // objects and arrays are copied or "pointed" by reference
+
+        // COPY OBJECTS // SHALLOW COPIES // 1 LEVEL DEEP
+        const person4 = { ...person1 }; // spread into new object MODERN WAY
+        const person5 = Object.assign({}, person1); // OLD WAY but might still see
+
+        person4.first = 'Jason';
+        console.log(person1.first);
+        console.log(person4.first);
+
+        // Can use LODASH for DEEP MULTI-LEVEL CLONES
+        // SEE LINE 12 for loading
+        // _. to use commands, can be loaded modually
+        const person6 = _.cloneDeep(person);
+        console.log(person6);
+
+        // You can spread multiple objects into a single object
+        const meatInventory = {
+            bacon: 2,
+            sausage: 3,
+            oyster: 10,
+        };
+
+        const veggieInventory = {
+            lettuce: 5,
+            tomatoes: 3,
+            oyster: 15,
+        };
+
+        const inventory = {
+            ...meatInventory,
+            ...veggieInventory,
+            carrots: 56,
+        };
+
+        console.log(inventory);
+    </script>
+</body>
+
+</html>

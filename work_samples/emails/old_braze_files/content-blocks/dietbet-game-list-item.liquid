@@ -1,0 +1,65 @@
+{% connected_content https://www.dietbet.com/api/game-service/games/{{game_id}} :save game :cache 3600 %}
+{% assign game_url = "https://waybetter.com/dietbet/games/" | append: game_id %}
+{% assign image_display_edge_length = 176 %}
+{% assign image_edge_length = image_display_edge_length | times: 2 %}
+{% assign image_base_url = "https://res.cloudinary.com/waybetter/image/upload/c_scale,f_auto,h_EDGELENGTH,q_auto,w_EDGELENGTH/v1/dietbet/game/" | replace: "EDGELENGTH", image_edge_length %}
+{% assign game_image_url = game.image.url | split: '/' | last | prepend: image_base_url %}
+
+<table border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBlock wbFeaturedGamesContainer" width="100%">
+    <tbody class="mcnCaptionBlockOuter">
+        <tr>
+            <td class="mcnCaptionBlockInner" style="padding:9px;" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" class="mcnCaptionRightContentOuter" width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="mcnCaptionRightContentInner" valign="top">
+                                <table align="left" border="0" cellpadding="0" cellspacing="0"
+                                    class="mcnCaptionRightImageContentContainer" width="{{image_display_edge_length}}">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" class="mcnCaptionRightImageContent" valign="top">
+                                                <a href="{{game_url}}"><img alt="" class="mcnImage"
+                                                        src="{{game_image_url}}" style="max-width:500px;"
+                                                        width="{{image_display_edge_length}}" /></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table align="right" border="0" cellpadding="0" cellspacing="0"
+                                    class="mcnCaptionRightTextContentContainer" width="300">
+                                    <tbody>
+                                        <tr>
+                                            <td class="mcnTextContent wbCaptionRightTextContent" valign="top">
+                                                <p style="margin-top: 0">
+                                                    {% if 'transformer' == game.subtype %}
+                                                    Lose 10% in 6 months!
+                                                    {% elsif 'kickstarter' == game.subtype %}
+                                                    Lose 4% in 4 weeks!
+                                                    {% endif %}
+                                                </p>
+
+                                                <p>
+                                                    <a href="{{game_url}}" class="wbThemeColor">
+                                                        <strong>
+                                                            <span style="font-size:18px">{{game.title}}</span>
+                                                        </strong>
+                                                    </a>
+                                                </p>
+
+                                                <p>{{game.startDate | date: "%b %e"}}
+                                                    -
+                                                    {{game.endDate | date: "%b %e"}}
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

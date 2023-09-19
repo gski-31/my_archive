@@ -1,0 +1,182 @@
+<mjml>
+
+<mj-head>
+
+<mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+<mj-attributes>
+<mj-all 
+padding="0px"
+font-family="Roboto, Arial, sans-serif;"
+line-height="1.3em";/>
+<mj-image  
+fluid-on-mobile="true" 
+href="#"/>
+<mj-button
+background-color="transparent"
+color="#6a1798"
+align="left"
+inner-padding="10px 0px 0px 0px"
+font-size="13px"
+font-weight="bold"
+font-family="'Averta', Arial, sans-serif;"
+href="#"
+/>
+<mj-class name="footer_text" font-size="12px" align="center" letter-spacing="0.3px;" line-height="18px"
+color="gray" font-family="Roboto, Arial, sans-serif"/>
+
+
+
+
+</mj-attributes>
+
+<mj-style>
+.pic_corners {
+border-radius: 0px 0px 10px 10px !important;
+}
+
+.featured_corners table tbody tr td a img {
+border-radius: 10px 0px 0px 10px !important;
+}
+
+@media (max-width:480px) {
+.featured_corners table tbody tr td a img {
+border-radius: 10px 10px 0px 0px !important;
+}
+}
+
+</mj-style>
+</mj-head>
+
+<mj-body background-color="#eee">
+
+
+<!-- MAIN IMAGE ------------------------- -->
+<mj-wrapper background-color="white"> 
+
+<mj-section>
+<mj-column>
+<mj-image src="{{main_image_path}}" href="{{main_image_cta_url}}" alt="WayBetter makes games that motivate you to change your life"/>
+</mj-column>
+</mj-section>
+
+</mj-wrapper>
+
+
+<!-- FEATURED GAME  ------------------------- -->
+<mj-wrapper background-color="white" padding="30px 30px 20px 30px"> 
+
+<mj-section border-radius="10px" background-color="#eee">
+<mj-column>
+<mj-image src="{{hero_image_url}}" href="{{game_join_cta_url}}" alt="join our featured game" css-class="featured_corners" />
+</mj-column>
+<mj-column>
+<mj-text container-background-color="#eee" padding="12px 12px 6px 12px">
+<span style="font-size: 12px; line-height: 17px;">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</span><br>
+<span style="font-size: 16px; line-height: 21px;"><strong>{{game.title}}</strong></span><br>
+</mj-text>
+<mj-table container-background-color="#eeeeee" padding="0px 12px">
+<tr>
+<td width="40px"><img width="30px" style="border-radius: 30px; border: 1px solid white;" src="{{avatar_image_url}}" /></td>
+<td><span style="font-size: 12px; line-height: 16px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+<mj-text container-background-color="#eee" padding="6px 12px 0px 12px" css-class="pic_corners">
+<span style="font-size: 11px; line-height: 1em;">{{game.description}}</span><br>
+<a href="{{game_join_cta_url}}" style="font-size: 14px; line-height: 40px; color: #6a1798; text-decoration: none; "><strong>JOIN NOW</strong></a>
+</mj-text>
+</mj-column>
+</mj-section>
+</mj-wrapper>
+<!-- ------------------------- END FEATURED GAME -->
+
+<!-- GAME ROW TITLE   ------------------------- -->
+<mj-wrapper background-color="white" padding="15px 30px 5px 30px"> 
+
+<mj-section>
+<mj-column>
+<mj-text font-size="23px" align="center" font-family="Garamond, serif;">Great Games:</mj-text>
+</mj-column>
+</mj-section>
+
+</mj-wrapper>
+<!-- ------------------------- END GAME ROW TITLE -->
+
+<!-- GAME ROW CONTENT   ------------------------- -->
+<mj-wrapper background-color="white" padding="5px 20px 35px 20px"> 
+
+<mj-section>
+
+<!-- GAME CELL 1 ------------------------- -->
+<mj-column padding="10px" border-radius="10px">
+<mj-image border-radius="10px 10px 0px 0px"  src="{{hero_image_url}}" href="{{game_join_cta_url}}" alt="join our game"/>
+<mj-text container-background-color="#eee" padding="12px 12px 6px 12px">
+<span style="font-size: 11px; line-height: 15px;">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</span><br>
+<span style="font-size: 14px"><strong>{{game.title}}</strong></span><br>
+</mj-text>
+<mj-table container-background-color="#eeeeee" padding="0px 12px">
+<tr>
+<td width="40px"><img width="30px" style="border-radius: 30px; border: 1px solid white;" src="{{avatar_image_url}}" /></td>
+<td><span style="font-size: 11px; line-height: 15px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+<mj-text container-background-color="#eee" padding="6px 12px" css-class="pic_corners">
+<a href="{{game_join_cta_url}}" style="font-size: 14px; line-height: 25px; color: #6a1798; text-decoration: none; "><strong>JOIN NOW</strong></a>
+</mj-text>
+</mj-column>
+<!-- ------------------------- END GAME CELL 1 -->
+
+<!-- GAME CELL 2 ------------------------- -->
+<mj-column padding="10px" border-radius="10px">
+<mj-image border-radius="10px 10px 0px 0px"  src="{{hero_image_url}}" href="{{game_join_cta_url}}" alt="join our game"/>
+<mj-text container-background-color="#eee" padding="12px 12px 6px 12px">
+<span style="font-size: 11px; line-height: 15px;">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</span><br>
+<span style="font-size: 14px"><strong>{{game.title}}</strong></span><br>
+</mj-text>
+<mj-table container-background-color="#eeeeee" padding="0px 12px">
+<tr>
+<td width="40px"><img width="30px" style="border-radius: 30px; border: 1px solid white;" src="{{avatar_image_url}}" /></td>
+<td><span style="font-size: 11px; line-height: 15px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+<mj-text container-background-color="#eee" padding="6px 12px" css-class="pic_corners">
+<a href="{{game_join_cta_url}}" style="font-size: 14px; line-height: 25px; color: #6a1798; text-decoration: none; "><strong>JOIN NOW</strong></a>
+</mj-text>
+</mj-column>
+<!-- ------------------------- END GAME CELL 2 -->
+
+<!-- GAME CELL 3 ------------------------- -->
+<mj-column padding="10px" border-radius="10px">
+<mj-image border-radius="10px 10px 0px 0px"  src="{{hero_image_url}}" href="{{game_join_cta_url}}" alt="join our game"/>
+<mj-text container-background-color="#eee" padding="12px 12px 6px 12px">
+<span style="font-size: 11px; line-height: 15px;">{{game_start_date}} - {{game_end_date}} • {{game_duration_weeks}} {{game_duration_weeks_label}}</span><br>
+<span style="font-size: 14px"><strong>{{game.title}}</strong></span><br>
+</mj-text>
+<mj-table container-background-color="#eeeeee" padding="0px 12px">
+<tr>
+<td width="40px"><img width="30px" style="border-radius: 30px; border: 1px solid white;" src="{{avatar_image_url}}" /></td>
+<td><span style="font-size: 11px; line-height: 15px;"><strong>With Coach</strong><br/>{{coach_name}}</span></td>
+</tr>
+</mj-table>
+<mj-text container-background-color="#eee" padding="6px 12px" css-class="pic_corners">
+<a href="{{game_join_cta_url}}" style="font-size: 14px; line-height: 25px; color: #6a1798; text-decoration: none; "><strong>JOIN NOW</strong></a>
+</mj-text>
+</mj-column>
+<!-- ------------------------- END GAME CELL 3 -->
+
+</mj-section>
+
+</mj-wrapper>
+<!-- ------------------------- END GAME ROW CONTENT -->
+
+
+
+
+
+<!-- FOOTER ------------------------- -->
+<mj-include path="../includes/footer.mjml" />
+<!-- ------------------------- END FOOTER -->
+
+
+</mj-body>
+</mjml>

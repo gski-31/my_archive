@@ -1,0 +1,27 @@
+{% unless game_id %}
+  {% if event_properties and event_properties.game_id %}
+    {% assign game_id = event_properties.game_id %}
+  {% endif %}
+{% endunless %}
+
+{% unless game_id %}
+  {% if event_properties and event_properties.feed_type_id and event_properties.feed_product == 'falkor' and event_properties.feed_type == 'game' %}
+    {% assign game_id = event_properties.feed_type_id %}
+  {% endif %}
+{% endunless %}
+
+{% unless game_id %}
+  {% abort_message("get-falkor-game-by-id: game_id missing") %}
+{% endunless %}
+
+{{content_blocks.${config-vars-1}}}
+
+{% unless wb_config_connected_content_url %}
+  {% abort_message("get-falkor-game-by-id: wb_config_connected_content_url missing (be sure to include config-vars-1)") %}
+{% endunless %}
+
+{% connected_content {{wb_config_connected_content_url}}/braze/falkor/games/{{game_id}} :basic_auth notify_service :save game :cache 3600 %}
+
+{% unless game %}
+  {% abort_message("get-falkor-game-by-id: connected content did not return a game") %}
+{% endunless %}

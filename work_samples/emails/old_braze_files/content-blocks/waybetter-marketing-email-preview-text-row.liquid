@@ -1,0 +1,10 @@
+{% unless preview_text_row_text %}
+  {% assign preview_text_row_text = '&nbsp;' %}
+{% endunless %}
+
+<!-- Preview Text -->
+<tr class="m-hide" style="mso-hide: all;">
+  <td style="font-size: 0pt; line-height: 0pt;">{{preview_text_row_text}}</td>
+</tr>
+<!-- END Preview Text -->
+

@@ -1,0 +1,24 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+        <div>
+            <div class="card">
+                <img class="card-img-top" src="<%= blog.image %>" alt="<%= blog.name %>">
+                <div class="card-body">
+                    <h5 class="card-title"><%= blog.title %></h5>
+                    <p class="card-text"><%= blog.body %>…</p>
+                    <p class="card-text text-right"><small>Posted: <%= blog.date.toDateString() %></small></p>
+                    <a href="/" class="btn btn-danger">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="float-right">
+        <a class="btn btn-success" href="/blogs/<%= blog._id %>/edit">Edit</a>
+        <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-warning">Delete Me</button>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer %>

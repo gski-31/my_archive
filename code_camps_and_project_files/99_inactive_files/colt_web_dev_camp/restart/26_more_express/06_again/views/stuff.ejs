@@ -1,0 +1,10 @@
+<h2>Testing Page</h2>
+
+<% stuff.forEach(function(item){ %>
+    <li><%= item %></li>
+<% }); %>
+
+<form action="/new_item" method="POST">
+<input type="text" name="new_item" placeholder="add item"/>
+<button>Submit</button>
+</form>

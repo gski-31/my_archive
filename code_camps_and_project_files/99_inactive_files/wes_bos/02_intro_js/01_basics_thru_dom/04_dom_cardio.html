@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom_cardio</title>
+</head>
+
+<body>
+
+    <script>
+        // Make a div
+        const d = document.createElement('div');
+
+        // add a class of wrapper to it
+        d.classList.add('wrapper');
+
+        // put it into the body
+        document.body.appendChild(d);
+
+        // make an unordered list
+        // add three list items with the words "one, two three" in them
+        const ul = `<ul>
+                    <li>one</li>
+                    <li>two</li>
+                    <li>three</li>
+                    </ul>`;
+
+        // put that list into the above wrapper
+        document.querySelector('.wrapper').innerHTML = ul;
+
+        // create an image
+        const img = document.createElement('img');
+
+        // set the source to an image
+        img.src = 'https://loremflickr.com/320/240/dog';
+
+        // set the width to 250
+        img.width = 250;
+
+        // add a class of cute
+        img.class = 'cute';
+
+        // add an alt of Cute Puppy
+        img.alt = 'Cute Puppy';
+
+        // Append that image to the wrapper
+        document.querySelector('.wrapper').appendChild(img);
+
+        // with HTML string, make a div, with two paragraphs inside of it
+        const moreHtml = `<p>Here is a pargraph</p>
+                            <p>Here is another pargraph</p>`;
+
+        // put this div before the unordered list from above
+        // ul.insertAdjacentHTML('beforebegin', moreHtml); // Can't pass the var to first ul var declaration becasue it's not actual HTML ????
+        const myUl = document.querySelector('ul');
+        myUl.insertAdjacentHTML('beforebegin', moreHtml);
+
+        // add a class to the second paragraph called warning
+        // GRAB PARENT AND MODIFY CHILDREN
+        const theDiv = document.querySelector('.wrapper');
+        theDiv.children[1].classList.add('warning');
+
+        // remove the first paragraph
+        theDiv.children[0].remove();
+
+        // create a function called generatePlayerCard that takes in three arguments: name, age, and height
+        // have that function return html that looks like this:
+        // <div class="playerCard">
+        //   <h2>NAME — AGE</h2>
+        //   <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
+        // </div>
+        const generatePlayerCard = (name, age, height) => `<div class="playerCard">
+            <h2>${name.toUpperCase()} — ${age}</h2>
+            <p>They are ${height} inches tall and ${age} years old. In Dog years this person would be ${age *
+            7}. That would be a tall dog!</p>
+            <button type="button" class="delete">Delete Me!</button>
+            </div>`;
+
+        // make a new div with a class of cards
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('cards');
+
+        // Have that function make 4 cards
+        // append those cards to the div
+        let myCards = generatePlayerCard('copper', 15, 12);
+        myCards += generatePlayerCard('daisy', 3, 8);
+        myCards += generatePlayerCard('stitch', 5, 22);
+        myCards += generatePlayerCard('anger', 65, 6);
+
+        // put the div into the DOM just before the wrapper element
+        document.querySelector('.wrapper').insertAdjacentHTML('beforebegin', myCards);
+
+        // Bonus, put a delete Button on each card so when you click it, the whole card is removed
+        // SEE LINE 79
+
+        // select all the buttons!
+        const delButtons = document.querySelectorAll('.delete');
+
+        // make out delete function
+        const deleteCard = e => {
+            const buttonClick = e.currentTarget;
+            buttonClick.closest('.playerCard').remove(); // parentElement works too
+        };
+
+        // loop over them and attach a listener
+        delButtons.forEach(e => e.addEventListener('click', deleteCard));
+    </script>
+
+</body>
+
+</html>

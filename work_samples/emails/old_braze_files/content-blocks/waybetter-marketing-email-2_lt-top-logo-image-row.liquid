@@ -1,0 +1,23 @@
+<!-- START  waybetter-marketing-email-2_lt-top-image-row -->
+
+{% unless wb_logo_image_url %}
+  {% assign wb_logo_image_url = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5f3bd8a628a1b1361fe0893c/original.png?1597757606" %}
+{% endunless %}
+
+{% unless wb_logo_image_link_url %}
+  {% if wb_config_hub_url %}
+    {% assign wb_logo_image_link_url = wb_config_hub_url %}
+  {% else %}
+    {% assign wb_logo_image_link_url = '#' %}
+  {% endif %}
+{% endunless %}
+
+<tr>
+	<td class="img-center pt-45 pb-70" style="font-size:0pt; line-height:0pt; text-align:center; padding-top: 45px; padding-bottom: 70px;">
+		<a href="{{wb_logo_image_link_url}}" target="_blank">
+			<img src="{{wb_logo_image_url}}" width="152" height="34" border="0" alt="" />
+		</a>
+	</td>
+</tr>
+
+<!-- END waybetter-marketing-email-2_lt-top-image-row-->

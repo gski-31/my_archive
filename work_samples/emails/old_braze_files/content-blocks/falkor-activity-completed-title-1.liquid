@@ -1,0 +1,27 @@
+{% comment %}
+
+Sample input (use in title where this would be included, to test):
+
+  {% assign game_name = "Sedentary Bet v.6" %}
+
+{% endcomment %}
+
+
+{% comment %} 
+get variables from event_properties if not otherwise set already
+{% endcomment %}
+
+{% unless game_name %}
+  {% assign game_name = event_properties.${title} %}
+{% endunless %}
+
+
+{% comment %}
+sanity check
+{% endcomment %}
+
+{% unless game_name %}
+  {% abort_message('game name is missing (either in game_name or in event_properties.title)') %}
+{% endunless %}
+
+Your progress in {{game_name}}

@@ -1,0 +1,53 @@
+[
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prevent and forms</title>
+    <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <a class="jason" href="https://www.linkedin.com/in/jasongdev">Jason</a>
+        <form name="signup">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="me">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="nope@nada.net">
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree">I agree to the terms and conditions</label>
+            <hr>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <script>
+        // STOP BUTTON FROM WORKING
+        const wesButton = document.querySelector('.jason');
+        wesButton.addEventListener('click', e => {
+            alert('not gonna happen');
+            e.preventDefault();
+        });
+
+        // STOP FORM FORM SUBMITTING IF NAME EQUALS BIFF
+        const myForm = document.querySelector('[name=signup]'); // NAME GOES IN []
+        myForm.addEventListener('submit', e => {
+            if (e.currentTarget.name.value.toUpperCase() === 'BIFF') {
+                // CAN DO INCLUDES AS WELL FOR FULL NAMES
+                e.preventDefault();
+                alert('go away biff');
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>]

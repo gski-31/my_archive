@@ -1,0 +1,109 @@
+<mjml>
+
+<mj-head>
+
+<mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+
+
+<mj-attributes>
+<mj-all 
+padding="0px"
+font-family="Roboto, Arial, sans-serif;"
+line-height="1.3em";/>
+<mj-image  
+fluid-on-mobile="true" 
+href="#"/>
+<mj-button
+background-color="transparent"
+color="#6a1798"
+align="left"
+inner-padding="10px 0px 0px 0px"
+font-size="13px"
+font-weight="bold"
+font-family="'Averta', Arial, sans-serif;"
+href="#"
+/>
+<mj-class name="footer_text" font-size="12px" align="center" letter-spacing="0.3px;" line-height="18px"
+color="gray" font-family="Roboto, Arial, sans-serif"/>
+
+
+<mj-style>
+
+/* *** IMPORT AVERTA FONT FOR TITLES *** */
+@import
+url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Regular.woff');
+font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Semibold.woff');
+font-weight: 600; font-style: normal; }
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Bold.woff'); font-weight:
+bold; font-style: normal; }
+
+@font-face { font-family: 'Averta'; src:
+url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-ExtraBold.woff');
+font-weight: 900; font-style: normal; }
+
+</mj-style>
+
+</mj-attributes>
+</mj-head>
+
+<mj-body background-color="#eee">
+
+
+<mj-wrapper background-color="white"> 
+
+
+<!-- ------- BEGIN_HERO_IMAGE ------- -->
+<mj-section>
+<mj-column>
+
+<mj-image src="{{main_image_path}}" href="{{main_image_cta_url}}" alt="WayBetter makes games that motivate you to change your life."/>
+<mj-spacer height="40px" />
+</mj-column>
+</mj-section>
+<!-- ------- END_HERO_IMAGE ------- -->
+
+</mj-wrapper>
+
+
+
+
+
+
+<mj-wrapper background-color="white" padding="0px 20px 40px 20px"> 
+
+<!-- -------  BEGIN_FEATURED_GAME ------- -->
+<mj-include path="../includes/em_featured_game.mjml" />
+<!-- -------  BEGIN_FEATURED_GAME ------- -->
+
+
+<!-- -------  BEGIN_GAME_ROW_1 ------- -->
+<mj-include path="../includes/em_game_row.mjml" />
+<!-- -------  END_GAME_ROW_1 ------- -->
+
+
+<!-- -------  BEGIN_GAME_ROW_2 ------- -->
+<mj-include path="../includes/em_game_row.mjml" />
+<!-- -------  END_GAME_ROW_2 ------- -->
+
+
+
+
+</mj-wrapper>
+
+
+<!-- ------- BEGIN_FOOTER ------- -->
+<mj-include path="../includes/footer.mjml" />
+<!-- ------- END_FOOTER ------- -->
+
+
+</mj-body>
+</mjml>

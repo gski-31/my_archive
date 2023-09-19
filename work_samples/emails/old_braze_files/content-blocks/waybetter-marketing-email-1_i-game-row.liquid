@@ -1,0 +1,70 @@
+{% unless wb_config_waybetter_app_branch_url %}
+  {% abort_message("waybetter-marketing-email-1_i-game-row: wb_config_waybetter_app_branch_url missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{% unless wb_utm_campaign_name %}
+  {% abort_message("waybetter-marketing-email-1_i-game-row: wb_utm_campaign_name missing - has the config-vars-1 block been included in the template?") %}
+{% endunless %}
+
+{{content_blocks.${get-falkor-game-by-id}}}
+
+{% assign article_top_header = game.title %}
+{% assign article_bottom_header = game.start_date | date: "%B %e" %}
+{% assign article_bottom_body = game.description %}
+{% assign article_bottom_cta_url = wb_config_waybetter_app_branch_url | append: '/game_profile' %}
+{% assign article_bottom_cta_text = 'Join Game' %}
+
+{% unless waybetter_marketing_email_use_link_template %}
+  {% capture article_bottom_cta_url %}{{article_bottom_cta_url}}?utm_medium=email&gameId={{game.id}}&utm_campaign={{wb_utm_campaign_name}}{% endcapture %}
+{% endunless %}
+
+{% if game_row_image_url %}
+  {% assign article_bg_image_url = game_row_image_url %}
+{% else %}
+
+  {% comment %}
+    https://cloudinary.com/documentation/image_transformations#control_gravity
+  {% endcomment %}
+  {% if game_row_image_crop_params %}
+    {% assign game_row_image_xform_params = 'c_crop,c_lfill,g_xy_center,' | append: game_row_image_crop_params %}
+  {% else %}
+    {% assign game_row_image_xform_params = 'c_crop,c_lfill,g_auto' %}
+  {% endif %}
+
+  {% assign hero_image_url_parts = game.image.secure_url | split: '/' %}
+  {% assign hero_image_display_width = 490 %}
+  {% assign hero_image_display_height = 236 %}
+  {% assign hero_image_pixel_width = hero_image_display_width | times: 1 %}
+  {% assign hero_image_pixel_height = hero_image_display_height | times: 1 %}
+  {% assign hero_image_cloudinary_params = 'f_auto,q_auto,c_crop,w_IMAGE_WIDTH,h_IMAGE_HEIGHT,XFORM_PARAMS' | replace: 'IMAGE_WIDTH', hero_image_pixel_width | replace: 'IMAGE_HEIGHT', hero_image_display_height | replace: 'XFORM_PARAMS', game_row_image_xform_params %}
+  {% assign article_bg_image_url = game.image.secure_url | replace: hero_image_url_parts[6], hero_image_cloudinary_params %}
+{% endif %}
+
+{{content_blocks.${waybetter-marketing-email-1_i-article-row-start}}}
+
+
+{% comment %}
+The source template had six variants of the game article. But really there are only two
+variants: a) live text game title and b) NO live text game title. Here's the breakdown:
+1. live text game title
+2. live text game title with a bit more bottom padding below the cta
+3. Exact same as #1
+4. No live text game title
+5. No live text game title with a bit more bottom padding below the cta
+6. Exact same as #4
+
+Since 3 and 6 were dupes, I removed them, hence why the numbers are 1,2,4, and 5.
+Marking doesn't care about the padding variants, so really we just care about
+choosing between variants 1 and 4.
+
+To further simplify things on the calling template, the expected way
+to choose a variant will be via the game_row_show_title boolean value.
+{% endcomment %}
+
+{% if game_row_show_title %}
+  {{content_blocks.${waybetter-marketing-email-1_i-article-bg-image-and-text-1}}}
+{% else %}
+  {{content_blocks.${waybetter-marketing-email-1_i-article-bg-image-and-text-4}}}
+{% endif %}
+
+{{content_blocks.${waybetter-marketing-email-1_i-article-row-end}}}

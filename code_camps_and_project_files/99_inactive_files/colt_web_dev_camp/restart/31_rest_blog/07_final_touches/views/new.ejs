@@ -1,0 +1,22 @@
+<% include partials/header %>
+<div class="container">
+
+<form action="/blogs" method="POST">
+    <div class="form-group">
+        <label for="name">Title</label>
+        <input type="text" class="form-control" id="title" name="blog[title]" placeholder="name goes here">
+    </div>
+    <div class="form-group">
+        <label for="image">Image URL</label>
+        <input type="text" class="form-control" id="image" name="blog[image]" placeholder="image url goes here">
+    </div>
+    <div class="form-group">
+        <label for="body">Type it here…</label>
+        <textarea class="form-control" id="body" name="blog[body]" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-danger">Add it</button>
+</form>
+
+</div>
+
+<% include partials/footer %>

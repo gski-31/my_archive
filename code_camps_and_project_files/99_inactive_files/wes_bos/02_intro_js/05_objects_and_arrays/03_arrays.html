@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arrays</title>
+</head>
+
+<body>
+
+    <script>
+        // An ARRAY is an ordered collection of data (either primitive or object depending upon the language). Arrays are used to store multiple values in a single variable. This is compared to a variable that can store only one value.
+        // Each item in an array has a number attached to it, called a numeric index, that allows you to access it. In JavaScript, arrays start at index zero and can be manipulated with various methods.
+
+        const names = ['regan', 'emma', 'jason'];
+        // use 0 based index etc...
+        // array methods etc...
+
+        // MUTABLE => change the original version
+        // IMMUTABLE => create a new version of original item
+        // --------- create a new array for most mutations, spread old array into a new one
+        const newNames = [...names].reverse();
+        console.log(names);
+        console.log(newNames);
+
+        // push, pop, shift, unshift
+
+        // slice copies a portion of the array // does not mutate original
+        // splice takes out a chunk of the array // mutates originally
+
+        const starWars = ['kenobi', 'vader', 'maul', 'ventress', 'ren'];
+        const newSw = [...starWars.slice(0, 3), 'tano', 'skywalker', ...starWars.slice(3)];
+        console.log(newSw);
+        // space numbers to remmove items
+
+        const swIndex = newSw.indexOf('vader');
+        console.log(swIndex);
+    </script>
+</body>
+
+</html>

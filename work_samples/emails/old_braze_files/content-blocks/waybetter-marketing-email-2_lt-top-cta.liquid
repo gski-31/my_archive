@@ -1,0 +1,27 @@
+<!-- START waybetter-marketing-email-2_lt-top-cta -->
+
+{% unless top_cta_url %}
+  {% abort_message("waybetter-marketing-email-2_lt-top-cta: top_cta_url missing") %}
+{% endunless %}
+
+{% unless top_cta_text %}
+  {% abort_message("waybetter-marketing-email-2_lt-top-cta: top_cta_text missing") %}
+{% endunless %}
+
+<!-- Button -->
+<table width="204" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="btn-16 c-white l-white" bgcolor="#e24f4b" style="font-size:14px; line-height:18px; mso-padding-alt:13px 10px; border-radius:50px; font-family:Averta, 'Trebuchet MS', Arial, sans-serif; text-align:center; min-width:auto !important; color:#ffffff;">
+			<strong>
+				<a href="{{top_cta_url}}" target="_blank" class="link c-white" style="display: block; padding: 13px 10px; text-decoration:none; color:#ffffff;">
+					<span class="link c-white fw-600" style="text-decoration:none; color:#ffffff; font-weight: 600;">
+					  {{top_cta_text}}
+					</span>
+				</a>
+			</strong>
+		</td>
+	</tr>
+</table>
+<!-- END Button -->
+
+<!-- END waybetter-marketing-email-2_lt-top-cta -->

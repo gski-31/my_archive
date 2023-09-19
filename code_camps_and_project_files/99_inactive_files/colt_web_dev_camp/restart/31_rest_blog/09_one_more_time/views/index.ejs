@@ -1,0 +1,20 @@
+<% include partials/header %>
+<h5>Index Page</h5>
+<div class="row">
+
+<% things.forEach((thing)=>{ %>
+<div class="col-md-3 col-sm-6">
+    <div class="card">
+        <img class="card-img-top" src="<%= thing.image %>" alt="<%= thing.name %>" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title"><%= thing.name %></h4>
+            <p class="card-text"><%= thing.description.substring(0,80) %>…</p>
+            <p><small><%= thing.date.toDateString() %></small></p>
+            <a href="things/<%= thing._id %>" class="btn btn-primary">See More</a>
+        </div>
+    </div>
+</div>
+<% }) %>
+
+</div>
+<% include partials/footer %>

@@ -1,0 +1,57 @@
+{% assign test_image_1_600x473 =  "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe327aa141af430ec6a6971/original.jpg?1608722346" %}
+{% assign test_image_1_600x472 =  "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe268cbeb0163441079c81f/original.gif?1608673483" %}
+{% assign test_image_1_1200x944 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe32672a23ded1f24835100/original.jpg?1608722034" %}
+{% assign test_image_1_1200x945 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fd99b16eb01633441ad447c/original.jpg?1608096534" %}
+{% assign test_image2 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe26a674282565fb2a5c6fd/original.gif?1608673895" %}
+{% assign test_image3 = "https://appboy-images.com/appboy/communication/assets/image_assets/images/5fe24dd69592745dbd04f6a0/original.jpg?1608666582" %}
+
+{% assign header_image_url = "https://diet.bet/e/igXd7Hfvkcb" %}
+
+{% assign image_urls_str = test_image_1_1200x945 | append: "|" | append: test_image2 | append: "|" | append: test_image3 %}
+{% assign image_urls = image_urls_str | split: "|" %}
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
+	xmlns:v="urn:schemas-microsoft-com:vml">
+
+<head>
+  <title>Test Borders</title>
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    border: 3px solid green;
+    border-style: none;
+    display: block;
+    width: 600px;
+    height: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  </style>
+
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <table>
+    <tbody>
+    {% for img_src in image_urls %}
+      <tr>
+        <td>
+          <a href="{{image_url}}"><img src="{{img_src}}"/></a>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

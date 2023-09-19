@@ -1,0 +1,33 @@
+# The Complete Web Developer in 2020: Zero to Mastery
+_Udemy Class/Camp_
+---
+Using as an extra resource for FreeCodeCamp
+---
+- [x] Introduction
+- [x] HTML 5
+- [x] CSS 3
+- ~~Bootstrap 4, Templates, And Building Your Startup Landing Page~~
+- [ ] CSS Grid + CSS Layout
+- [ ] Career Of A Web Developer
+- [ ] Javascript
+- [ ] DOM Manipulation
+- [ ] Advanced Javascript
+- [ ] Command Line
+- [ ] Developer Environment
+- [ ] Git + Github + Open Source Projects
+- [ ] A Day In The Life Of A Developer
+- [ ] NPM + NPM Scripts
+- [ ] React.js + Redux
+- [ ] HTTP_JSON_AJAX + Asynchronous Javascript
+- [ ] Backend Basics
+- [ ] APIs
+- [ ] FINAL PROJECT_ SmartBrain Front-End
+- [ ] Node.js + Express.js
+- [ ] FINAL PROJECT_ SmartBrain Back-End -- Server
+- [ ] Databases
+- [ ] FINAL PROJECT_ SmartBrain Back-End -- Database
+- [ ] Production + Deployment
+- [ ] Where To Go From Here_
+- [ ] Bonus_ Extra Bits
+- [ ] Extra_ For Windows Users
+- [ ] Extras

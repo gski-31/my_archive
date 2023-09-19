@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+
+<body>
+    <button class="one">Button 1</button>
+    <button class="two">Button 2</button>
+
+    <script>
+        /* A function's this keyword behaves a little differently in JavaScript compared to other languages. It also has some differences between strict mode and non-strict mode.
+
+        In most cases, the value of this is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called. ES5 introduced the bind() method to set the value of a function's this regardless of how it's called, and ES2015 introduced arrow functions which don't provide their own this binding (it retains the this value of the enclosing lexical context). */
+
+        const test = {
+            prop: 42,
+            func() {
+                return this.prop;
+            },
+        };
+
+        console.log(test.func()); // 42
+
+        console.clear(); // clear mdn notes
+
+        // "this" is the thing to left of the dot when calling a method
+
+        const button1 = document.querySelector('.one');
+        const button2 = document.querySelector('.two');
+
+        function tellMeAboutTheButton() {
+            // "this" is scoped to the function
+            // arrow functions would bind to higher function or window
+            // - embedding function use arrow
+            console.log(this); // this is button
+            //   console.log('outside', this);
+            setTimeout(() => {
+                this.textContent = 'You Clicked Me';
+            }, 1000);
+        }
+        // event.target is better use scenario ˄˄˄˄ than embedded this
+
+        // this.method
+        button1.addEventListener('click', tellMeAboutTheButton);
+        button2.addEventListener('click', tellMeAboutTheButton);
+
+        console.clear();
+
+        function Pizza(toppings = [], customer) {
+            console.log('Making a pizza');
+            this.toppings = toppings;
+            this.customer = customer;
+            // https://www.paulirish.com/2009/random-hex-color-code-snippets/
+            this.id = Math.floor(Math.random() * 16777215).toString(16);
+            this.slices = 10;
+        }
+
+        const myPizza = new Pizza(['pep', 'shrooms'], 'Ty');
+        const yourPizza = new Pizza(['ban pep', 'shrooms'], 'Cobb');
+        console.log(myPizza, yourPizza);
+    </script>
+</body>
+
+</html>

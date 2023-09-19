@@ -1,0 +1,360 @@
+<mjml>
+
+<mj-head>
+
+<!-- ROBOTO GOOGLE FONT FOR BODY -->
+<mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+<mj-attributes>
+  <!-- UNIVERSAL WAYBETTER STANDARDS -->
+  <mj-all 
+  padding="0px" 
+  font-family="Roboto, Arial sans-serif" 
+  font-size="16px"
+  line-height="23px"
+  color="#010101"/>
+
+  <mj-divider 
+  border-color="#D7D7D7" 
+border-width="2px"/>
+
+<mj-button
+color="white"
+background-color="#6B1099"
+font-size="16px"
+border-radius="30px"
+inner-padding="12px 26px"
+font-family="'Averta', Roboto, Arial, sans-serif"
+/>
+
+<mj-class name="footer_text" font-size="12px" align="center" letter-spacing="0.3px;" line-height="18px"
+color="gray" font-family="Roboto, Arial, sans-serif"/>
+
+</mj-attributes>
+
+
+<mj-style>
+  /* *** BASIC CSS—USE INLINER BEFORE BRAZE *** */
+  p {
+  padding: 0px;
+  margin: 0px;
+}
+
+  .header {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;
+
+    color: #6A1099;
+  }
+
+  .sub_header {
+    color: #010101;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  .podcast_title {
+    color: #363A43;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .podcast_date {
+    color: #6A1099;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .podcast_info {
+    color: #010101;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+.featured_date {
+  color: #010101;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+.featured_game {
+  color: #010101;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.featured_coach {
+  color: #010101;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.featured_info {
+  color: #010101;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 11px !important;
+  line-height: 16px !important;
+}
+
+.main_padding {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
+}
+
+  /* *** MEDIA QUERIES FOR FONT SIZES *** */
+
+  @media (max-width:480px) {
+    .header {
+      font-size: 24px !important;
+      line-height: 36px !important;
+    }
+
+    .podcast_title {
+      font-size: 23px !important;
+      line-height: 30px !important;
+    }
+
+    .podcast_td1 {
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    .podcast_td2 {
+      display: block;
+    }
+
+    .main_padding {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+}
+
+  }
+  
+
+  /* *** IMPORT AVERTA FONT FOR TITLES *** */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+  @font-face {
+    font-family: 'Averta';
+    src:
+      url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Averta';
+    src:
+      url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Semibold.woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Averta';
+    src:
+      url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-Bold.woff');
+    font-weight:
+      bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Averta';
+    src:
+      url('https://res.cloudinary.com/waybetter/raw/upload/v1593615865/external/fonts/Averta-ExtraBold.woff');
+    font-weight: 900;
+    font-style: normal;
+  }
+</mj-style>
+</mj-head>
+
+<mj-body background-color="#D7D7D7" background-color="white" >
+
+<mj-wrapper css-class="main_padding" background-color="white" >
+
+  <mj-section>
+    <mj-column>
+      <mj-image src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60f9e41923591256faf5dbf2/original.png?1626989593" width="230px" />
+      <mj-spacer height="50px" />
+<!-- -------------------- MAIN PODCAST IMAGE-------------------- -->
+      <mj-image href="{{main_podcast_link}}" src="{{main_podcast_image}}" fluid-on-mobile="true"/>
+      <mj-spacer height="50px" />
+      <!-- -------------------- MAIN PODCAST QUOTE -------------------- -->
+      <mj-text align="center"><span class="header">{{main_podcast_quote}}</span></mj-text>
+      <mj-spacer height="30px" />
+       <!-- -------------------- MAIN PODCAST PARGRAPH  -------------------- -->
+      <mj-text align="center"><span class="sub_header">{{main_podcast_description}}</span></mj-text>
+      <mj-spacer height="40px" />
+       <!-- -------------------- MAIN PODCAST BUTTON  -------------------- -->
+      <mj-button href="{{main_podcast_link}}">Listen now</mj-button>
+      <mj-spacer height="40px" />
+      <mj-divider />
+      <mj-spacer height="40px" />
+      <mj-text align="center"><span class="podcast_title">Catch up with past episodes</span></mj-text>
+      <mj-spacer height="60px" />
+    </mj-column>
+  </mj-section>
+<mj-section>
+<mj-column>
+
+<mj-table cellpadding="5" >
+  <tr>
+    <td class="podcast_td1" style="padding-right: 15px;">
+    <!-- -------------------- PAST PODCAST DATE  -------------------- -->
+      <span class="podcast_date">{{catch1_podcast_date}}</span><br>
+      <!-- -------------------- PAST PODCAST NAME  -------------------- -->
+      <span class="podcast_info">{{catch1_podcast_title}}</span>
+    </td>
+    <td class="podcast_td2">
+    <!-- -------------------- PAST PODCAST LINK  -------------------- -->
+    <a href="{{catch1_podcast_link}}"><img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60f9e2f32c92fe33ebbabea3/original.png?1626989299" width="30px" align="left"/></a>
+    <td>
+  <tr>
+</mj-table>
+
+
+<mj-spacer height="25px"/>
+</mj-column>
+
+
+
+</mj-section>
+
+<mj-section  background-color="white">
+<mj-column>
+
+<mj-table cellpadding="5">
+  <tr>
+    <td class="podcast_td1" style="padding-right: 15px;">
+    <!-- -------------------- PAST PODCAST DATE  -------------------- -->
+      <span class="podcast_date">{{catch2_podcast_date}}</span><br>
+      <!-- -------------------- PAST PODCAST NAME  -------------------- -->
+      <span class="podcast_info">{{catch2_podcast_title}}</span>
+    </td>
+    <td class="podcast_td2">
+    <!-- -------------------- PAST PODCAST LINK  -------------------- -->
+    <a href="{{catch2_podcast_link}}"><img src="https://appboy-images.com/appboy/communication/assets/image_assets/images/60f9e2f32c92fe33ebbabea3/original.png?1626989299" width="30px" align="left"/></a>
+    <td>
+  <tr>
+</mj-table>
+
+
+
+<mj-spacer height="30px" />
+</mj-column>
+</mj-section >
+  <mj-section  background-color="white">
+    <mj-column>
+      <mj-text><span class="featured_coach">*Available wherever you get your podcasts</span></mj-text>
+      <mj-spacer height="40px" />
+      <mj-divider />
+      <mj-spacer height="40px" />
+      <mj-text align="center"><span class="podcast_title">Join {{game_coach}}’s WayBetter challenge</span></mj-text>
+      <mj-spacer height="40px" />
+    </mj-column>
+  </mj-section> 
+  <mj-section background-color="#F6F7F7">
+    <mj-column>
+     <!-- -------------------- FEATURED GAME IMAGE  -------------------- -->
+      <mj-image href="{{game_link}}" src="{{game_image}}" fluid-on-mobile="true"/>
+    </mj-column>
+    <mj-column padding="10px 15px">
+    <!-- -------------------- FEATURED GAME DATE  -------------------- -->
+      <mj-text><span class="featured_date">{{game_date}}</span></mj-text>
+      <!-- -------------------- FEATURED GAME NAME  -------------------- -->
+      <mj-text><span class="featured_game">{{game_name}}</span></mj-text>
+       <mj-spacer height="4px" />
+
+      <mj-table>
+      <tr>
+      <td width="36px"><img width="30px" style="border-radius: 30px; border: 1px solid white;" src="http://www.fillmurray.com/200/200" /></td>
+      <!-- -------------------- FEATURED GAME COACH  -------------------- -->
+      <td><p class="featured_coach"><strong>With Coach</strong><br/>{{game_coach}}</p></td>
+      </tr>
+      </mj-table>
+      <mj-spacer height="6px" />
+<!-- -------------------- FEATURED GAME DESCRIPTION  -------------------- -->
+      <mj-text><p class="featured_info">{{game_description}}</p></mj-text>
+      <mj-spacer height="20px" />
+      <!-- -------------------- FEATURED GAME JOIN BUTTON  -------------------- -->
+      <mj-button
+      color="#6B1099"
+      background-color="transparent"
+      align="left"
+      font-size="13px"
+      inner-padding="0px"
+      font-family="'Averta', Roboto, Arial, sans-serif"
+      font-weight="bold"
+      letter-spacing="1px"
+      href="{{game_link}}"
+      >JOIN NOW</mj-button>
+    </mj-column>
+  </mj-section>
+
+</mj-wrapper>
+
+<mj-wrapper background-color="#D7D7D7">
+<mj-section padding="35px">
+<mj-column>
+
+<mj-social icon-size="36px" mode="horizontal" inner-padding="4px" padding-bottom="12px">
+
+<mj-social-element name="facebook" href="{{wb_facebook_page_url}}" target="_blank"
+src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/b26dd39d-934e-456d-adb5-87c61199fef8.png"
+background-color="transparent">
+
+</mj-social-element>
+<mj-social-element name="instagram" href="{{wb_instagram_page_url}}" target="_blank"
+src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/374bb897-c6c6-4a86-a342-1e07071cb4bf.png"
+background-color="transparent">
+</mj-social-element>
+
+</mj-social>
+
+<mj-text mj-class="footer_text">
+Questions? We&rsquo;re here to help!&nbsp;<a
+href="mailto:support@waybetter.com?subject=Support">support@waybetter.com</a><br />
+Got&nbsp;an&nbsp;idea&nbsp;for&nbsp;a&nbsp;game? Tell&nbsp;us!&nbsp;<a
+href="mailto:suggestions@waybetter.com?subject=Suggestion">suggestions@waybetter.com</a>
+<br>&nbsp;<br>
+This email was sent from WayBetter,&nbsp;Inc.<br />
+4023 Kennett Pike Suite 500 Wilmington,&nbsp;DE&nbsp;19807
+<br>&nbsp;<br>
+Want to change how you receive these&nbsp;emails?<br />
+You can <a href="{{wb_unsubscribe_url}}{{${user_id}}}">unsubscribe</a> from this&nbsp;list.
+</mj-text>
+
+<mj-image
+src="https://gallery.mailchimp.com/e0aca887467fab45140e9bba0/images/98933a7c-31b6-4917-aec6-294c3ee587b7.png"
+padding="20px" width="140px" />
+
+<mj-text mj-class="footer_text">
+&copy; {{ "now" | date: "%Y" }}  WayBetter, All rights reserved.
+</mj-text>
+</mj-column>
+</mj-section>
+
+</mj-wrapper>
+
+</mj-body>
+
+</mjml>
+

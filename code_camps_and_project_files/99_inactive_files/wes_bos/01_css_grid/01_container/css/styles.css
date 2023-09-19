@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* VARIABLES */
+:root {
+    --tan: #fff4e4;
+    --orange: #f88020;
+    --red: #d1274b;
+    --brown: #3d0e1e;
+}
+ 
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--brown);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+
+body{
+    background-color: var(--tan);
+}
+
+.item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--brown);
+    border-radius: 3px;
+    font-size: 35px;
+    background-color: var(--orange); 
+    color: var(--tan); 
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--red);
+}
+
+/* Explicit Grid Sample
+.container {
+    display:  grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-auto-rows: 100px 300px 100px;
+    grid-gap: 20px;
+}
+*/
+/*
+.container {
+    display:  grid;
+    grid-template-columns: 125px 200px;
+    grid-gap: 10px;
+}
+*/
+
+/* Implicit Grid Sample
+.container {
+    display:  grid;
+    grid-template-columns: 200px 400px;
+    grid-template-rows: 50px 100px;
+    grid-auto-rows: 66px; 
+    grid-auto-columns: 100px;
+    grid-gap: 10px;
+}
+*/
+
+/* Grid Auto Flow 
+.container {
+    display:  grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 400px;
+    grid-auto-flow: column;
+    grid-auto-columns: 80px;
+}
+*/
+
+/* fractional unit 
+.container {
+    border: 2px solid red;
+    display:  grid;
+    height: 300px;
+    grid-gap: 10px;
+    grid-template-columns: 100px 200px 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+*/
+
+/* repeat function
+.container {
+    border: 2px solid red;
+    display:  grid;
+    height: 300px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+ */
+
+
+
+
+
+
+
+
+

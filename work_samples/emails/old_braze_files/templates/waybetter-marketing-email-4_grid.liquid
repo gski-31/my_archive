@@ -1,0 +1,39 @@
+{{content_blocks.${waybetter-marketing-email-4_grid-all-pre-content}}}
+
+{% assign header_row_image_url = "https://mailpreview.net/54/aaa12327/r651176-e3751363/images/img_1.jpg" %}
+{% assign header_row_image_link_url = "https://waybetter.com/games" %}
+
+<table width="600" border="0" cellspacing="0" cellpadding="0" class="m-shell" bgcolor="#ffffff">
+	<tr>
+		<td class="td" style="width:600px; min-width:600px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+				{% comment %}
+				  Additional code required by template, do not change or remove.
+				{% endcomment %}
+				{{content_blocks.${waybetter-marketing-email-4_grid-header-row}}}
+
+				{% comment %}
+				  Section with row of games
+				{% endcomment %}
+				{{content_blocks.${waybetter-marketing-email-4_grid-game-section-start}}}
+					{% assign game_section_title = "Workout games" %}
+					{{content_blocks.${waybetter-marketing-email-4_grid-game-section-title}}}
+
+					{% assign row_game_ids = "1158,1136,1081" | split: "," %}
+					{{content_blocks.${waybetter-marketing-email-4_grid-game-row}}}
+				{{content_blocks.${waybetter-marketing-email-4_grid-game-section-end}}}
+
+				{% comment %}
+				  Section with row of games
+				{% endcomment %}
+				{{content_blocks.${waybetter-marketing-email-4_grid-game-section-start}}}
+					{% assign game_section_title = "Self-care games" %}
+					{{content_blocks.${waybetter-marketing-email-4_grid-game-section-title}}}
+
+					{% assign row_game_ids = "1118,1145,1083" | split: "," %}
+					{{content_blocks.${waybetter-marketing-email-4_grid-game-row}}}
+				{{content_blocks.${waybetter-marketing-email-4_grid-game-section-end}}}
+
+
+{{content_blocks.${waybetter-marketing-email-4_grid-all-post-content}}}

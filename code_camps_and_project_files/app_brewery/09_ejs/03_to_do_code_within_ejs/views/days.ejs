@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today</title>
+</head>
+
+<body>
+    <!-- basic control flow js in ejs -->
+    <% if(dayOfWeek === "Saturday" || dayOfWeek === "Sunday"){ %>
+    <h3 style="color: rgb(13, 196, 13);">Today is FUN-DAY <%= dayOfWeek %>!!!</h3>
+    <% } else { %>
+    <h3 style="color: rgb(255, 145, 0);">Today is <%= dayOfWeek %>!!!</h3> %>
+    <% } %>
+
+
+</body>
+
+</html>

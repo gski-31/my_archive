@@ -1,0 +1,27 @@
+<% include partials/header %>
+<h1>New Page</h1>
+
+<div class="container">
+
+    <form action="/characters" method="POST">
+            <div class="form-group">
+                <label for="name">Character Name</label>
+                <input type="text" class="form-control" id="name" name="character[name]" placeholder="Enter Character Name">
+            </div>
+            <div class="form-group">
+                <label for="image">Image Url</label>
+                <input type="text" class="form-control" id="image" name="character[image]" placeholder="Enter Image URL">
+            </div>
+            <div class="form-group">
+                    <label for="description">Character Description</label>
+                    <textarea class="form-control" id="description" name="character[description]" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+
+
+
+</div>
+
+
+<% include partials/footer %>
